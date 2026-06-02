@@ -1,149 +1,882 @@
-<!DOCTYPE html><html lang="es"><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="es">
+<head>
   <meta charset="UTF-8">
-  
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#d4af37">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Primera Mano">
-  <link rel="apple-touch-icon" href="icons/icon-192.png">
-  <meta http-equiv="Cache-Control" content="public, max-age=86400">
-  <title>Primera Mano - Catálogo Moderno</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Primera Mano - Catálogo Moderno</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css">
-    
+    <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      background: 
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),    
+        url('fondo1.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
 
-  
+      .nombre-producto {
+      color: gold;
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
 
+    .selector-precio {
+      width: 90%;
+      padding: 8px;
+      border-radius: 8px;
+      border: none;
+      background: #000;
+      color: gold;
+      font-weight: bold;
+    }
+
+    .boton-carrito {
+      background-color: gold;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      padding: 10px 16px;
+      margin-top: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .boton-carrito:hover {
+      background-color: #d4af37;
+    }
+
+    /* --- Texto elegante negro con borde dorado --- */
+    .producto h3 {
+      color: #000; /* Negro principal */
+      font-weight: bold;
+      font-size: 1.3em;
+      text-align: center;
+      text-shadow:
+        1px 1px 2px #d4af37,
+        -1px -1px 2px #d4af37,
+        1px -1px 2px #d4af37,
+        -1px 1px 2px #d4af37;
+      margin-top: 10px;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .producto h3:hover {
+      transform: scale(1.05);
+      color: #111;
+    }
       
-    
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-      
-    
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    header {
+      text-align: center;
+      margin-top: 60px;
+      padding: 25px 10px;
+      background: linear-gradient(to right, #000, #1a0f00, #000);
+      border-bottom: 2px solid gold;
+      color: white;
+    /* ✨ Sombra elegante */
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+
+    /* 💛 Efecto de resplandor dorado */
+    animation: glowGold 3s infinite alternate;
+    }
+
+    /* ✨ Efecto de brillo dorado suave */
+    @keyframes glowGold {
+      from {
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.4),
+                    0 0 20px rgba(212, 175, 55, 0.2);
+      }
+      to {
+        box-shadow: 0 0 25px rgba(212, 175, 55, 0.7),
+                0 0 45px rgba(212, 175, 55, 0.4);
+      }
+    }
+
+    header svg {
+      width: 100%;
+      max-width: 350px; /* 📱 no se deforma, se ajusta */
+      height: auto;
+      margin: 0 auto;
+    }
+
+    header p {
+     font-size: 1rem;
+     width: 100%;
+     color: gold;
+     text-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+     margin-top: 8px;
+   }
+
+    /* 🔁 Adaptación para pantallas pequeñas */
+    @media (max-width: 600px) {
+    header svg text {
+     font-size: 28px; /* más pequeño para celulares */
+      }
+    header p {
+     font-size: 0.9rem; 
+      }
+    }
+    /* 🔥 NAV estilo lujo negro + dorado (REEMPLAZA) */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #000000, #1a1a1a, #000000); /* Degradado suave negro */
+  padding: 6px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;        /* <-- CAMBIO: centra verticalmente los botones */
+  gap: 25px;                  /* Separación entre botones */
+  z-index: 2000;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.7); /* Línea dorada */
+  backdrop-filter: blur(8px);  /* Efecto vidrio elegante */
+  box-sizing: border-box;
+}
+
+/* Reemplazo exacto: botones del nav con look idéntico a los enlaces */
+nav a,
+nav button,
+nav [role="button"],
+#combos-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  background: transparent !important;
+  color: #d4af37 !important;    /* dorado consistente */
+  border: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform .18s ease, background .18s ease, color .18s ease;
+}
+
+/* foco accesible (teclado) */
+nav a:focus-visible,
+nav button:focus-visible,
+#combos-toggle:focus-visible {
+  outline: 3px solid rgba(212,175,55,0.14);
+  outline-offset: 4px;
+  background: linear-gradient(to right, rgba(212,175,55,0.08), rgba(212,175,55,0.04));
+  color: #fff;
+}
 
 
+/* Evita que el hover cambie el tamaño del box y provoque saltos */
+nav a, nav button {
+  transform-origin: center;
+}
+nav a:hover, nav button:hover {
+  background: linear-gradient(to right, #070707, #030303);
+  color: #000;
+  transform: translateY(-2px);
+}
+
+  /* Estilos mínimos para el submenu de Combos (ajusta según tu tema global) */
+  #combos-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    font: inherit;
+  }
+
+  .submenu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 6px 0;
+    background: #050505;
+    border: 1px solid rgba(0,0,0,.08);
+    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    border-radius: 6px;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: top left;
+    transform: translateY(-6px);
+    transition: opacity .18s ease, transform .18s ease, visibility .18s;
+  }
+
+  /* Mostrar cuando el <li> padre tenga clase .open */
+  li.open .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .submenu a {
+    display: block;
+    padding: 8px 14px;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+  .submenu a:hover,
+  .submenu a:focus {
+    background: rgba(0,0,0,.03);
+    outline: none;
+  }
+
+  #combos-toggle:focus {
+    outline: 2px solid rgba(0,123,255,.25);
+    border-radius: 4px;
+  }
+
+     
+     
+     
+     
+     
+     
+     
+      /* Estilos y animación del submenu */
+/* --- Reemplazar por completo este bloque --- */
+#muebles-submenu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 200px;
+  max-width: 360px;            /* ajusta si quieres más/menos ancho */
+  padding: 8px;
+  border-radius: 8px;
+  background: linear-gradient(to bottom,#0b0b0b,#111);
+  border: 1px solid rgba(10, 10, 10, 0.6);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  box-sizing: border-box;
+
+  /* fuerza apilado vertical de los elementos internos */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+  z-index: 3000;
+  pointer-events: none;
+}
+
+/* estado visible */
+#muebles-submenu.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* asegurar que los hijos ocupen fila completa */
+#muebles-submenu > * {
+  display: block !important;   /* por si venían inline o inline-block */
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 6px 8px;
+  text-align: left;
+}
+
+/* si usas lista dentro */
+#muebles-submenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#muebles-submenu li {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* enlaces / botones dentro del submenu */
+#muebles-submenu a,
+#muebles-submenu button {
+  display: block !important;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  background: transparent;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* pequeño hover para mejorar visibilidad */
+#muebles-submenu a:hover,
+#muebles-submenu button:hover {
+  background: rgba(212, 175, 55, 0.06);
+}
+
+/* Cambio visual del botón cuando está abierto */
+#main-nav button[aria-expanded="true"] {
+  background: linear-gradient(to right,#d4af37,#b8921b);
+  color: #000;
+}
+
+
+
+
+
+    /* ✨ Botones del menú */
+    nav a {
+      color: gold;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05rem;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: 0.3s;
+     }
+
+    /* ⭐ Hover dorado */
+    nav a:hover {
+      background: linear-gradient(to right, #070707, #030303);
+      color: #000;
+      transform: scale(1.08);
+     }   
+    @media (max-width: 480px) {
+      nav {
+        gap: 8px;       /* Menos separación */
+        padding: 4px 0;
+     }
+
+      nav a {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+     }
+    }
+
+    .seccion-productos {
+      padding: 30px 15px;
+      text-align: center;
+    }
+
+    .seccion-productos h2 {
+      color: #050505;
+      margin-bottom: 20px;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .producto {
+      background-color: rgba(0, 0, 0, 50); /* fondo blanco con transparencia suave */
+      border: 1px solid gold;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(3, 3, 3, 0.2);
+      min-height: 420px; /* asegura que todos los cuadros tengan la misma altura */
+      overflow: hidden; /* evita que algo se salga del cuadro */
+      transition: 0.3s ease
+    }
+
+    .producto img {
+      width: 100%;
+      height: 200px; /* iguala el alto de todas las imágenes */
+      object-fit: cover; /* recorta para mantener proporción sin deformar */
+      border-radius: 8px;
+    }
+
+    .producto p {
+      color: #000;
+      font-size: 0.95em;
+      margin: 8px 0;
+      text-align: center;
+    }
+
+    .producto select, .producto button {
+      margin-top: 8px;
+    }
+
+
+    button {
+      background-color: #c49a6c;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #a87e53;
+    }
+
+    #carrito {
+      background-color: #fff;
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    footer {
+      background-color: #000;
+      color: #d4af37;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebc57;
+    }
+    /* --- ESTILO DEL SELECTOR DE PRECIOS --- */
+    .producto select {
+      width: 95%;
+      font-size: 0.9em;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 2px solid #d4af37; /* Borde dorado */
+      background-color: #000; /* Fondo negro elegante */
+      color: #d4af37; /* Texto dorado */
+      font-weight: bold;
+      text-align: center;
+      text-align-last: center;
+      white-space: normal; /* Permite que el texto se divida en varias líneas */
+      word-wrap: break-word; 
+      overflow-wrap: break-word;
+      height: auto;
+      min-height: 70px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .producto select:hover {
+      background-color: #111;
+      box-shadow: 0 0 10px #d4af37;
+    }
+
+    /* --- OPCIONES INTERNAS DEL SELECT --- */
+    .producto select option {
+      background-color: #000;
+      color: #d4af37;
+      padding: 10px;
+      font-size: 1em;
+      border-bottom: 1px solid #d4af37;
+    }
+
+    /* --- BOTÓN DE CARRITO --- */
+    .producto button {
+      width: 95%;
+      font-size: 1.1em;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background-color: #d4af37;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .producto button:hover {
+      background-color: #fff3b0;
+      transform: scale(1.05);
+    }
+    /* 💰 Estilos del carrito */
+    #carrito {
+      background-color: rgba(255, 255, 255, 0.70); /* Fondo claro para que se lea bien */
+      color: #000; /* Texto negro */
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      width: 90%;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+
+    #carrito h2 {
+      color: #d4af37; /* Dorado elegante */
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #lista-carrito li {
+      list-style: none;
+      padding: 8px 0;
+      border-bottom: 1px solid #ccc;
+      font-weight: bold;
+    }
+
+    #total {
+      text-align: right;
+      font-size: 18px;
+      color: #000;
+      font-weight: bold;
+    }
+
+    #carrito button {
+      background-color: #d4af37;
+      color: #000;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+    }
+
+    #carrito button:hover {
+      background-color: #b68a2d;
+    }
+    /* 🛏️ Estilo general de los productos */
+    .seccion-productos {
+      margin: 50px auto;
+      text-align: center;
+      color: gold;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+      width: 95%;
+    }
+
+    .seccion-productos h2 {
+      color: gold;
+      font-size: 2rem;
+      margin-bottom: 25px;
+      text-shadow: 0 0 10px gold;
+    }
+
+     /* 📸 Galería de productos */
+      .galeria {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Se adapta automáticamente */
+        gap: 25px;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      /* 🪑 Tarjeta de cada producto */
+      .producto {
+        background: rgba(0, 0, 0, 0.85);
+        border: 1px solid gold;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .producto:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+      }
+
+      /* 📸 Imagen del producto */
+      .producto img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 15px;
+        border: 1px solid gold;
+      }
+
+      /* 🪄 Nombre del producto */
+      .producto h3 {
+        color: gold;
+        font-size: 1.3rem;
+        margin: 10px 0;
+        text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+      }
+
+      /* 📜 Descripción */
+      .producto p {
+        color: #fff;
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+      }
+
+      /* 🧾 Selector de tamaño/precio */
+      .selector-precio {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid gold;
+        background: #000;
+        color: gold;
+        font-weight: bold;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+
+      /* 🛒 Botón agregar al carrito */
+      .boton-carrito {
+        background-color: gold;
+        color: #000;
+        font-weight: bold;
+        border: none;
+        padding: 10px 16px;
+       border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 100%;
+      }
+
+      .boton-carrito:hover {
+        background-color: #d4af37;
+        transform: scale(1.05);
+      }
+
+      /* ✨ Scroll bonito */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: gold;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+
+      /* 📱 RESPONSIVE: Ajustes para teléfonos */
+     /* Reemplazo: forzar vista de escritorio en tablets y móviles (ajustado más compacto) */
+
+/* Tablets / pantallas medianas: usar vista de escritorio */
+@media (max-width: 768px) {
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;               /* reducido */
+    align-items: start;
+    overflow-x: visible;
+    padding: 6px;            /* opcional: menos espacio externo */
+  }
+
+  .producto {
+    padding: 6px;
+    box-sizing: border-box;
+    min-width: 180px;        /* ligeramente menor */
+  }
+
+  .producto img {
+    width: 100%;
+    height: 160px;           /* menor altura */
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+  }
+
+  .producto h3 {
+    font-size: 1rem;         /* reducido */
+    line-height: 1.1;
+    margin: 6px 0 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .producto p {
+    font-size: 0.95rem;
+    margin: 0;
+    color: #333;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .producto .precio,
+  .producto .detalle {
+    font-size: 0.95rem;
+  }
+
+  .producto .btn-agregar {
+    padding: 8px 10px;       /* botón más compacto */
+    font-size: 0.95rem;
+    border-radius: 6px;
+  }
+}
+
+/* Móviles: forzar la vista de escritorio (2 columnas), aún más compacto */
+@media (max-width: 480px) {
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;                /* reducido al mínimo */
+    align-items: start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px;
+  }
+
+  .producto {
+    padding: 6px;
+    box-sizing: border-box;
+    min-width: 160px;        /* más compacto */
+  }
+
+  .producto img {
+    width: 100%;
+    height: 140px;           /* altura reducida para que quepan más */
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+  }
+
+  .producto h3 {
+    font-size: 0.95rem;
+    line-height: 1.05;
+    margin: 6px 0 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .producto p {
+    font-size: 0.88rem;
+    margin: 0;
+    -webkit-line-clamp: 2;
+  }
+
+  .producto .precio,
+  .producto .detalle {
+    font-size: 0.88rem;
+  }
+
+  .producto .btn-agregar {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  }
+}
+
+
+        
+      .titulo-oro {
+        grid-column: 1 / -1;
+        text-align: center;
+        font-size: 2rem;
+        margin: 40px 0 20px;
+        font-weight: bold;
+
+        /* 🎨 Efecto dorado animado */
+        background: linear-gradient(
+          90deg,
+          #d4af37,
+          #fff4b8,
+          #d4af37,
+          #b8860b
+        );
+        background-size: 300%;
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        animation: oroBrillando 4s linear infinite;
+      }
+
+      /* ✨ Animación */
+      @keyframes oroBrillando {
+        0%   { background-position: 0% }
+        50%  { background-position: 150% }
+        100% { background-position: 300% }
+      }
+   }
+  
+
+  </style>
 </head>
-<body><div id="sticky-header-container">
-  <div class="top-bar">
-    <div class="brand-container">
-      <i class="fa-solid fa-gem icon-animado"></i>
-      <h1 class="titulo-animado">Primera Mano</h1>
-    </div>
-    <div class="search-container">
-      <i class="fa-solid fa-search"></i>
-      <input type="text" id="buscar-producto" placeholder="Escribe para buscar..." oninput="filtrarProductos()" onkeyup="filtrarProductos()">
-    </div>
-  </div><nav id="main-nav">
-        <div class="nav-item dropdown">
-          <a href="#electrodomésticos">⚡ Electrodomésticos <span class="dropdown-icon">▼</span></a>
-          <div class="dropdown-content"><a href="#electrodomésticos-productos">⚡ Electrodomésticos</a></div>
-        </div>
-      
-        <div class="nav-item dropdown">
-          <a href="#combos">🛒 Combos y Tienda <span class="dropdown-icon">▼</span></a>
-          <div class="dropdown-content"><a href="#carnicos">🥩 Cárnicos</a><a href="#agromercado">🌽 Agro y Mercado</a><a href="#confituras">🍯 Confituras</a><a href="#bebidas">🥤 Bebidas</a><a href="#aseo">🧴 Aseo y Limpieza</a><a href="#farmacia">💊 Farmacia</a><a href="#otros">📦 Otros</a></div>
-        </div>
-      </nav>
-  </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <header><h1 class="titulo-animado"><i class="fa-solid fa-gem icon-animado"></i> Primera Mano</h1>
+<body>
+
+  <header>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+      <text x="10" y="65" font-family="Arial" font-size="42" font-weight="bold" fill="#d4af37">Primera</text>
+      <text x="170" y="65" font-family="Arial" font-size="42" font-weight="bold" fill="#ffffff"> Mano</text>
+    </svg>
     
-    
-    <p></p>
+    <p>Productos de primera mano, ya sean importados o fabricados en Cuba</p>
   </header>
-  <div id="buscador-primera-mano" style="padding: 5px 20px 15px 20px; display:flex; justify-content:center;">
-    
-  </div>
-  
 
-  
+ <nav id="main-nav">
+  <ul style="list-style:none; margin:0; padding:0; display:flex; gap:20px;">
+    <li><a href="#electrodomésticos">⚡ Electrodomésticos</a></li>
 
- 
-  
-  
-  
-  
-  
-  
+    <li style="position:relative;">
+      <button id="muebles-toggle">🛋️ Muebles▾</button>
+
+      <div id="muebles-submenu">
+        <a href="#camas">🛏️ Camas</a>
+        <a href="#muebles-l">🛋️ Muebles en L</a>
+        <a href="#muebles-capitoneados">💎 Muebles Capitoneados</a>
+      </div>
+    </li>
+
+   <li style="position:relative;">
+      <button id="combos-toggle">🧺 Combos ▾</button>
+
+      <div id="combos-submenu" class="submenu" role="menu" aria-label="Combos">
+        <a href="#carnicos">🥩 Cárnicos</a>
+        <a href="#agromercado">🌽 Agro mercado</a>
+        <a href="#confituras">🍯 Confituras</a>
+        <a href="#bebidas">🥤 Bebidas</a>
+        <a href="#aseo">🧴 Aseo y Limpieza</a>
+        <a href="#farmacia">💊 Farmacia</a>
+        <a href="#otros">📦 Otros</a>
+        <a href="#premium">🏆 Combos Premium</a>
+      </div>
+    </li>
+  </ul>
+</nav>
   
 
 
@@ -153,107 +886,2085 @@
   <div class="separator"></div>
 
  <!-- ⚡ Electrodomésticos -->
-  <section id="electrodomésticos" class="seccion-padre" style="margin-top: 40px; border-top: 2px solid gold; padding-top: 20px;">
-    <h2 class="titulo-oro titulo-padre" style="text-align: center; color: gold; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 10px; text-shadow: 0 0 15px rgba(212,175,55,0.7);">⚡ Electrodomésticos</h2>
+  <section id="electrodomésticos" class="seccion-productos">
+    <h2 class="titulo-oro">⚡ Electrodomésticos</h2>
   
-    
- 
-    <section class="seccion-productos" id="electrodomésticos-productos"><h2>⚡ Electrodomésticos</h2><div class="galeria">
-    <!-- Products will be loaded dynamically here -->
-  </div></section>
-    
-    
-    </section>
-    <section class="seccion-padre" id="muebles" style="margin-top:40px; border-top:2px solid gold; padding-top:20px;">
-      <h2 class="titulo-padre" style="text-align:center; color:gold; font-size:2.5rem; text-transform:uppercase; margin-bottom:10px; text-shadow:0 0 15px rgba(212,175,55,0.7);">🪑 Muebles</h2>
-    <section id="camas" class="seccion-productos">
-    <h2 class="titulo-oro">🛏️ Camas moderna</h2>  
- 
     <div class="galeria">
-    <!-- Products will be loaded dynamically here -->
-  </div>
- </section><section id="muebles-l" class="seccion-productos">
-   <h2 class="titulo-oro">🛋️ Muebles en L</h2>
-    <div class="galeria">
-    <!-- Products will be loaded dynamically here -->
-  </div> 
- </section><section id="muebles-capitoneados" class="seccion-productos">
-   <h2 class="titulo-oro">💎 Muebles Capitoneados</h2>
-    <div class="galeria">
-    <!-- Products will be loaded dynamically here -->
-  </div>
 
-</section></section>
-  
+      <!-- AIR FRYER -->
+      <div class="producto">
+        <img src="electrodomésticos/electro1.webp" alt="Air Fryer Royal 4L" loading="lazy">
+        <h3>Air Fryer Royal 4L</h3>
+        <p class="precio">💵 $55</p>
+        <p>USD</p>       
+        <button class="boton-carrito" onclick="agregarAlCarrito('Air Fryer Royal 4L', 55 )">Agregar 🛒</button>
+       </div>
+
+      <!-- 🍃 Ventilador recargable F6 -->
+      <div class="producto">
+        <img src="electrodomésticos/electro2.webp" alt="🍃 Ventilador recargable F6" loading="lazy">
+        <h3>🍃 Ventilador recargable F6” Smart</h3>
+        <p class="precio">💵 $40</p>
+        <p>USD</p>        
+        <button class="boton-carrito" onclick="agregarAlCarrito('🍃 Ventilador recargable F6', 40 )">Agregar 🛒</button>
+       </div>
+
+      <!-- COCINA DE KEROSENO -->
+      <div class="producto">
+        <img src="electrodomésticos/electro3.webp" alt="Cocina de Keroseno BigWheel" loading="lazy">
+        <h3>Cocina de Keroseno BigWheel</h3>
+        <p class="precio">💵 $36</p>
+        <p>USD</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Cocina Keroseno BigWheel', 36 )">Agregar 🛒</button>
+       </div>
+
+      <!-- BOMBA DE AGUA -->
+      <div class="producto">
+        <img src="electrodomésticos/electro4.webp" alt="Bomba de agua SP-QB60" loading="lazy">
+        <h3>Bomba de Agua 1/2 HP</h3>
+        <p class="precio">💵 $36</p>
+        <p>USD</p>       
+        <button class="boton-carrito" onclick="agregarAlCarrito('Bomba de Agua 1/2 HP', 36 )">Agregar 🛒</button>
+       </div>
+
+      <!-- LÁMPARA LED USB -->
+      <div class="producto">
+        <img src="electrodomésticos/electro5.webp" alt="Lámpara LED USB" loading="lazy">
+        <h3>Lámpara LED USB</h3>
+        <p class="precio">💵 $6</p>
+        <p>USD</p>        
+        <button class="boton-carrito" onclick="agregarAlCarrito('Lámpara LED USB', 6 )">Agregar 🛒</button>
+       </div>
+
+      <!-- ARROCERA SACO 1.8L -->
+      <div class="producto">
+        <img src="electrodomésticos/electro6.webp" alt="Arrocera SACO 1.8L" loading="lazy">
+        </h3>Arrocera SACO 1.8L (700W)</h3>
+        <p class="precio">💵 $32</p>
+        <p>USD</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Arrocera SACO 1.8L', 32 )">Agregar 🛒</button>
+       </div>
+
+      <!-- OLLA DE PRESIÓN SACO 7L -->
+      <div class="producto">
+        <img src="electrodomésticos/electro7.webp" alt="Olla de Presión Eléctrica SACO 7L" loading="lazy">
+        </h3>Olla de Presión SACO 7L</h3>
+        <p class="precio">💵 $55</p>
+        <p>USD</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Olla Presión SACO 7L', 55 )">Agregar 🛒</button>
+       </div>
+
+      <!-- LAVADORA ROYAL -->
+      <div class="producto">
+        <img src="electrodomésticos/electro8.webp" alt="Lavadora Automática ROYAL" loading="lazy">
+        </h3>Lavadora Automática ROYAL</h3>
+        <p class="precio">💵 $210</p>
+        <p>USD</p>
+        <button disabled class="boton-carrito" style="opacity:0.4; cursor:not-allowed;">No disponible</button>
+       </div>
+
+    <!-- AIR FRYER MILEXUS -->
+      <div class="producto">
+        <img src="electrodomésticos/electro9.webp" alt="Air Fryer MILEXUS ML-AF-900" loading="lazy">
+        </h3>Freidora de Aire MILEXUS ML-AF-900</h3>
+        <p class="precio">💵 $58</p>
+        <p>USD</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Air Fryer MILEXUS ML-AF-900', 58 )">Agregar 🛒</button>
+       </div>
+
+
+
+   </div>
+ </section>
 
 
   <!-- 🛏️ Sección de Camas -->
-  
+  <section id="camas" class="seccion-productos">
+    <h2 class="titulo-oro">
+      🛏️ Camas moderna
+  </h2>  
+ 
+    <div class="galeria"> 
+
+      <!-- Cama 1 -->
+      <div class="producto">
+        <img src="camas/cama1.webp" alt="Cama moderna 1">
+        <h3>Cama Moderna 1</h3>
+        <p>Disponible en tamaño 3/4, Camera, Queen, King y de todos los colores.</p>
+        <select id="muebles y descanso/cama1-tamano">
+         <option value="165000">3/4(1.90cm x 1.20cm) - $165,000</option>
+         <option value="170000">Camera(1.90cm x 135cm) - $170,000</option>
+         <option value="180000">Queen(1.90 o 2m x 1.60cm) - $180,000</option>
+         <option value="190000">King(2m x 2m) - $190,000</option>
+        </select>
+         <button onclick="agregarAlCarrito('Cama Moderna 1', 'cama1-tamano')">🛒 Agregar al carrito</button>
+      </div>
+
+      <!-- Cama 2 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama2.webp" alt="Cama moderna 2" loading="lazy">
+        <h3>Cama Moderna 2</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama2-tamano">
+          <option value="155000">3/4(1.90cm x 1.20cm) - $155,000</option>
+          <option value="160000">Camera(1.90cm x 135cm) - $160,000</option>
+          <option value="170000">Queen(1.90 o 2m x 1.60cm) - $170,000</option>
+          <option value="180000">King(2m x 2m) - $180,000</option>
+        </select>
+         <button onclick="agregarAlCarrito('Cama Moderna 2', 'cama2-tamano')">🛒 Agregar al carrito</button>
+      </div>
+
+      <!-- Cama 3 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama3.webp" alt="Cama moderna 3" loading="lazy">
+        <h3>Cama Moderna 3</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama3-tamano">
+          <option value="145000">3/4(1.90cm x 1.20cm) - $145,000</option>
+          <option value="150000">Camera(1.90cm x 135cm) - $150,000</option>
+          <option value="160000">Queen(1.90 o 2m x 1.60cm) - $160,000</option>
+          <option value="170000">King(2m x 2m) - $170,000</option>
+        </select>
+         <button onclick="agregarAlCarrito('Cama Moderna 3', 'cama3-tamano')">🛒 Agregar al carrito</button>
+      </div>
+
+      <!-- Cama 4 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama4.webp" alt="Cama moderna 4" loading="lazy">
+        <h3>Cama Moderna 4</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama4-tamano">
+          <option value="125000">3/4(1.90cm x 1.20cm) - $125,000</option>
+          <option value="130000">Camera(1.90cm x 135cm) - $130,000</option>
+          <option value="140000">Queen(1.90 o 2m x 1.60cm) - $140,000</option>
+          <option value="150000">King(2m x 2m) - $150,000</option>
+        </select>
+         <button onclick="agregarAlCarrito('Cama Moderna 4', 'cama4-tamano')">🛒 Agregar al carrito</button>
+       </div>
+
+      <!-- Cama 5 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama5.webp" alt="Cama moderna 5" loading="lazy">
+        <h3>Cama Moderna 5</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama5-tamano">
+          <option value="125000">3/4(1.90cm x 1.20cm) - $125,000</option>
+          <option value="130000">Camera(1.90cm x 135cm) - $130,000</option>
+          <option value="140000">Queen(1.90 o 2m x 1.60cm) - $140,000</option>
+          <option value="150000">King(2m x 2m) - $150,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 5', 'cama5-tamano')">🛒 Agregar al carrito</button>
+      </div>
+      
+      <!-- Cama 6 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama6.webp" alt="Cama moderna 6" loading="lazy">
+        <h3>Cama Moderna 6</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama6-tamano">
+          <option value="165000">3/4(1.90cm x 1.20cm) - $165,000</option>
+          <option value="170000">Camera(1.90cm x 135cm) - $170,000</option>
+          <option value="180000">Queen(1.90 o 2m x 1.60cm) - $180,000</option>
+          <option value="190000">King(2m x 2m) - $190,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 6', 'cama6-tamano')">🛒 Agregar al carrito</button>
+      </div>
+      
+      <!-- Cama 7 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama7.webp" alt="Cama Moderna 7" loading="lazy">
+        <h3>Cama Moderna 7</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores. Diseño de listas de muy buen confort</p>
+        <select id="cama7-tamano">
+          <option value="140000">3/4(1.90cm x 1.20cm) - $140,000</option>
+          <option value="145000">Cama Camera(1.90cm x 135cm) - $145,000</option>
+          <option value="155000">Cama Queen(1.90 o 2m x 1.60cm) - $155,000</option>
+          <option value="165000">Cama King(2m x 2m) - $165,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 7', 'cama7-tamano')">🛒 Agregar al carrito</button>
+      </div>
+
+      <!-- Cama 8 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama8.webp" alt="Cama Moderna 8" loading="lazy">
+        <h3>Cama Moderna 8</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores. Diseño cabecera plateada de Charol</p>
+        <select id="cama8-tamano">
+          <option value="110000">3/4(1.90cm x 1.20cm) - $110,000</option>
+          <option value="115000">Cama Camera(1.90cm x 135cm) - $115,000</option>
+          <option value="125000">Cama Queen(1.90 o 2m x 1.60cm) - $125,000</option>
+          <option value="130000">Cama King(2m x 2m) - $130,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 8', 'cama8-tamano')">🛒 Agregar al carrito</button>
+      </div>
+
+      <!-- Cama 9 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama9.webp" alt="Cama Moderna 9" loading="lazy">
+        <h3>Cama Moderna 9</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores. </p>
+        <select id="cama9-tamano">
+          <option value="115000">3/4(1.90cm x 1.20cm) - $115,000</option>
+          <option value="120000">Cama Camera(1.90cm x 135cm) - $120,000</option>
+          <option value="130000">Cama Queen(1.90 o 2m x 1.60cm) - $130,000</option>
+          <option value="140000">Cama King(2m x 2m) - $140,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 9', 'cama9-tamano')">🛒 Agregar al carrito</button>
+      </div>
+
+      <!-- Cama 10 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama10.webp" alt="Cama Moderna 10" loading="lazy">
+        <h3>Cama Moderna 10</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama10-tamano">
+          <option value="85000">3/4(1.90cm x 1.20cm) - $85,000</option>
+          <option value="90000">Cama Camera(1.90cm x 135cm) - $90,000</option>
+          <option value="100000">Cama Queen(1.90 o 2m x 1.60cm) - $100,000</option>
+          <option value="110000">Cama King(2m x 2m) - $110,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 10', 'cama10-tamano')">🛒 Agregar al carrito</button>
+       </div>
+      
+      <!-- Cama 11 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama11.webp" alt="Cama Moderna 11" loading="lazy">
+        <h3>Cama Moderna 11</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama11-tamano">
+          <option value="105000">3/4(1.90cm x 1.20cm) - $105,000</option>
+          <option value="110000">Cama Camera(1.90cm x 135cm) - $110,000</option>
+          <option value="120000">Cama Queen(1.90 o 2m x 1.60cm) - $120,000</option>
+          <option value="130000">Cama King(2m x 2m) - $130,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 11', 'cama11-tamano')">🛒 Agregar al carrito</button>
+      </div>
+      
+      <!-- Cama 12 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama12.webp" alt="Cama Moderna 12" loading="lazy">
+        <h3>Cama Moderna 12</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama12-tamano">
+          <option value="110000">3/4(1.90cm x 1.20cm) - $110,000</option>
+          <option value="115000">Cama Camera(1.90cm x 135cm) - $115,000</option>
+          <option value="125000">Cama Queen(1.90 o 2m x 1.60cm) - $125,000</option>
+          <option value="130000">Cama King(2m x 2m) - $130,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 12', 'cama12-tamano')">🛒 Agregar al carrito</button>
+      </div>
+      
+      <!-- Cama 13 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama13.webp" alt="Cama Moderna 13" loading="lazy">
+        <h3>Cama Moderna 13</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama13-tamano">
+          <option value="140000">3/4(1.90cm x 1.20cm) - $145,000</option>
+          <option value="150000">Cama Camera(1.90cm x 135cm) - $150,000</option>
+          <option value="160000">Cama Queen(1.90 o 2m x 1.60cm) - $160,000</option>
+          <option value="170000">Cama King(2m x 2m) - $170,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 13', 'cama13-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+      
+      <!-- Cama 14 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama14.webp" alt="Cama Moderna 14" loading="lazy">
+        <h3>Cama Moderna 14</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama14-tamano">
+          <option value="155000">3/4(1.90cm x 1.20cm) - $155,000</option>
+          <option value="160000">Cama Camera(1.90cm x 135cm) - $160,000</option>
+          <option value="170000">Cama Queen(1.90 o 2m x 1.60cm) - $170,000</option>
+          <option value="180000">Cama King(2m x 2m) - $180,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 14', 'cama14-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+      
+      <!-- Cama 15 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama15.webp" alt="Cama Moderna 15" loading="lazy">
+        <h3>Cama Moderna 15</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama15-tamano">
+          <option value="170000">3/4(1.90cm x 1.20cm) - $170,000</option>
+          <option value="175000">Cama Camera(1.90cm x 135cm) - $175,000</option>
+          <option value="185000">Cama Queen(1.90 o 2m x 1.60cm) - $185,000</option>
+          <option value="195000">Cama King(2m x 2m) - $195,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 15', 'cama15-tamano')">🛒 Agregar al carrito</button>
+      </div>  
+      
+            <!-- Cama 16 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama16.webp" alt="Cama Moderna 16" loading="lazy">
+        <h3>Cama Moderna 16</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama16-tamano">
+          <option value="105000">3/4(1.90cm x 1.20cm) - $105,000</option>
+          <option value="110000">Cama Camera(1.90cm x 135cm) - $110,000</option>
+          <option value="120000">Cama Queen(1.90 o 2m x 1.60cm) - $120,000</option>
+          <option value="130000">Cama King(2m x 2m) - $130,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 16', 'cama16-tamano')">🛒 Agregar al carrito</button>
+      </div>  
+
+                  <!-- Cama 17 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama17.webp" alt="Cama Moderna 17" loading="lazy">
+        <h3>Cama Moderna 17</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama17-tamano">
+          <option value="125000">3/4(1.90cm x 1.20cm) - $125,000</option>
+          <option value="130000">Cama Camera(1.90cm x 135cm) - $130,000</option>
+          <option value="140000">Cama Queen(1.90 o 2m x 1.60cm) - $140,000</option>
+          <option value="150000">Cama King(2m x 2m) - $150,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 17', 'cama17-tamano')">🛒 Agregar al carrito</button>
+      </div>  
+
+                  <!-- Cama 18 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama18.webp" alt="Cama Moderna 18" loading="lazy">
+        <h3>Cama Moderna 18</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama18-tamano">
+          <option value="100000">3/4(1.90cm x 1.20cm) - $100,000</option>
+          <option value="105000">Cama Camera(1.90cm x 135cm) - $105,000</option>
+          <option value="115000">Cama Queen(1.90 o 2m x 1.60cm) - $115,000</option>
+          <option value="125000">Cama King(2m x 2m)- $125,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 18', 'cama18-tamano')">🛒 Agregar al carrito</button>
+      </div>  
+
+                  <!-- Cama 19 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama19.webp" alt="Cama Moderna 19" loading="lazy">
+        <h3>Cama Moderna 19</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama19-tamano">
+          <option value="100000">3/4(1.90cm x 1.20cm) - $100,000</option>
+          <option value="105000">Cama Camera(1.90cm x 135cm) - $105,000</option>
+          <option value="115000">Cama Queen(1.90 o 2m x 1.60cm) - $115,000</option>
+          <option value="125000">Cama King(2m x 2m) - $125,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 19', 'cama19-tamano')">🛒 Agregar al carrito</button>
+      </div>  
+
+                  <!-- Cama 20 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama20.webp" alt="Cama Moderna 20" loading="lazy">
+        <h3>Cama Moderna 20</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama20-tamano">
+          <option value="105000">3/4(1.90cm x 1.20cm) - $105,000</option>
+          <option value="110000">Cama Camera(1.90cm x 135cm) - $110,000</option>
+          <option value="120000">Cama Queen(1.90 o 2m x 1.60cm) - $120,000</option>
+          <option value="130000">Cama King(2m x 2m) - $130,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 20', 'cama20-tamano')">🛒 Agregar al carrito</button>
+      </div>  
+      
+      <!-- Cama 21 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama21.webp" alt="Cama Moderna 21" loading="lazy">
+        <h3>Cama Moderna 21</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <p>Diseño de cabecera Capitoneada y con Charol Plateado. </p>
+        <select id="cama21-tamano">
+          <option value="140000">3/4(1.90cm x 1.20cm) - $140,000</option>
+          <option value="145000">Cama Camera(1.90cm x 135cm) - $145,000</option>
+          <option value="155000">Cama Queen(1.90 o 2m x 1.60cm)  - $155,000</option>
+          <option value="165000">Cama King(2m x 2m) - $165,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 21', 'cama21-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 22 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama22.webp" alt="Cama Moderna 22" loading="lazy">
+        <h3>Cama Moderna 22</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <p>Diseño de cabecera Capitoneada y con Charol Plateado. </p>
+        <select id="cama22-tamano">
+          <option value="150000">3/4(1.90cm x 1.20cm) - $150,000</option>
+          <option value="155000">Cama Camera(1.90cm x 135cm) - $155,000</option>
+          <option value="165000">Cama Queen(1.90 o 2m x 1.60cm)  - $165,000</option>
+          <option value="175000">Cama King(2m x 2m) - $175,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 22', 'cama22-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 23 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama23.webp" alt="Cama Moderna 23" loading="lazy">
+        <h3>Cama Moderna 23</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama23-tamano">
+          <option value="105000">3/4(1.90cm x 1.20cm) - $105,000</option>
+          <option value="110000">Cama Camera(1.90cm x 135cm) - $110,000</option>
+          <option value="120000">Cama Queen(1.90 o 2m x 1.60cm)  - $120,000</option>
+          <option value="130000">Cama King(2m x 2m) - $130,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 23', 'cama23-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 24 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama24.webp" alt="Cama Moderna 24" loading="lazy">
+        <h3>Cama Moderna 24</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama24-tamano">
+          <option value="105000">3/4(1.90cm x 1.20cm) - $105,000</option>
+          <option value="110000">Cama Camera(1.90cm x 135cm) - $110,000</option>
+          <option value="120000">Cama Queen(1.90 o 2m x 1.60cm)  - $120,000</option>
+          <option value="130000">Cama King(2m x 2m) - $130,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 24', 'cama24-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 25 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama25.webp" alt="Cama Moderna 25" loading="lazy">
+        <h3>Cama Moderna 25</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama25">
+          <option value="140000">3/4(1.90cm x 1.20cm) - $140,000</option>
+          <option value="145000">Cama Camera(1.90cm x 135cm) - $145,000</option>
+          <option value="155000">Cama Queen(1.90 o 2m x 1.60cm)  - $155,000</option>
+          <option value="165000">Cama King(2m x 2m) - $165,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 25', 'cama25-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 26 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama26.webp" alt="Cama Moderna 26" loading="lazy">
+        <h3>Cama Moderna 26</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama26-tamano">
+          <option value="105000">3/4(1.90cm x 1.20cm) - $105,000</option>
+          <option value="110000">Cama Camera(1.90cm x 135cm) - $110,000</option>
+          <option value="120000">Cama Queen(1.90 o 2m x 1.60cm)  - $120,000</option>
+          <option value="130000">Cama King(2m x 2m) - $130,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 26', 'cama26-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 27 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama27.webp" alt="Cama Moderna 27" loading="lazy">
+        <h3>Cama Moderna 27</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama27-tamano">
+          <option value="125000">3/4(1.90cm x 1.20cm) - $125,000</option>
+          <option value="130000">Cama Camera(1.90cm x 135cm) - $130,000</option>
+          <option value="140000">Cama Queen(1.90 o 2m x 1.60cm)  - $140,000</option>
+          <option value="150000">Cama King(2m x 2m) - $150,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 27', 'cama27-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 28 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama28.webp" alt="Cama Moderna 28" loading="lazy">
+        <h3>Cama Moderna 28</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama28-tamano">
+          <option value="113000">3/4(1.90cm x 1.20cm) - $113,000</option>
+          <option value="118000">Cama Camera(1.90cm x 135cm) - $118,000</option>
+          <option value="128000">Cama Queen(1.90 o 2m x 1.60cm)  - $128,000</option>
+          <option value="138000">Cama King(2m x 2m) - $138,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 28', 'cama28-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 29 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama29.webp" alt="Cama Moderna 29" loading="lazy">
+        <h3>Cama Moderna 29</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama29-tamano">
+          <option value="125000">3/4(1.90cm x 1.20cm) - $125,000</option>
+          <option value="130000">Cama Camera(1.90cm x 135cm) - $130,000</option>
+          <option value="140000">Cama Queen(1.90 o 2m x 1.60cm)  - $140,000</option>
+          <option value="150000">Cama King(2m x 2m) - $150,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 29', 'cama29-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 30 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama30.webp" alt="Cama Moderna 30" loading="lazy">
+        <h3>Cama Moderna 30</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama30-tamano">
+          <option value="90000">3/4(1.90cm x 1.20cm) - $90,000</option>
+          <option value="95000">Cama Camera(1.90cm x 135cm) - $95,000</option>
+          <option value="105000">Cama Queen(1.90 o 2m x 1.60cm)  - $105,000</option>
+          <option value="115000">Cama King(2m x 2m) - $115,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 30', 'cama30-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 31 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama31.webp" alt="Cama Moderna 31" loading="lazy">
+        <h3>Cama Moderna 31</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama31-tamano">
+          <option value="120000">3/4(1.90cm x 1.20cm) - $95,000</option>
+          <option value="125000">Cama Camera(1.90cm x 135cm) - $125,000</option>
+          <option value="135000">Cama Queen(1.90 o 2m x 1.60cm)  - $135,000</option>
+          <option value="145000">Cama King(2m x 2m) - $145,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 31', 'cama31-tamano')">🛒 Agregar al carrito</button>
+      </div>
+
+      <!-- Cama 32 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama32.webp" alt="Cama Moderna 32" loading="lazy">
+        <h3>Cama Moderna 32</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores. Diseño de la cabecera es de lista</p>
+        <select id="cama32-tamano">
+          <option value="85000">3/4(1.90cm x 1.20cm) - $85,000</option>
+          <option value="90000">Cama Camera(1.90cm x 135cm) - $90,000</option>
+          <option value="100000">Cama Queen(1.90 o 2m x 1.60cm)  - $100,000</option>
+          <option value="110000">Cama King(2m x 2m) - $110,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 32', 'cama32-tamano')">🛒 Agregar al carrito</button>
+      </div>
+
+      <!-- Cama 33 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama33.webp" alt="Cama Moderna 33" loading="lazy">
+        <h3>Cama Moderna 33</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama33-tamano">
+          <option value="100000">3/4(1.90cm x 1.20cm) - $100,000</option>
+          <option value="105000">Cama Camera(1.90cm x 135cm) - $105,000</option>
+          <option value="115000">Cama Queen(1.90 o 2m x 1.60cm)  - $115,000</option>
+          <option value="125000">Cama King(2m x 2m) - $125,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 33', 'cama33-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 34 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama34.webp" alt="Cama Moderna 34" loading="lazy">
+        <h3>Cama Moderna 34</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama34-tamano">
+          <option value="105000">3/4(1.90cm x 1.20cm) - $105,000</option>
+          <option value="110000">Cama Camera(1.90cm x 135cm) - $110,000</option>
+          <option value="120000">Cama Queen(1.90 o 2m x 1.60cm)  - $120,000</option>
+          <option value="130000">Cama King(2m x 2m) - $130,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 34', 'cama34-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 35 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama35.webp" alt="Cama Moderna 35" loading="lazy">
+        <h3>Cama Moderna 35</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama35-tamano">
+          <option value="90000">3/4(1.90cm x 1.20cm) - $90,000</option>
+          <option value="95000">Cama Camera(1.90cm x 135cm) - $95,000</option>
+          <option value="105000">Cama Queen(1.90 o 2m x 1.60cm)  - $105,000</option>
+          <option value="115000">Cama King(2m x 2m) - $115,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 35', 'cama35-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 36 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama36.webp" alt="Cama Moderna 36" loading="lazy">
+        <h3>Cama Moderna 36</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama36-tamano">
+          <option value="130000">3/4(1.90cm x 1.20cm) - $130,000</option>
+          <option value="135000">Cama Camera(1.90cm x 135cm) - $135,000</option>
+          <option value="145000">Cama Queen(1.90 o 2m x 1.60cm)  - $145,000</option>
+          <option value="155000">Cama King(2m x 2m) - $155,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 36', 'cama36-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 37 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama37.webp" alt="Cama Moderna 37" loading="lazy">
+        <h3>Cama Moderna 37</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama37-tamano">
+          <option value="120000">3/4(1.90cm x 1.20cm) - $120,000</option>
+          <option value="125000">Cama Camera(1.90cm x 135cm) - $125,000</option>
+          <option value="135000">Cama Queen(1.90 o 2m x 1.60cm)  - $135,000</option>
+          <option value="145000">Cama King(2m x 2m) - $145,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 37', 'cama37-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 38 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama38.webp" alt="Cama Moderna 38" loading="lazy">
+        <h3>Cama Moderna 38</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama38-tamano">
+          <option value="165000">3/4(1.90cm x 1.20cm) - $165,000</option>
+          <option value="170000">Cama Camera(1.90cm x 135cm) - $170,000</option>
+          <option value="180000">Cama Queen(1.90 o 2m x 1.60cm)  - $180,000</option>
+          <option value="190000">Cama King(2m x 2m) - $190,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 38', 'cama38-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 39 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama39.webp" alt="Cama Moderna 39" loading="lazy">
+        <h3>Cama Moderna 39</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama39-tamano">
+          <option value="95000">3/4(1.90cm x 1.20cm) - $95,000</option>
+          <option value="100000">Cama Camera(1.90cm x 135cm) - $100,000</option>
+          <option value="110000">Cama Queen(1.90 o 2m x 1.60cm)  - $110,000</option>
+          <option value="120000">Cama King(2m x 2m) - $120,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 39', 'cama39-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+      <!-- Cama 40 -->
+      <div class="producto">
+        <img src="muebles y descanso/camas/cama40.webp" alt="Cama Moderna 40" loading="lazy">
+        <h3>Cama Moderna 40</h3>
+        <p>Disponible en tamaño 3/4,Camera,Queen,King y de todos los colores.</p>
+        <select id="cama40-tamano">
+          <option value="130000">3/4(1.90cm x 1.20cm) - $130,000</option>
+          <option value="135000">Cama Camera(1.90cm x 135cm) - $135,000</option>
+          <option value="145000">Cama Queen(1.90 o 2m x 1.60cm)  - $145,000</option>
+          <option value="155000">Cama King(2m x 2m) - $155,000</option>
+        </select>
+        <button onclick="agregarAlCarrito('Cama Moderna 40', 'cama40-tamano')">🛒 Agregar al carrito</button>
+      </div> 
+
+
+    </div>
+ </section>
 
   <!-- 🛋️ Muebles en L -->
-  
+  <section id="muebles-l" class="seccion-productos">
+   <h2 class="titulo-oro">
+  🛋️ Muebles en L 
+  </h2>
+    <div class="galeria">
+       
+      <!-- 🛋️ Mueble 1 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble1.webp" alt="Mueble L1" loading="lazy">
+        <h3>Mueble en L de Lujo</h3>
+        <p>✨ Confort y elegancia que transforman tu sala.</p>
+        <p class="precio">💰 $195,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 1', 195000)">Agregar 🛒</button>
+      </div>
+
+      <!-- 🛋️ Mueble 2 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble2.webp" alt="Mueble L2" loading="lazy">
+       <h3>Mueble en L de Lujo </h3>
+       <p>🌟 Diseño fino y moderno para un hogar con estilo.</p>
+       <p class="precio">💰 $210,000</p>
+       <button onclick="agregarAlCarrito('Mueble en L de Lujo capitoneado 2', 210000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 3 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble3.webp" alt="Mueble L3" loading="lazy">
+        <h3>Mueble en L </h3>
+        <p>🛋️ Elegancia y comodidad en perfecta armonía.</p>
+        <p class="precio">💰 $170,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L lujo 3', 170000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 4 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble4.webp" alt="Mueble L4" loading="lazy">
+        <h3>Mueble en L de Lujo</h3>
+        <p>✨Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $280,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de Lujo 4', 280000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 5 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble5.webp" alt="Mueble L5" loading="lazy">
+        <h3>Mueble en L de Lujo</h3>
+        <p>🏛️Diseño moderno con acabados premium. Ideal para espacios amplios.</p>
+        <p class="precio">💰 $480,000</p>
+        <button onclick="agregarAlCarrito('Mueble L en L de lujo 5', 480000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 6 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble6.webp" alt="Mueble L6" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>🏡 Ideal para crear un espacio acogedor y sofisticado.</p>
+        <p class="precio">💰 $165,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 6', 165000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 7 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble7.webp" alt="Mueble L7" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>🛋️Elegancia y confort en cada rincón: seccional gris, Butaca Curva y detalles que inspiran.</p>
+        <p class="precio">💰 $210,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 7', 210000)">Agregar 🛒</button>
+       </div>
+      
+      <!-- 🛋️ Mueble 8 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble8.webp" alt="Mueble L8" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>🖤Estilo minimalista con impacto visual: líneas modernas en blanco y negro para espacios únicos.</p>
+        <p class="precio">💰 $145,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 8', 145000)">Agregar 🛒</button>
+       </div>
+      
+      <!-- 🛋️ Mueble 9 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble9.webp" alt="Mueble L9" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $190,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 9', 190000)">Agregar 🛒</button>
+       </div>
+      
+      <!-- 🛋️ Mueble 10 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble10.webp" alt="Mueble L10" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Diseño contemporáneo en blanco y negro: elegancia que transforma tu espacio.</p>
+        <p class="precio">💰 $165,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 10', 165000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 11 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble11.webp" alt="Mueble L11" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $162,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 11', 162000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 12 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble12.webp" alt="Mueble L12" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $214,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 12', 214000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 13 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble13.webp" alt="Mueble L13" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $280,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 13', 280000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 14 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble14.webp" alt="Mueble L14" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $290,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 14', 290000)">Agregar 🛒</button>
+       </div>
+      
+      <!-- 🛋️ Mueble 15 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble15.webp" alt="Mueble L15" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $155,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 15', 155000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 16 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble16.webp" alt="Mueble L16" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>sofá blanco en L de 7 plaza con mesa de diseño para ambientes sofisticados.</p>
+        <p class="precio">💰 $215,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 16', 215000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 17 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble17.webp" alt="Mueble L17" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $230,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 17', 230000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 18 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble18.webp" alt="Mueble L10" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $280,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 18', 280000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 19 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble19.webp" alt="Mueble L19" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $140,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 19', 140000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 20 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble20.webp" alt="Mueble L20" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $210,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 20', 210000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 21 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble21.webp" alt="Mueble L21" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $400,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 21', 400000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 22 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble22.webp" alt="Mueble L22" loading="lazy">
+        <h3>Mueble en L Lujoso</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $600,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 22', 600000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 23 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble23.webp" alt="Mueble L23" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $285,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 23', 285000)">Agregar 🛒</button>
+       </div>
+      
+      <!-- 🛋️ Mueble 24 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble24.webp" alt="Mueble L24" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $120,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 24', 120000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 25 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble25.webp" alt="Mueble L25" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $135,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 25', 135000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 26 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble26.webp" alt="Mueble L26" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $165,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 26', 165000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 27 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble27.webp" alt="Mueble L27" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $180,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 27', 180000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 28 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble28.webp" alt="Mueble L28" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $275,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 28', 265000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 29 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble29.webp" alt="Mueble L29" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $185,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 29', 185000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🛋️ Mueble 30 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-l/mueble30.webp" alt="Mueble L30" loading="lazy">
+        <h3>Mueble en L Elegante</h3>
+        <p>Confort y elegancia para tu hogar.</p>
+        <p class="precio">💰 $270,000</p>
+        <button onclick="agregarAlCarrito('Mueble en L de lujo 30', 270000)">Agregar 🛒</button>
+       </div>
+      
+   </div> 
+ </section>
 
   <!-- 💎 TÍTULO DE SECCIÓN CAPITONEADOS -->
-  
-    <section class="seccion-padre" id="combos" style="margin-top:40px; border-top:2px solid gold; padding-top:20px;">
-      <h2 class="titulo-padre" style="text-align:center; color:gold; font-size:2.5rem; text-transform:uppercase; margin-bottom:10px; text-shadow:0 0 15px rgba(212,175,55,0.7);">🛒 Combos y Tienda</h2>
-    <section id="carnicos" class="seccion-productos">
+  <section id="muebles-capitoneados" class="seccion-productos">
+   <h2 class="titulo-oro">
+  💎 Muebles Capitoneados
+  </h2>
+    <div class="galeria">
+
+      <!-- 🪶 Capitoneado 1 -->
+      <div class="producto">
+        <img src="muebles-capitoneados/sala1.webp" alt="Capitoneado 1" loading="lazy">
+        <h3>Mueble Capitoneado Clásico</h3>
+        <p>Diseño tradicional.</p>
+        <p class="precio">💰 $370,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado clásico 1', 370000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 2 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala2.webp" alt="Capitoneado 2" loading="lazy">
+        <h3>Mueble Capitoneado Real</h3>
+        <p>Estilo elegante con tapizado premium.</p>
+        <p class="precio">💰 $270,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado real 2', 270000)">Agregar 🛒</button>
+      </div>
+
+      <!-- 🪶 Capitoneado 3 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala3.webp" alt="Capitoneado 3" loading="lazy">
+        <h3>Mueble Capitoneado Lujoso</h3>
+        <p>🌟 Detalles de lujo pensados para quienes aman lo exclusivo.</p>
+        <p class="precio">💰 $560,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado moderno 3', 560000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 4 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala4.webp" alt="Capitoneado 4" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $380,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 4', 380000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 5 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala5.webp" alt="Capitoneado 5" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $460,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 5', 460000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 6 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala6.webp" alt="Capitoneado 6" loading="lazy">
+        <h3>Confort y diseño elegante en un solo mueble.</h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $260,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 6', 260000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 7 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala7.webp" alt="Capitoneado 7" loading="lazy">
+        <h3>Mueble Capitoneado en L Lujoso </h3>
+        <p>🌟 Diseño de lujo que refleja distinción y buena calidad.</p>
+        <p class="precio">💰 $650,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 7', 650000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 8 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala8.webp" alt="Capitoneado 8" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $480,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 8', 480000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 9 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala9.webp" alt="Capitoneado 9" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $220,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 9', 220000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 10 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala10.webp" alt="Capitoneado 10" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $270,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 10', 270000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 11 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala11.webp" alt="Capitoneado 11" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $470,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 11', 470000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 12 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala12.webp" alt="Capitoneado 12" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $560,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 12', 560000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 13 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala13.webp" alt="Capitoneado 13" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $270,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 13', 270000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 14 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala14.webp" alt="Capitoneado 14" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $225,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 14', 225000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 15 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala15.webp" alt="Capitoneado 15" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $330,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 15', 330000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 16 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala16.webp" alt="Capitoneado 16" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $470,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 16', 470000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 17 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala17.webp" alt="Capitoneado 17" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $350,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 17', 350000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 18 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala18.webp" alt="Capitoneado 18" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $240,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 18', 240000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 19 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala19.webp" alt="Capitoneado 19" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $380,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 19', 380000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 20 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala20.webp" alt="Capitoneado 20" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $380,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 20', 380000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 21 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala21.webp" alt="Capitoneado 21" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $300,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 21', 300000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 22 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala22.webp" alt="Capitoneado 22" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $530,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 22', 530000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 23 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala23.webp" alt="Capitoneado 23" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $270,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 23', 270000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 24 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala24.webp" alt="Capitoneado 24" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $255,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 24', 255000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 25 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala25.webp" alt="Capitoneado 25" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $350,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 25', 350000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 26 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala26.webp" alt="Capitoneado 26" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $410,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 26', 410000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 27 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala27.webp" alt="Capitoneado 27" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $280,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 27', 280000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 28 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala28.webp" alt="Capitoneado 28" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $250,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 28', 250000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 29 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala29.webp" alt="Capitoneado 29" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $650,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 29', 650000)">Agregar 🛒</button>
+       </div>
+
+      <!-- 🪶 Capitoneado 30 -->
+      <div class="producto">
+        <img src="muebles y descanso/muebles-capitoneados/sala30.webp" alt="Capitoneado 30" loading="lazy">
+        <h3>Mueble Capitoneado en L </h3>
+        <p>Confort y diseño elegante en un solo mueble.</p>
+        <p class="precio">💰 $440,000</p>
+        <button class="boton-carrito" onclick="agregarAlCarrito('Mueble capitoneado en L 30', 440000)">Agregar 🛒</button>
+       </div>
+   </div>
+
+<!-- 🥩 CÁRNICOS -->
+<section id="carnicos" class="seccion-productos">
   <h2 class="titulo-oro">🥩 Cárnicos</h2>
 
   <div class="galeria">
-    <!-- Products will be loaded dynamically here -->
+
+    <!-- Paquete de pollo 10 lb -->
+    <div class="producto">
+      <img src="combos/carnicos/carnicos1.webp" alt="Paquete de pollo 10 lb" loading="lazy">
+      <h3>Paquete de pollo 10 lb</h3>
+      <p class="precio">💵 $10.90 USD</p>
+      <p>Paquete de pollo 10 lb</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Paquete de pollo 10 lb', 10.90)">Agregar 🛒</button>
+    </div>
+
+    <!-- Pechuga de pollo sin hueso 2 kg -->
+    <div class="producto">
+      <img src="combos/carnicos/carnicos2.webp" alt="Pechuga de pollo sin hueso 2 kg" loading="lazy">
+      <h3>Pechuga de pollo sin hueso 2 kg</h3>
+      <p class="precio">💵 $17.99 USD</p>
+      <p>Pechuga de pollo sin hueso 2 kg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Pechuga de pollo sin hueso 2 kg', 17.99)">Agregar 🛒</button>
+    </div>
+
+    <!-- Pierna de cerdo deshuesada / lb -->
+    <div class="producto">
+      <img src="combos/carnicos/carnicos3.webp" alt="Pierna de cerdo deshuesada / lb" loading="lazy">
+      <h3>Pierna de cerdo deshuesada / lb</h3>
+      <p class="precio">💵 $4.10 USD</p>
+      <p>Pierna de cerdo deshuesada / lb</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Pierna de cerdo deshuesada / lb', 4.10)">Agregar 🛒</button>
+    </div>
+
+    <!-- Lomo de cerdo deshuesado / lb -->
+    <div class="producto">
+      <img src="combos/carnicos/carnicos4.webp" alt="Lomo de cerdo deshuesado / lb" loading="lazy">
+      <h3>Lomo de cerdo deshuesado / lb</h3>
+      <p class="precio">💵 $3.95 USD</p>
+      <p>Lomo de cerdo deshuesado / lb</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Lomo de cerdo deshuesado / lb', 3.95)">Agregar 🛒</button>
+    </div>
+
+    <!-- Picadillo de pollo condimentado 400 g -->
+    <div class="producto">
+      <img src="combos/carnicos/carnicos5.webp" alt="Picadillo de pollo condimentado 400 g" loading="lazy">
+      <h3>Picadillo de pollo condimentado 400 g</h3>
+      <p class="precio">💵 $1.69 USD</p>
+      <p>Picadillo de pollo condimentado 400 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Picadillo de pollo 400 g', 1.69)">Agregar 🛒</button>
+    </div>
+
+    <!-- Salchicha de pollo (10 unidades) -->
+    <div class="producto">
+      <img src="combos/carnicos/carnicos6.webp" alt="Salchicha de pollo (10 unidades)" loading="lazy">
+      <h3>Salchicha de pollo (10 unidades)</h3>
+      <p class="precio">💵 $1.89 USD</p>
+      <p>Salchicha de pollo (10 unidades)</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Salchicha de pollo (10 unidades)', 1.89)">Agregar 🛒</button>
+    </div>
+
+    <!-- Croquetas de Pollo (10 unidades) -->
+    <div class="producto">
+      <img src="combos/carnicos/carnicos7.webp" alt="Croquetas de Pollo (10 unidades)" loading="lazy">
+      <h3>Croquetas de Pollo (10 unidades)</h3>
+      <p class="precio">💵 $1.59 USD</p>
+      <p>Croquetas de Pollo (10 unidades)</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Croquetas de Pollo (10 unidades)', 1.59)">Agregar 🛒</button>
+    </div>
+
+    <!-- Varitas de Merluza 1 kg -->
+    <div class="producto">
+      <img src="combos/carnicos/carnicos8.webp" alt="Varitas de Merluza 1 kg" loading="lazy">
+      <h3>Varitas de Merluza 1 kg</h3>
+      <p class="precio">💵 $5.89 USD</p>
+      <p>Varitas de Merluza 1 kg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Varitas de Merluza 1 kg', 5.89)">Agregar 🛒</button>
+    </div>
+
+    <!-- Atún 140 g -->
+    <div class="producto">
+      <img src="combos/carnicos/carnicos9.webp" alt="Atún 140 g" loading="lazy">
+      <h3>Atún 140 g</h3>
+      <p class="precio">💵 $3.59 USD</p>
+      <p>Atún 140 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Atún 140 g', 3.59)">Agregar 🛒</button>
+    </div>
+
+    <!-- Jamón García bloque de 5 lb -->
+    <div class="producto">
+      <img src="combos/carnicos/carnicos10.webp" alt="Jamon Garcia bloque de 5 lb" loading="lazy">
+      <h3>Jamón García bloque de 5 lb</h3>
+      <p class="precio">💵 $21.00 USD</p>
+      <p>Jamón García bloque de 5 lb</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Jamón García bloque de 5 lb', 21.00)">Agregar 🛒</button>
+    </div>
+
+    <!-- Queso Gouda bloque de 3 kg -->
+    <div class="producto">
+      <img src="combos/carnicos/carnicos11.webp" alt="Queso Gouda bloque de 3 kg" loading="lazy">
+      <h3>Queso Gouda bloque de 3 kg</h3>
+      <p class="precio">💵 $34.99 USD</p>
+      <p>Queso Gouda bloque de 3 kg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Queso Gouda bloque de 3 kg', 34.99)">Agregar 🛒</button>
+    </div>
+
+    <!-- Medio bloque de queso Gouda 1.5 kg -->
+    <div class="producto">
+      <img src="combos/carnicos/carnicos12.webp" alt="Medio bloque de queso Gouda 1.5 kg" loading="lazy">
+      <h3>Medio bloque de Queso Gouda 1.5 kg</h3>
+      <p class="precio">💵 $19.50 USD</p>
+      <p>Medio bloque de Queso Gouda 1.5 kg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Medio bloque Queso Gouda 1.5 kg', 19.50)">Agregar 🛒</button>
+    </div>
+
+    <!-- Hamburguesas de pollo (5 unidades) -->
+    <div class="producto">
+      <img src="combos/carnicos/carnicos13.webp" alt="Hamburguesas de pollo (5 unidades)" loading="lazy">
+      <h3>Hamburguesas de pollo (5 unidades)</h3>
+      <p class="precio">💵 $2.70 USD</p>
+      <p>Hamburguesas de pollo (5 unidades)</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Hamburguesas de pollo (5 unidades)', 2.70)">Agregar 🛒</button>
+    </div>
+
+    <!-- Huevos (30 unidades) -->
+    <div class="producto">
+      <img src="combos/carnicos/carnicos14.webp" alt="Huevos (30 unidades)" loading="lazy">
+      <h3>Huevos (30 unidades)</h3>
+      <p class="precio">💵 $8.99 USD</p>
+      <p>Huevos (30 unidades)</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Huevos (30 unidades)', 8.99)">Agregar 🛒</button>
+    </div>
+
   </div>
-</section><section id="agromercado" class="seccion-productos">
+</section>
+<!-- 🌽 AGRO Y MERCADO -->
+<section id="agromercado" class="seccion-productos">
   <h2 class="titulo-oro">🌽 Agro y Mercado</h2>
 
   <div class="galeria">
-    <!-- Products will be loaded dynamically here -->
+
+    <!-- Arroz / kg -->
+    <div class="producto">
+      <img src="combos/agromercado/agromercado1.webp" alt="Arroz / kg" loading="lazy">
+      <h3>Arroz / kg</h3>
+      <p class="precio">💵 $2.75 USD</p>
+      <p>Arroz / kg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Arroz / kg', 2.75)">Agregar 🛒</button>
+    </div>
+
+    <!-- Frijol negro / lb -->
+    <div class="producto">
+      <img src="combos/agromercado/agromercado2.webp" alt="Frijol negro / lb" loading="lazy">
+      <h3>Frijol negro / lb</h3>
+      <p class="precio">💵 $2.09 USD</p>
+      <p>Frijol negro / lb</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Frijol negro / lb', 2.09)">Agregar 🛒</button>
+    </div>
+
+    <!-- Frijol colorado / lb -->
+    <div class="producto">
+      <img src="combos/agromercado/agromercado3.webp" alt="Frijol colorado / lb" loading="lazy">
+      <h3>Frijol colorado / lb</h3>
+      <p class="precio">💵 $2.20 USD</p>
+      <p>Frijol colorado / lb</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Frijol colorado / lb', 2.20)">Agregar 🛒</button>
+    </div>
+
+    <!-- Garbanzos pkt 500 g -->
+    <div class="producto">
+      <img src="combos/agromercado/agromercado4.webp" alt="Garbanzos pkt 500 g" loading="lazy">
+      <h3>Garbanzos pkt 500 g</h3>
+      <p class="precio">💵 $2.99 USD</p>
+      <p>Garbanzos pkt 500 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Garbanzos pkt 500 g', 2.99)">Agregar 🛒</button>
+    </div>
+
+    <!-- Maíz en grano lata de 425 g -->
+    <div class="producto">
+      <img src="combos/agromercado/agromercado5.webp" alt="Maíz en grano lata de 425 g" loading="lazy">
+      <h3>Maíz en grano (lata 425 g)</h3>
+      <p class="precio">💵 $2.29 USD</p>
+      <p>Maíz en grano lata de 425 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Maíz en grano (lata 425 g)', 2.29)">Agregar 🛒</button>
+    </div>
+
+    <!-- Espagueti 500 g -->
+    <div class="producto">
+      <img src="combos/agromercado/agromercado6.webp" alt="Espagueti 500 g" loading="lazy">
+      <h3>Espagueti 500 g</h3>
+      <p class="precio">💵 $1.70 USD</p>
+      <p>Espagueti 500 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Espagueti 500 g', 1.70)">Agregar 🛒</button>
+    </div>
+
+    <!-- Fideos 350 g -->
+    <div class="producto">
+      <img src="combos/agromercado/agromercado7.webp" alt="Fideos 350 g" loading="lazy">
+      <h3>Fideos 350 g</h3>
+      <p class="precio">💵 $0.95 USD</p>
+      <p>Fideos 350 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Fideos 350 g', 0.95)">Agregar 🛒</button>
+    </div>
+
+    <!-- Sal 1 kg -->
+    <div class="producto">
+      <img src="combos/agromercado/agromercado8.webp" alt="Sal 1 kg" loading="lazy">
+      <h3>Sal 1 kg</h3>
+      <p class="precio">💵 $1.05 USD</p>
+      <p>Sal 1 kg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Sal 1 kg', 1.05)">Agregar 🛒</button>
+    </div>
+
+    <!-- Azúcar blanca 1 kg -->
+    <div class="producto">
+      <img src="combos/agromercado/agromercado9.webp" alt="Azúcar blanca 1 kg" loading="lazy">
+      <h3>Azúcar blanca 1 kg</h3>
+      <p class="precio">💵 $2.40 USD</p>
+      <p>Azúcar blanca 1 kg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Azúcar blanca 1 kg', 2.40)">Agregar 🛒</button>
+    </div>
+
+    <!-- Aceite 1 L -->
+    <div class="producto">
+      <img src="combos/agromercado/agromercado10.webp" alt="Aceite 1 L" loading="lazy">
+      <h3>Aceite 1 L</h3>
+      <p class="precio">💵 $3.45 USD</p>
+      <p>Aceite 1 L</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Aceite 1 L', 3.45)">Agregar 🛒</button>
+    </div>
+
+    <!-- Vinagre 1 l -->
+    <div class="producto">
+      <img src="combos/agromercado/agromercado11.webp" alt="Vinagre 1 L" loading="lazy">
+      <h3>Vinagre 1 L</h3>
+      <p class="precio">💵 $2.25 USD</p>
+      <p>Vinagre 1 L</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Vinagre 1 L', 2.25)">Agregar 🛒</button>
+    </div>
+
+    <!-- Zumo de Limón 295 g -->
+    <div class="producto">
+      <img src="combos/agromercado/agromercado12.webp" alt="Zumo de Limón 295 g" loading="lazy">
+      <h3>Zumo de Limón 295 g</h3>
+      <p class="precio">💵 $2.87 USD</p>
+      <p>Zumo de Limón 295 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Zumo de Limón 295 g', 2.87)">Agregar 🛒</button>
+    </div>
+
+    <!-- Sazon Iberia 10 u -->
+    <div class="producto">
+      <img src="combos/agromercado/agromercado13.webp" alt="Sazon Iberia 10 u" loading="lazy">
+      <h3>Sazon Iberia 10 u</h3>
+      <p class="precio">💵 $2.20 USD</p>
+      <p>Sazon Iberia 10 u</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Sazon Iberia 10 u', 2.20)">Agregar 🛒</button>
+    </div>
+
+    <!-- Caldito de pollo -->
+    <div class="producto">
+      <img src="combos/agromercado/agromercado14.webp" alt="Caldito de pollo" loading="lazy">
+      <h3>Caldito de pollo</h3>
+      <p class="precio">💵 $0.25 USD</p>
+      <p>Caldito de pollo</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Caldito de pollo', 0.25)">Agregar 🛒</button>
+    </div>
+
+    <!-- Pasta de tomate 400 g -->
+    <div class="producto">
+      <img src="combos/agromercado/agromercado15.webp" alt="Pasta de tomate 400 g" loading="lazy">
+      <h3>Pasta de tomate 400 g</h3>
+      <p class="precio">💵 $2.49 USD</p>
+      <p>Pasta de tomate 400 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Pasta de tomate 400 g', 2.49)">Agregar 🛒</button>
+    </div>
+
   </div>
-</section><section id="confituras" class="seccion-productos">
+</section>
+<!-- 🍯 CONFITURAS -->
+<section id="confituras" class="seccion-productos">
   <h2 class="titulo-oro">🍯 Confituras</h2>
 
   <div class="galeria">
-    <!-- Products will be loaded dynamically here -->
+
+    <!-- Galletas Renata -->
+    <div class="producto">
+      <img src="combos/confituras/confituras1.webp" alt="Galletas Renata" loading="lazy">
+      <h3>Galletas Renata</h3>
+      <p class="precio">💵 $1.39 USD</p>
+      <p>Galletas Renata</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Galletas Renata', 1.39)">Agregar 🛒</button>
+    </div>
+
+    <!-- Galletas Florbu con chispas de chocolate -->
+    <div class="producto">
+      <img src="combos/confituras/confituras2.webp" alt="Galletas Florbu con chispas de chocolate" loading="lazy">
+      <h3>Galletas Florbu con chispas de chocolate</h3>
+      <p class="precio">💵 $1.79 USD</p>
+      <p>Galletas Florbu con chispas de chocolate</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Galletas Florbu con chispas de chocolate', 1.79)">Agregar 🛒</button>
+    </div>
+
+    <!-- Bocadito de helado Sandy Nestle -->
+    <div class="producto">
+      <img src="combos/confituras/confituras3.webp" alt="Bocadito de helado Sandy Nestle" loading="lazy">
+      <h3>Bocadito de helado Sandy Nestle</h3>
+      <p class="precio">💵 $1.25 USD</p>
+      <p>Bocadito de helado Sandy Nestle</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Bocadito de helado Sandy Nestle', 1.25)">Agregar 🛒</button>
+    </div>
+
+    <!-- Pote de helado Nestle 450 ml -->
+    <div class="producto">
+      <img src="combos/confituras/confituras4.webp" alt="Pote de helado Nestle 450 ml" loading="lazy">
+      <h3>Pote de helado Nestle 450 ml</h3>
+      <p class="precio">💵 $3.99 USD</p>
+      <p>Pote de helado Nestle 450 ml</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Pote de helado Nestle 450 ml', 3.99)">Agregar 🛒</button>
+    </div>
+
+    <!-- Sorbetos 175 g -->
+    <div class="producto">
+      <img src="combos/confituras/confituras5.webp" alt="Sorbetos 175 g" loading="lazy">
+      <h3>Sorbetos 175 g</h3>
+      <p class="precio">💵 $1.95 USD</p>
+      <p>Sorbetos 175 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Sorbetos 175 g', 1.95)">Agregar 🛒</button>
+    </div>
+
+    <!-- Paquete de 20 Bombones -->
+    <div class="producto">
+      <img src="combos/confituras/confituras6.webp" alt="Paquete de 20 Bombones" loading="lazy">
+      <h3>Paquete de 20 Bombones</h3>
+      <p class="precio">💵 $3.90 USD</p>
+      <p>Paquete de 20 Bombones</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Paquete de 20 Bombones', 3.90)">Agregar 🛒</button>
+    </div>
+
+    <!-- M&M 43.8 g -->
+    <div class="producto">
+      <img src="combos/confituras/confituras7.webp" alt="M&M 43.8 g" loading="lazy">
+      <h3>M&M 43.8 g</h3>
+      <p class="precio">💵 $2.27 USD</p>
+      <p>M&M 43.8 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('M&M 43.8 g', 2.27)">Agregar 🛒</button>
+    </div>
+
+    <!-- Snickers 48 g -->
+    <div class="producto">
+      <img src="combos/confituras/confituras8.webp" alt="Snickers 48 g" loading="lazy">
+      <h3>Snickers 48 g</h3>
+      <p class="precio">💵 $2.49 USD</p>
+      <p>Snickers 48 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Snickers 48 g', 2.49)">Agregar 🛒</button>
+    </div>
+
+    <!-- Milky Way 48 g -->
+    <div class="producto">
+      <img src="combos/confituras/confituras9.webp" alt="Milky Way 48 g" loading="lazy">
+      <h3>Milky Way 48 g</h3>
+      <p class="precio">💵 $2.49 USD</p>
+      <p>Milky Way 48 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Milky Way 48 g', 2.49)">Agregar 🛒</button>
+    </div>
+
+    <!-- Peter Hersheys chocolate blanco 20 g -->
+    <div class="producto">
+      <img src="combos/confituras/confituras10.webp" alt="Peter Hersheys chocolate blanco 20 g" loading="lazy">
+      <h3>Peter Hersheys chocolate blanco 20 g</h3>
+      <p class="precio">💵 $1.59 USD</p>
+      <p>Peter Hersheys chocolate blanco 20 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Peter Hersheys chocolate blanco 20 g', 1.59)">Agregar 🛒</button>
+    </div>
+
+    <!-- Barrita de chocolate Nuvix 22 g -->
+    <div class="producto">
+      <img src="combos/confituras/confituras11.webp" alt="Barrita de chocolate Nuvix 22 g" loading="lazy">
+      <h3>Barrita de chocolate Nuvix 22 g</h3>
+      <p class="precio">💵 $0.33 USD</p>
+      <p>Barrita de chocolate Nuvix 22 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Barrita de chocolate Nuvix 22 g', 0.33)">Agregar 🛒</button>
+    </div>
+
+    <!-- Barrita de chocolate Erdem 20 g -->
+    <div class="producto">
+      <img src="combos/confituras/confituras12.webp" alt="Barrita de chocolate Erdem 20 g" loading="lazy">
+      <h3>Barrita de chocolate Erdem 20 g</h3>
+      <p class="precio">💵 $0.31 USD</p>
+      <p>Barrita de chocolate Erdem 20 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Barrita de chocolate Erdem 20 g', 0.31)">Agregar 🛒</button>
+    </div>
+
+    <!-- Sorbeto Greedy 30 g -->
+    <div class="producto">
+      <img src="combos/confituras/confituras13.webp" alt="Sorbeto Greedy 30 g" loading="lazy">
+      <h3>Sorbeto Greedy 30 g</h3>
+      <p class="precio">💵 $0.41 USD</p>
+      <p>Sorbeto Greedy 30 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Sorbeto Greedy 30 g', 0.41)">Agregar 🛒</button>
+    </div>
+
   </div>
-</section><section id="bebidas" class="seccion-productos">
+</section>
+<section id="bebidas" class="seccion-productos">
   <h2 class="titulo-oro">🥤 Bebidas</h2>
 
   <div class="galeria">
-    <!-- Products will be loaded dynamically here -->
+
+    <!-- Refresco en polvo 1L (10u) -->
+    <div class="producto">
+      <img src="combos/bebidas/bebidas1.webp" alt="Refresco en polvo 1L (10u)" loading="lazy">
+      <h3>Refresco en polvo 1L (10u)</h3>
+      <p class="precio">💵 $1.80 USD</p>
+      <p>Refresco en polvo 1L (10u)</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Refresco en polvo 1L (10u)', 1.80)">Agregar 🛒</button>
+    </div>
+
+    <!-- Refresco gaseado 330 ml (Cola / Limón / Naranja) -->
+    <div class="producto">
+      <img src="combos/bebidas/bebidas2.webp" alt="Refresco gaseado 330 ml (Cola / Limón / Naranja)" loading="lazy">
+      <h3>Refresco gaseado 330 ml</h3>
+      <p class="precio">💵 $0.79 USD</p>
+      <p>Cola / Limón / Naranja - 330 ml</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Refresco gaseado 330 ml (Cola/Limón/Naranja)', 0.79)">Agregar 🛒</button>
+    </div>
+
+    <!-- Malta -->
+    <div class="producto">
+      <img src="combos/bebidas/bebidas3.webp" alt="Malta" loading="lazy">
+      <h3>Malta</h3>
+      <p class="precio">💵 $0.91 USD</p>
+      <p>Malta</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Malta', 0.91)">Agregar 🛒</button>
+    </div>
+
+    <!-- Jugo 1 Litro -->
+    <div class="producto">
+      <img src="combos/bebidas/bebidas4.webp" alt="Jugo 1 Litro" loading="lazy">
+      <h3>Jugo 1 Litro</h3>
+      <p class="precio">💵 $2.40 USD</p>
+      <p>Jugo 1 Litro</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Jugo 1 Litro', 2.40)">Agregar 🛒</button>
+    </div>
+
+    <!-- Yogurt Natural / Fresa 1.5 L -->
+    <div class="producto">
+      <img src="combos/bebidas/bebidas5.webp" alt="Yogurt Natural / Fresa 1.5 L" loading="lazy">
+      <h3>Yogurt Natural / Fresa 1.5 L</h3>
+      <p class="precio">💵 $6.59 USD</p>
+      <p>Yogurt Natural / Fresa 1.5 L</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Yogurt Natural / Fresa 1.5 L', 6.59)">Agregar 🛒</button>
+    </div>
+
+    <!-- Vino Tinto 750 ml -->
+    <div class="producto">
+      <img src="combos/bebidas/bebidas6.webp" alt="Vino Tinto 750 ml" loading="lazy">
+      <h3>Vino Tinto 750 ml</h3>
+      <p class="precio">💵 $9.17 USD</p>
+      <p>Vino Tinto 750 ml</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Vino Tinto 750 ml', 9.17)">Agregar 🛒</button>
+    </div>
+
+    <!-- Sidra sin alcohol -->
+    <div class="producto">
+      <img src="combos/bebidas/bebidas7.webp" alt="Sidra sin alcohol" loading="lazy">
+      <h3>Sidra sin alcohol</h3>
+      <p class="precio">💵 $2.99 USD</p>
+      <p>Sidra sin alcohol</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Sidra sin alcohol', 2.99)">Agregar 🛒</button>
+    </div>
+
   </div>
-</section><section id="aseo" class="seccion-productos">
+</section>
+<section id="aseo" class="seccion-productos">
   <h2 class="titulo-oro">🧴 Aseo y Limpieza</h2>
 
   <div class="galeria">
-    <!-- Products will be loaded dynamically here -->
+
+    <!-- LIMPIEZA -->
+    <div class="producto">
+      <img src="combos/aseo-limpieza/limpieza1.webp" alt="Detergente liquido lavavajillas" loading="lazy">
+      <h3>Detergente líquido lavavajillas</h3>
+      <p class="precio">💵 $4.51 USD</p>
+      <p>Detergente líquido lavavajillas</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Detergente líquido lavavajillas', 4.51)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/aseo-limpieza/limpieza2.webp" alt="Detergente en polvo 500 g" loading="lazy">
+      <h3>Detergente en polvo 500 g</h3>
+      <p class="precio">💵 $1.89 USD</p>
+      <p>Detergente en polvo 500 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Detergente en polvo 500 g', 1.89)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/aseo-limpieza/limpieza3.webp" alt="Esponja de fregar" loading="lazy">
+      <h3>Esponja de fregar</h3>
+      <p class="precio">💵 $0.39 USD</p>
+      <p>Esponja de fregar</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Esponja de fregar', 0.39)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/aseo-limpieza/limpieza4.webp" alt="Jabón de lavar 250 g" loading="lazy">
+      <h3>Jabón de lavar 250 g</h3>
+      <p class="precio">💵 $1.89 USD</p>
+      <p>Jabón de lavar 250 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Jabón de lavar 250 g', 1.89)">Agregar 🛒</button>
+    </div>
+
+    <!-- ASEO -->
+    <div class="producto">
+      <img src="combos/aseo-limpieza/limpieza5.webp" alt="Jabón de baño" loading="lazy">
+      <h3>Jabón de baño</h3>
+      <p class="precio">💵 $1.10 USD</p>
+      <p>Jabón de baño</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Jabón de baño', 1.10)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/aseo-limpieza/limpieza6.webp" alt="Juego de shampoo y acondicionador" loading="lazy">
+      <h3>Juego shampoo + acondicionador</h3>
+      <p class="precio">💵 $8.25 USD</p>
+      <p>Juego de shampoo y acondicionador</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Juego de shampoo y acondicionador', 8.25)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/aseo-limpieza/limpieza7.webp" alt="Juego de shampoo y acondicionador sin sal" loading="lazy">
+      <h3>Juego shampoo + acond. sin sal</h3>
+      <p class="precio">💵 $12.65 USD</p>
+      <p>Juego de shampoo y acondicionador sin sal</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Juego shampoo y acondicionador sin sal', 12.65)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/aseo-limpieza/limpieza8.webp" alt="Desodorante pasta / spray" loading="lazy">
+      <h3>Desodorante (pasta / spray)</h3>
+      <p class="precio">💵 $8.36 USD</p>
+      <p>Desodorante pasta / spray</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Desodorante pasta/spray', 8.36)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/aseo-limpieza/limpieza9.webp" alt="Colonia 300 ml" loading="lazy">
+      <h3>Colonia 300 ml</h3>
+      <p class="precio">💵 $7.65 USD</p>
+      <p>Colonia 300 ml</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Colonia 300 ml', 7.65)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/aseo-limpieza/limpieza10.webp" alt="Perfume Mariposa / Camerata" loading="lazy">
+      <h3>Perfume Mariposa / Camerata</h3>
+      <p class="precio">💵 $16.50 USD</p>
+      <p>Perfume Mariposa / Camerata</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Perfume Mariposa / Camerata', 16.50)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/aseo-limpieza/limpieza11.webp" alt="Crema corporal" loading="lazy">
+      <h3>Crema corporal</h3>
+      <p class="precio">💵 $5.50 USD</p>
+      <p>Crema corporal</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Crema corporal', 5.50)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/aseo-limpieza/limpieza12.webp" alt="Pasta dental Royal Fresh 115 g" loading="lazy">
+      <h3>Pasta dental Royal Fresh 115 g</h3>
+      <p class="precio">💵 $4.99 USD</p>
+      <p>Pasta dental Royal Fresh 115 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Pasta dental Royal Fresh 115 g', 4.99)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/aseo-limpieza/limpieza13.webp" alt="Toallitas húmedas" loading="lazy">
+      <h3>Toallitas húmedas</h3>
+      <p class="precio">💵 $4.40 USD</p>
+      <p>Toallitas húmedas</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Toallitas húmedas', 4.40)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/aseo-limpieza/limpieza14.webp" alt="Papel higiénico (4 rollos)" loading="lazy">
+      <h3>Papel higiénico (4 rollos)</h3>
+      <p class="precio">💵 $4.18 USD</p>
+      <p>Papel higiénico (4 rollos)</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Papel higiénico (4 rollos)', 4.18)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/aseo-limpieza/limpieza15.webp" alt="Íntimas 10 u" loading="lazy">
+      <h3>Íntimas 10 u</h3>
+      <p class="precio">💵 $2.53 USD</p>
+      <p>Íntimas 10 u</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Íntimas 10 u', 2.53)">Agregar 🛒</button>
+    </div>
+
   </div>
-</section><section id="farmacia" class="seccion-productos">
+</section>
+<section id="farmacia" class="seccion-productos">
   <h2 class="titulo-oro">💊 Farmacia</h2>
 
   <div class="galeria">
-    <!-- Products will be loaded dynamically here -->
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia1.webp" alt="Cefalexina 12 tab de 500 mg" loading="lazy">
+      <h3>Cefalexina 12 tab de 500 mg</h3>
+      <p class="precio">💵 $3.90 USD</p>
+      <p>Cefalexina 12 tab de 500 mg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Cefalexina 12 tab de 500 mg', 3.90)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia2.webp" alt="Azitromicina 3 tab de 500 mg" loading="lazy">
+      <h3>Azitromicina 3 tab de 500 mg</h3>
+      <p class="precio">💵 $2.95 USD</p>
+      <p>Azitromicina 3 tab de 500 mg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Azitromicina 3 tab de 500 mg', 2.95)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia3.webp" alt="Vitaminas A, C, D (infantil 30 ml)" loading="lazy">
+      <h3>Vitaminas A, C, D (infantil 30 ml)</h3>
+      <p class="precio">💵 $4.99 USD</p>
+      <p>Vitaminas A, C, D (infantil 30 ml)</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Vitaminas A, C, D (infantil 30 ml)', 4.99)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia4.webp" alt="Vitamina C 80 tab" loading="lazy">
+      <h3>Vitamina C 80 tab</h3>
+      <p class="precio">💵 $4.10 USD</p>
+      <p>Vitamina C 80 tab</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Vitamina C 80 tab', 4.10)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia5.webp" alt="Metronidazol 10 tab" loading="lazy">
+      <h3>Metronidazol 10 tab</h3>
+      <p class="precio">💵 $2.90 USD</p>
+      <p>Metronidazol 10 tab</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Metronidazol 10 tab', 2.90)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia6.webp" alt="Aspirina 20 tab" loading="lazy">
+      <h3>Aspirina 20 tab</h3>
+      <p class="precio">💵 $2.00 USD</p>
+      <p>Aspirina 20 tab</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Aspirina 20 tab', 2.00)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia7.webp" alt="Captopril 25 mg 30 tabletas" loading="lazy">
+      <h3>Captopril 25 mg 30 tabletas</h3>
+      <p class="precio">💵 $1.90 USD</p>
+      <p>Captopril 25 mg 30 tabletas</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Captopril 25 mg 30 tabletas', 1.90)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia8.webp" alt="Diclofenaco en gel 60 g" loading="lazy">
+      <h3>Diclofenaco en gel 60 g</h3>
+      <p class="precio">💵 $5.90 USD</p>
+      <p>Diclofenaco en gel 60 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Diclofenaco en gel 60 g', 5.90)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia9.webp" alt="Metamizol (Dipirona) 10 tab de 500 mg" loading="lazy">
+      <h3>Metamizol (Dipirona) 10 tab de 500 mg</h3>
+      <p class="precio">💵 $1.80 USD</p>
+      <p>Metamizol (Dipirona) 10 tab de 500 mg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Metamizol (Dipirona) 10 tab de 500 mg', 1.80)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia10.webp" alt="Amoxicilina 12 tab de 500 mg" loading="lazy">
+      <h3>Amoxicilina 12 tab de 500 mg</h3>
+      <p class="precio">💵 $3.00 USD</p>
+      <p>Amoxicilina 12 tab de 500 mg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Amoxicilina 12 tab de 500 mg', 3.00)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia11.webp" alt="Ciprofloxacino 10 tab de 500 mg" loading="lazy">
+      <h3>Ciprofloxacino 10 tab de 500 mg</h3>
+      <p class="precio">💵 $3.50 USD</p>
+      <p>Ciprofloxacino 10 tab de 500 mg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Ciprofloxacino 10 tab de 500 mg', 3.50)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia12.webp" alt="Paracetamol 10 tab de 500 mg" loading="lazy">
+      <h3>Paracetamol 10 tab de 500 mg</h3>
+      <p class="precio">💵 $1.80 USD</p>
+      <p>Paracetamol 10 tab de 500 mg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Paracetamol 10 tab de 500 mg', 1.80)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia13.webp" alt="Loratadina 10 tab de 10 mg" loading="lazy">
+      <h3>Loratadina 10 tab de 10 mg</h3>
+      <p class="precio">💵 $2.00 USD</p>
+      <p>Loratadina 10 tab de 10 mg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Loratadina 10 tab de 10 mg', 2.00)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia14.webp" alt="Ibuprofeno en suspensión 120 ml" loading="lazy">
+      <h3>Ibuprofeno en suspensión 120 ml</h3>
+      <p class="precio">💵 $5.99 USD</p>
+      <p>Ibuprofeno en suspensión 120 ml</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Ibuprofeno en suspensión 120 ml', 5.99)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia15.webp" alt="Alkaseltzer 2 capsulas" loading="lazy">
+      <h3>Alkaseltzer 2 cápsulas</h3>
+      <p class="precio">💵 $0.97 USD</p>
+      <p>Alkaseltzer 2 cápsulas</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Alkaseltzer 2 cápsulas', 0.97)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia16.webp" alt="Hidroclorotiazida" loading="lazy">
+      <h3>Hidroclorotiazida</h3>
+      <p class="precio">💵 $2.00 USD</p>
+      <p>Hidroclorotiazida</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Hidroclorotiazida', 2.00)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia17.webp" alt="Omeprazol 14 cápsulas de 20 mg" loading="lazy">
+      <h3>Omeprazol 14 cápsulas de 20 mg</h3>
+      <p class="precio">💵 $1.89 USD</p>
+      <p>Omeprazol 14 cápsulas de 20 mg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Omeprazol 14 cápsulas de 20 mg', 1.89)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia18.webp" alt="Termómetro digital" loading="lazy">
+      <h3>Termómetro digital</h3>
+      <p class="precio">💵 $4.89 USD</p>
+      <p>Termómetro digital</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Termómetro digital', 4.89)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/farmacia/farmacia19.webp" alt="Ungüento mentol" loading="lazy">
+      <h3>Ungüento mentol</h3>
+      <p class="precio">💵 $3.00 USD</p>
+      <p>Ungüento mentol</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Ungüento mentol', 3.00)">Agregar 🛒</button>
+    </div>
+
   </div>
-</section><section id="otros" class="seccion-productos">
+</section>
+<section id="otros" class="seccion-productos">
   <h2 class="titulo-oro">📦 Otros</h2>
 
   <div class="galeria">
-    <!-- Products will be loaded dynamically here -->
+
+    <div class="producto">
+      <img src="combos/otros/otros1.webp" alt="Leche en polvo 1 kg" loading="lazy">
+      <h3>Leche en polvo 1 kg</h3>
+      <p class="precio">💵 $7.39 USD</p>
+      <p>Leche en polvo 1 kg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Leche en polvo 1 kg', 7.39)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/otros/otros2.webp" alt="Café Aroma 250 g" loading="lazy">
+      <h3>Café Aroma 250 g</h3>
+      <p class="precio">💵 $5.79 USD</p>
+      <p>Café Aroma 250 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Café Aroma 250 g', 5.79)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/otros/otros3.webp" alt="Chocolate en polvo 500 g" loading="lazy">
+      <h3>Chocolate en polvo 500 g</h3>
+      <p class="precio">💵 $3.99 USD</p>
+      <p>Chocolate en polvo 500 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Chocolate en polvo 500 g', 3.99)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/otros/otros4.webp" alt="Leche condensada 385 g" loading="lazy">
+      <h3>Leche condensada 385 g</h3>
+      <p class="precio">💵 $1.88 USD</p>
+      <p>Leche condensada 385 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Leche condensada 385 g', 1.88)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/otros/otros5-40g.webp" alt="Gelatina de Mandarina 40 g" loading="lazy">
+      <h3>Gelatina de Mandarina 40 g</h3>
+      <p class="precio">💵 $0.69 USD</p>
+      <p>Gelatina de Mandarina 40 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Gelatina de Mandarina 40 g', 0.69)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/otros/otros6.webp" alt="Mayonesa 500 g" loading="lazy">
+      <h3>Mayonesa 500 g</h3>
+      <p class="precio">💵 $3.23 USD</p>
+      <p>Mayonesa 500 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Mayonesa 500 g', 3.23)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/otros/otros7.webp" alt="Mantequilla 250 g" loading="lazy">
+      <h3>Mantequilla 250 g</h3>
+      <p class="precio">💵 $2.60 USD</p>
+      <p>Mantequilla 250 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Mantequilla 250 g', 2.60)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/otros/otros8.webp" alt="Queso Crema 226 g" loading="lazy">
+      <h3>Queso Crema 226 g</h3>
+      <p class="precio">💵 $3.69 USD</p>
+      <p>Queso Crema 226 g</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Queso Crema 226 g', 3.69)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/otros/otros9.webp" alt="Galletas Crokantinas (7 pkt)" loading="lazy">
+      <h3>Galletas Crokantinas (7 pkt)</h3>
+      <p class="precio">💵 $3.90 USD</p>
+      <p>Galletas Crokantinas (7 pkt)</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Galletas Crokantinas (7 pkt)', 3.90)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/otros/otros10.webp" alt="Papas prefritas 2.5 kg" loading="lazy">
+      <h3>Papas prefritas 2.5 kg</h3>
+      <p class="precio">💵 $9.90 USD</p>
+      <p>Papas prefritas 2.5 kg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Papas prefritas 2.5 kg', 9.90)">Agregar 🛒</button>
+    </div>
+
+    <div class="producto">
+      <img src="combos/otros/otros11.webp" alt="Papas prefritas 1 kg" loading="lazy">
+      <h3>Papas prefritas 1 kg</h3>
+      <p class="precio">💵 $5.29 USD</p>
+      <p>Papas prefritas 1 kg</p>
+      <button class="boton-carrito" onclick="agregarAlCarrito('Papas prefritas 1 kg', 5.29)">Agregar 🛒</button>
+    </div>
+
   </div>
 </section>
-    
-    </section>
-  
-
-<!-- 🥩 CÁRNICOS -->
-
-<!-- 🌽 AGRO Y MERCADO -->
-
-<!-- 🍯 CONFITURAS -->
-
-
-
-
-
 
 
 
@@ -262,365 +2973,396 @@
 
       <!-- Usa la clase .boton-carrito para heredar estilos -->
       <button class="boton-carrito" onclick="agregarAlCarrito('Cama Moderna 1', 'combo1-tamano')">🛒 Agregar al carrito</button>
-    
+    </div>
 
     <!-- duplicar el bloque .producto para más combos, cambiando ids -->
-  
+  </div>
+</section>
 
 
 
-
-    
- 
+    </div>
+ </section>
 
   <!-- 🛋️ Muebles en L -->
+  <section id="muebles-l" class="seccion-productos">
+   <h2 class="titulo-oro">
+  🛋️ Muebles en L 
+  </h2>
+    <div class="galeria"></div>
   
+  <script>
+(function(){
+    const toggle = document.getElementById('combos-toggle');
+    if (!toggle) return;
+    const li = toggle.closest('li');
+    const submenu = document.getElementById('combos-submenu');
+
+    function openMenu() {
+      li.classList.add('open');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+    function closeMenu() {
+      li.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+    function toggleMenu() {
+      li.classList.contains('open') ? closeMenu() : openMenu();
+    }
+
+    // click en el botón
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // teclado: Enter / Space abren, Escape cierra
+    toggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu();
+      } else if (e.key === 'Escape') {
+        closeMenu();
+        toggle.focus();
+      }
+    });
+
+    // cerrar al hacer click fuera
+    document.addEventListener('click', (e) => {
+      if (!li.contains(e.target)) closeMenu();
+    });
+
+    // cerrar con Escape si foco en submenu
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (li.classList.contains('open')) {
+          closeMenu();
+          toggle.focus();
+        }
+      }
+    });
+
+    // cerrar al seleccionar una opción del submenu
+    submenu.addEventListener('click', (e) => {
+      const tgt = e.target;
+      if (tgt.tagName.toLowerCase() === 'a') {
+        closeMenu();
+      }
+    });
+  })();
+
+(function(){
+  const toggleBtn = document.getElementById('muebles-toggle');
+  const submenu = document.getElementById('muebles-submenu');
+
+  if (!toggleBtn || !submenu) return; // seguridad
+
+  // Abrir / cerrar con clase 'open'
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const willOpen = !submenu.classList.contains('open');
+    submenu.classList.toggle('open', willOpen);
+    toggleBtn.setAttribute('aria-expanded', String(willOpen));
+    submenu.setAttribute('aria-hidden', String(!willOpen));
+    if (willOpen) submenu.querySelector('.submenu-link')?.focus();
+  });
+
+  // Cerrar si se hace click fuera
+  document.addEventListener('click', (e) => {
+    if (!submenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+      submenu.classList.remove('open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      submenu.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  // Cerrar con Escape y soporte para navegación con teclado básica
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      submenu.classList.remove('open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      submenu.setAttribute('aria-hidden', 'true');
+      toggleBtn.focus();
+    }
+    // Abrir con tecla Enter/Space cuando el botón está enfocado
+    if ((e.key === 'Enter' || e.key === ' ') && document.activeElement === toggleBtn) {
+      e.preventDefault();
+      toggleBtn.click();
+    }
+  });
+
+  // Si eliges una opción del submenu: cerrar y hacer scroll suave (si es ancla)
+  submenu.querySelectorAll('.submenu-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href') || '';
+      if (href.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        submenu.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        submenu.setAttribute('aria-hidden', 'true');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+})();
+</script>
+</script>
+const toggleBtn = document.getElementById('muebles-toggle');
+const submenu = document.getElementById('muebles-submenu');
+
+submenu.style.display = "none";
+
+toggleBtn.onclick = () => {
+  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+};
+</script>
+
+
+
+  <!-- 🛒 SECCIÓN DEL CARRITO -->
+ <div id="carrito-contenedor">
+   <div id="carrito-header" onclick="toggleCarrito()">
+    <span>🛒 Carrito de Compras</span>
+    <span id="toggle-icon">🔽</span>
+   </div>
+
+   <div id="carrito" class="cerrado">
+    <ul id="lista-carrito"></ul>
+    <p id="total">Total: $0</p>
+    <div class="botones-carrito">
+      <button class="boton-carrito vaciar" onclick="vaciarCarrito()">🗑️ Vaciar</button>
+      <button class="boton-carrito enviar" onclick="enviarWhatsApp()">📲 Enviar por WhatsApp</button>
+   </div> 
+ </div>    
+
+  <style>
+    /* 🛒 Estilo general del carrito */
+    #carrito-contenedor {
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     background: rgba(0, 0, 0, 0.95);
+     border-top: 3px solid gold;
+     box-shadow: 0 -4px 20px rgba(255, 215, 0, 0.4);
+     font-family: "Poppins", sans-serif;
+     z-index: 1000;
+     color: gold;
+     max-height: 70px; /* Altura inicial (más baja) */
+     overflow: hidden;
+     transition: max-height 0.5s ease;
+  }
+
+  /* 🧱 Encabezado del carrito */
+  #carrito-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.9);
+    color: gold;
+    font-size: 1.2rem;
+    border-bottom: 1px solid gold;
+  }
+
+  #carrito-header:hover {
+    background-color: gold;
+    color: #000;
+  }
+
+  /* 🔽 Contenido interno del carrito */
+  #carrito {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    padding: 0 20px;
+  }
+
+  #carrito.abierto {
+    max-height: 400px; /* Altura total visible al abrir */
+    padding: 15px 20px;
+  }
+
+  /* 🧾 Lista */
+  #lista-carrito {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  #lista-carrito li {
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid gold;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+
+  #lista-carrito li button {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  /* 💰 Total */
+  #total {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: gold;
+    font-weight: bold;
+  }
+
+  /* 🟡 Botones */
+  .botones-carrito {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .boton-carrito {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+  }
+
+  .boton-carrito.vaciar {
+    background-color: #222;
+    color: gold;
+    border: 1px solid gold;
+  }
+
+  .boton-carrito.vaciar:hover {
+    background-color: gold;
+    color: #000;
+  }
+
+  .boton-carrito.enviar {
+    background-color: gold;
+    color: #000;
+  }
+
+  .boton-carrito.enviar:hover {
+    background-color: #d4af37;
+    transform: scale(1.05);
+  }
+  </style>
+
+ <script>
+ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  function guardarCarrito() {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }
+
+  function agregarAlCarrito(nombre, idSelect) {
+    const select = document.getElementById(idSelect);
+    let precio = 0;
+    let tamano = "";
+
+    if (select) {
+      precio = parseFloat(select.value);
+      tamano = select.options[select.selectedIndex].text;
+    } else {
+      precio = parseFloat(idSelect);
+      tamano = "Único modelo";
+    }
+
+    carrito.push({ nombre, tamano, precio });
+    guardarCarrito();
+    actualizarCarrito();
+  }
+
+  function actualizarCarrito() {
+    const lista = document.getElementById("lista-carrito");
+    const totalSpan = document.getElementById("total");
+    lista.innerHTML = "";
+    let total = 0;
+
+    carrito.forEach((item, index) => {
+      const li = document.createElement("li");
+      li.textContent = `${item.nombre} - ${item.tamano}`;
+      const precioSpan = document.createElement("span");
+      precioSpan.textContent = ` $${item.precio.toLocaleString()}`;
+      li.appendChild(precioSpan);
+
+      const btnEliminar = document.createElement("button");
+      btnEliminar.textContent = "❌";
+      btnEliminar.onclick = () => eliminarDelCarrito(index);
+      li.appendChild(btnEliminar);
+
+      lista.appendChild(li);
+      total += item.precio;
+  });
+
+    totalSpan.textContent = `Total: $${total.toLocaleString()}`;
+  }
+
+  function eliminarDelCarrito(index) {
+    carrito.splice(index, 1);
+    guardarCarrito();
+    actualizarCarrito();
+  }
+
+  function vaciarCarrito() {
+    carrito = [];
+    guardarCarrito();
+    actualizarCarrito();
+  }
+
+  function enviarWhatsApp() {
+    if (carrito.length === 0) {
+      alert("Tu carrito está vacío.");
+      return;
+    }
+
+    let mensaje = "🛋️ *Pedido desde el Catálogo Mueble Primera Mano:*\n\n";
+    carrito.forEach(item => {
+      mensaje += `• ${item.nombre} - ${item.tamano} - $${item.precio.toLocaleString()}\n`;
+    });
+    const total = carrito.reduce((acc, item) => acc + item.precio, 0);
+    mensaje += `\n💰 *Total:* $${total.toLocaleString()}\n\n📞 Enviado desde el catálogo web.`;
+
+    const numeroWhatsApp = "54449370";
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, "_blank");
+  }
+
+  document.addEventListener("DOMContentLoaded", actualizarCarrito);
+   
+  function toggleCarrito() {
+   const carrito = document.getElementById("carrito");
+   const contenedor = document.getElementById("carrito-contenedor");
+   const icon = document.getElementById("toggle-icon");
+
+  carrito.classList.toggle("abierto");
+
+  if (carrito.classList.contains("abierto")) {
+    contenedor.style.maxHeight = "500px";
+    icon.textContent = "🔽"; // icono hacia abajo
+  } else {
+    contenedor.style.maxHeight = "70px";
+    icon.textContent = "🔼"; // icono hacia arriba
+  }
+ }
+ </script>        
     
-  
-      
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación -->
-  <div id="custom-confirm-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); backdrop-filter:blur(8px); z-index:11000; justify-content:center; align-items:center;">
-    <div style="background:linear-gradient(145deg, #111, #1a1a1a); border:2px solid #d4af37; border-radius:24px; box-shadow:0 20px 60px rgba(212,175,55,0.3); padding:35px 30px; text-align:center; max-width:420px; width:90%; color:#fff; font-family:sans-serif; animation: popInConfirm 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
-      <div style="width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg, #d4af37, #b8921b); display:flex; justify-content:center; align-items:center; margin:0 auto 20px; box-shadow:0 5px 15px rgba(212,175,55,0.5);">
-        <i class="fa-solid fa-cart-arrow-down" style="font-size:2.5rem; color:#000;"></i>
-      </div>
-      <h3 style="margin:0 0 12px 0; color:#d4af37; font-size:1.6rem; text-transform:uppercase; letter-spacing:1px;">Confirmar Pedido</h3>
-      <p style="margin:0 0 30px 0; font-size:1.15rem; color:#ddd; line-height:1.6;">¿Deseas añadir <br><b id="confirm-product-name" style="color:#fff; font-size:1.25rem; display:block; margin-top:8px;"></b><br> a tu carrito?</p>
-      <div style="display:flex; justify-content:space-between; gap:15px;">
-        <button class="btn-confirm-cancel" onclick="cerrarConfirmacion()" style="flex:1; padding:14px; border-radius:12px; border:2px solid #555; background:transparent; color:#ccc; font-size:1rem; font-weight:bold; cursor:pointer; transition:0.3s;">Cancelar</button>
-        <button class="btn-confirm-add" onclick="ejecutarAgregarAlCarrito()" style="flex:1; padding:14px; border-radius:12px; border:none; background:linear-gradient(135deg, #d4af37, #b8921b); color:#000; font-size:1rem; font-weight:bold; cursor:pointer; box-shadow:0 4px 15px rgba(212,175,55,0.5); transition:0.3s;">Sí, añadir 🛒</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  <!-- ================= CARRITO RESTAURADO ================= -->
-  
-
-  
-
-  
-  <!-- ======================================================== -->
-  \n
-  
-  <!-- Estilos para Modal de Confirmación -->
-  
-
-  <!-- Modal de Confirmación Gigante -->
-  
-
-  <!-- Toast Notificación Lateral -->
-  
-
-  
-  
-  
-  <div id="carrito-contenedor">
-    
-    <div id="carrito" style="display: none !important; width: 700px !important;"><div style="text-align: right; margin-bottom: 10px;"><button id="carrito-close-btn" onclick="toggleCarritoModal()" style="background: transparent; border: none; font-size: 2rem; color: #d4af37; cursor: pointer;">×</button></div>
-        
-        <ul id="lista-carrito"></ul>
-        <p id="total">Total: $0</p>
-        
-        <div style="margin-top: 15px; margin-bottom: 15px; text-align: left;">
-          <label for="checkout-direccion" style="color: #d4af37; font-weight: bold; display: block; margin-bottom: 5px;">📍 Dirección de Envío (Opcional):</label>
-          <input type="text" id="checkout-direccion" placeholder="Ej: Calle 23 #104 e/ M y N, Vedado" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #d4af37; background: #000; color: #fff; box-sizing: border-box; font-family: inherit;">
-        </div>
-        
-        <div class="botones-carrito">
-          <button class="boton-carrito vaciar" onclick="vaciarCarrito()">🗑️ Vaciar</button>
-          <button class="boton-carrito enviar" onclick="enviarWhatsApp()" style="background: #25d366; color: #fff;">📲 WhatsApp</button>
-          <button class="boton-carrito enviar" onclick="llamarTelefono()" style="background: #007bff; color: #fff;">📞 Llamar</button>
-        </div>
-      </div>
-  </div>
-  
-<!-- Product Details Modal -->
-<div id="product-detail-modal" onclick="if(event.target===this) cerrarDetalle()">
-  <div id="product-detail-content">
-    <button id="product-detail-close" onclick="cerrarDetalle()">×</button>
-    <div id="product-detail-img-container">
-      <img id="product-detail-img" src="" alt="Product Image">
-    </div>
-    <div id="product-detail-info">
-      <h2 id="product-detail-title">Nombre</h2>
-      <div id="product-detail-price">Precio</div>
-      <div id="product-detail-desc">
-        <ul style="list-style: none; padding: 0; color: #eee; margin-bottom: 20px;">
-          <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-check-circle" style="color:#25D366; font-size: 2.5rem;"></i> 
-            <span style="font-size: 1.8rem;">Disponible ahora</span>
-          </li>
-          <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-truck-fast" style="color:#d4af37; font-size: 2.5rem;"></i> 
-            <span style="font-size: 1.8rem;">Envío a domicilio</span>
-          </li>
-          <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-shield-halved" style="color:#1da1f2; font-size: 2.5rem;"></i> 
-            <span style="font-size: 1.8rem;">Garantía Primera Mano</span>
-          </li>
-        </ul>
-        <p style="font-size: 0.95rem; color: #999; border-top: 1px solid #444; padding-top: 15px; margin-top: 15px;">
-          * Las propiedades específicas del artículo se pueden confirmar al contactar vía WhatsApp.
-        </p>
-      </div>
-      <button class="btn-detail-add" id="product-detail-add-btn">Añadir al Carrito 🛒</button>
-    </div>
-  </div>
-</div>
-
-
-
-
-<script src="app.js"></script></body></html>
+</body>
+</html>
