@@ -1,5 +1,5 @@
-const CACHE_NAME = 'pm-cache-v2';
-const DYNAMIC_CACHE = 'pm-dynamic-v2';
+const CACHE_NAME = 'pm-cache-v3';
+const DYNAMIC_CACHE = 'pm-dynamic-v3';
 
 const ASSETS_TO_CACHE = [
   '/',
@@ -35,7 +35,7 @@ self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
 
   // For products.json, index.html, JS, CSS -> Network First
-  if (url.pathname.endsWith('json') || url.pathname.endsWith('html') || url.pathname.endsWith('js') || url.pathname.endsWith('css')) {
+  if (url.pathname.endsWith('json') || url.pathname.endsWith('html') || url.pathname.endsWith('js') || url.pathname.endsWith('css') || url.pathname === '/' || url.pathname.endsWith('/')) {
     event.respondWith(
       fetch(event.request)
         .then(response => {
