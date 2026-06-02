@@ -1,17 +1,117 @@
-// Register Service Worker
+// ========================================
+// ACTUALIZACIÓN DE LA PWA
+// ========================================
+
+// Función global para actualizar la app (llamada por el botón "Actualizar")
+window.actualizarApp = function() {
+  // Mostrar feedback visual al usuario
+  var btns = document.querySelectorAll('[id^="btn-actualizar"]');
+  btns.forEach(function(btn) {
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Actualizando...';
+  });
+
+  // Paso 1: Enviar mensaje al SW para borrar cachés
+  if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+    navigator.serviceWorker.controller.postMessage('FORCE_UPDATE');
+  }
+
+  // Paso 2: Borrar todas las cachés desde la app también
+  if ('caches' in window) {
+    caches.keys().then(function(names) {
+      return Promise.all(names.map(function(name) {
+        console.log('[App] Borrando caché:', name);
+        return caches.delete(name);
+      }));
+    }).then(function() {
+      console.log('[App] Todas las cachés borradas');
+    });
+  }
+
+  // Paso 3: Desregistrar el SW actual y re-registrar uno nuevo
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      var unregisterPromises = registrations.map(function(reg) {
+        return reg.unregister();
+      });
+      return Promise.all(unregisterPromises);
+    }).then(function() {
+      console.log('[App] Service Workers desregistrados');
+      // Esperar un momento y recargar con caché busteado
+      setTimeout(function() {
+        // Forzar recarga completa (sin caché del navegador)
+        window.location.href = window.location.pathname + '?updated=' + Date.now();
+      }, 500);
+    }).catch(function() {
+      // Si falla, recargar de todas formas
+      window.location.href = window.location.pathname + '?updated=' + Date.now();
+    });
+  } else {
+    // Sin soporte de SW, simplemente recargar
+    window.location.href = window.location.pathname + '?updated=' + Date.now();
+  }
+};
+
+// Register Service Worker con manejo de actualizaciones
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js').then(registration => {
-      console.log('ServiceWorker registration successful');
-    }).catch(err => {
-      console.log('ServiceWorker registration failed: ', err);
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('sw.js').then(function(registration) {
+      console.log('[App] ServiceWorker registrado correctamente');
+
+      // Detectar actualizaciones disponibles
+      registration.addEventListener('updatefound', function() {
+        var newWorker = registration.installing;
+        console.log('[App] Nuevo ServiceWorker encontrado, instalando...');
+
+        newWorker.addEventListener('statechange', function() {
+          if (newWorker.state === 'installed') {
+            if (navigator.serviceWorker.controller) {
+              // Hay una actualización disponible
+              console.log('[App] Actualización disponible — activando...');
+              newWorker.postMessage('SKIP_WAITING');
+            }
+          }
+        });
+      });
+
+      // Buscar actualización inmediatamente al cargar
+      registration.update();
+
+    }).catch(function(err) {
+      console.log('[App] Error registrando ServiceWorker:', err);
+    });
+
+    // Cuando un nuevo SW toma control, recargar la página (Auto-Update)
+    navigator.serviceWorker.addEventListener('controllerchange', function() {
+      console.log('[App] Nuevo SW en control — auto-recargando...');
+      window.location.href = window.location.pathname + '?updated=' + Date.now();
+    });
+
+    // Detectar cuando el usuario vuelve a abrir la app (Visibility API)
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'visible' && registration) {
+        console.log('[App] App en primer plano, buscando actualizaciones de código...');
+        registration.update();
+      }
+    });
+
+    // Escuchar mensajes del SW
+    navigator.serviceWorker.addEventListener('message', function(event) {
+      if (event.data === 'CACHES_CLEARED' || (event.data && event.data.type === 'CACHES_CLEARED')) {
+        console.log('[App] Cachés borradas por el SW');
+      }
+
+      if (event.data && event.data.type === 'DATA_UPDATED') {
+        console.log('[App] Datos actualizados en segundo plano. Refrescando UI en vivo...');
+        cargarProductosEnVivo();
+      }
     });
   });
 }
 
 let productsData = { combos: [], electrodomesticos: [], muebles: [] };
 
-document.addEventListener('DOMContentLoaded', () => {
+function cargarProductosEnVivo() {
   fetch('products.json')
     .then(response => response.json())
     .then(data => {
@@ -20,9 +120,38 @@ document.addEventListener('DOMContentLoaded', () => {
       renderProducts('electrodomesticos', data.electrodomesticos);
       renderProducts('muebles', data.muebles);
       actualizarCarrito();
+      precacheImagesAggressively(data); // Iniciar prefetch de imágenes inteligente
     })
     .catch(error => console.error('Error loading products:', error));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  cargarProductosEnVivo();
 });
+
+function precacheImagesAggressively(data) {
+  // Solo pre-cachear si el SW está activo
+  if (!navigator.serviceWorker || !navigator.serviceWorker.controller) return;
+
+  // Extraer todas las URLs de imágenes de los productos
+  let urls = [];
+  const categorias = ['combos', 'electrodomesticos', 'muebles'];
+  categorias.forEach(cat => {
+    if (data[cat]) {
+      data[cat].forEach(p => {
+        if (p.image) urls.push(p.image);
+      });
+    }
+  });
+
+  if (urls.length > 0) {
+    console.log('[App] Solicitando prefetch en segundo plano de ' + urls.length + ' imágenes...');
+    navigator.serviceWorker.controller.postMessage({
+      type: 'PRECACHE_URLS',
+      urls: urls
+    });
+  }
+}
 
 function renderProducts(categoryId, products) {
   // Find the gallery inside the section with id matching category or containing it
@@ -200,3 +329,25 @@ window.filtrarProductos = function() {
     p.style.display = (name.includes(q) || desc.includes(q)) ? '' : 'none';
   });
 }
+
+// Manejador global para recargar imagenes fallidas
+document.addEventListener('error', function(event) {
+  if (event.target && event.target.tagName && event.target.tagName.toLowerCase() === 'img') {
+    const img = event.target;
+    let attempts = parseInt(img.getAttribute('data-retries') || '0', 10);
+    if (attempts < 3) {
+      attempts++;
+      img.setAttribute('data-retries', attempts);
+      img.removeAttribute('loading');
+      setTimeout(() => {
+        try {
+          const url = new URL(img.src, window.location.href);
+          url.searchParams.set('retry', Date.now());
+          img.src = url.href;
+        } catch(e) {}
+      }, 1500 * attempts);
+    } else {
+      img.style.opacity = '0.3';
+    }
+  }
+}, true);
