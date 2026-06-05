@@ -357,16 +357,14 @@ document.addEventListener('error', function(event) {
 // ========================================
 let deferredPrompt;
 window.addEventListener('beforeinstallprompt', (e) => {
-  // Prevenir que Chrome muestre el prompt por defecto
   e.preventDefault();
-  // Guardar el evento
   deferredPrompt = e;
 });
 
-// Inyectar CSS y HTML para el modal de instalación
 document.addEventListener('DOMContentLoaded', () => {
   const installModalHtml = `
-  <div id="pwa-install-modal" style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:90%; max-width:400px; background:linear-gradient(135deg, #111, #1a1a1a); border:2px solid #d4af37; border-radius:20px; box-shadow:0 10px 40px rgba(212,175,55,0.3); padding:20px; z-index:12000; color:#fff; font-family:sans-serif; text-align:center;">
+  <div id="pwa-install-modal" style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:90%; max-width:400px; background:linear-gradient(135deg, #111, #1a1a1a); border:2px solid #d4af37; border-radius:20px; box-shadow:0 10px 40px rgba(212,175,55,0.3); padding:20px; z-index:12000; color:#fff; font-family:sans-serif; text-align:center; animation: popIn 0.5s ease-out;">
+    <style>@keyframes popIn { from { opacity: 0; transform: translate(-50%, 20px); } to { opacity: 1; transform: translate(-50%, 0); } }</style>
     <button onclick="document.getElementById('pwa-install-modal').style.display='none'" style="position:absolute; top:10px; right:15px; background:transparent; border:none; color:#888; font-size:1.5rem; cursor:pointer;">✕</button>
     <div style="width:60px; height:60px; border-radius:15px; background:linear-gradient(135deg, #d4af37, #b8921b); display:flex; justify-content:center; align-items:center; margin:0 auto 15px;">
       <i class="fa-solid fa-gem" style="font-size:2rem; color:#000;"></i>
@@ -386,14 +384,22 @@ document.addEventListener('DOMContentLoaded', () => {
       if (outcome === 'accepted') {
         deferredPrompt = null;
       }
+    } else {
+      alert("Para instalar, por favor abre el menú de tu navegador (los 3 puntitos arriba a la derecha) y selecciona 'Instalar aplicación' o 'Añadir a la pantalla principal'.");
+      document.getElementById('pwa-install-modal').style.display = 'none';
     }
   });
 
-  // Mostrar cada 2 minutos (120000 ms) si no está instalada
-  setInterval(() => {
-    // Si la app no está instalada (standalone) y el navegador permite instalación
-    if (!window.matchMedia('(display-mode: standalone)').matches && deferredPrompt) {
+  function showInstallPrompt() {
+    // Solo mostrar si NO está en la APK instalada
+    if (!window.matchMedia('(display-mode: standalone)').matches && !navigator.standalone) {
       document.getElementById('pwa-install-modal').style.display = 'block';
     }
-  }, 120000);
+  }
+
+  // Mostrar por primera vez a los 3 segundos
+  setTimeout(showInstallPrompt, 3000);
+
+  // Luego mostrar cada 2 minutos
+  setInterval(showInstallPrompt, 120000);
 });
