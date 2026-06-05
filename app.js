@@ -351,3 +351,49 @@ document.addEventListener('error', function(event) {
     }
   }
 }, true);
+
+// ========================================
+// INSTALADOR PWA CADA 2 MINUTOS
+// ========================================
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevenir que Chrome muestre el prompt por defecto
+  e.preventDefault();
+  // Guardar el evento
+  deferredPrompt = e;
+});
+
+// Inyectar CSS y HTML para el modal de instalación
+document.addEventListener('DOMContentLoaded', () => {
+  const installModalHtml = `
+  <div id="pwa-install-modal" style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:90%; max-width:400px; background:linear-gradient(135deg, #111, #1a1a1a); border:2px solid #d4af37; border-radius:20px; box-shadow:0 10px 40px rgba(212,175,55,0.3); padding:20px; z-index:12000; color:#fff; font-family:sans-serif; text-align:center;">
+    <button onclick="document.getElementById('pwa-install-modal').style.display='none'" style="position:absolute; top:10px; right:15px; background:transparent; border:none; color:#888; font-size:1.5rem; cursor:pointer;">✕</button>
+    <div style="width:60px; height:60px; border-radius:15px; background:linear-gradient(135deg, #d4af37, #b8921b); display:flex; justify-content:center; align-items:center; margin:0 auto 15px;">
+      <i class="fa-solid fa-gem" style="font-size:2rem; color:#000;"></i>
+    </div>
+    <h3 style="margin:0 0 10px 0; color:#d4af37; font-size:1.4rem; text-transform:uppercase;">¡Instala nuestra App!</h3>
+    <p style="margin:0 0 20px 0; font-size:0.95rem; color:#ccc;">Instala Primera Mano en tu pantalla de inicio para una experiencia más rápida.</p>
+    <button id="btn-install-pwa" style="width:100%; padding:15px; border-radius:12px; border:none; background:linear-gradient(135deg, #d4af37, #b8921b); color:#000; font-size:1.1rem; font-weight:bold; cursor:pointer; box-shadow:0 4px 15px rgba(212,175,55,0.4);">INSTALAR AHORA</button>
+  </div>
+  `;
+  document.body.insertAdjacentHTML('beforeend', installModalHtml);
+
+  document.getElementById('btn-install-pwa').addEventListener('click', async () => {
+    if (deferredPrompt) {
+      document.getElementById('pwa-install-modal').style.display = 'none';
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        deferredPrompt = null;
+      }
+    }
+  });
+
+  // Mostrar cada 2 minutos (120000 ms) si no está instalada
+  setInterval(() => {
+    // Si la app no está instalada (standalone) y el navegador permite instalación
+    if (!window.matchMedia('(display-mode: standalone)').matches && deferredPrompt) {
+      document.getElementById('pwa-install-modal').style.display = 'block';
+    }
+  }, 120000);
+});
