@@ -361,7 +361,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
   deferredPrompt = e;
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+function initInstallPrompt() {
   const installModalHtml = `
   <div id="pwa-install-modal" style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:90%; max-width:400px; background:linear-gradient(135deg, #111, #1a1a1a); border:2px solid #d4af37; border-radius:20px; box-shadow:0 10px 40px rgba(212,175,55,0.3); padding:20px; z-index:12000; color:#fff; font-family:sans-serif; text-align:center; animation: popIn 0.5s ease-out;">
     <style>@keyframes popIn { from { opacity: 0; transform: translate(-50%, 20px); } to { opacity: 1; transform: translate(-50%, 0); } }</style>
@@ -391,7 +391,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function showInstallPrompt() {
-    // Solo mostrar si NO está en la APK instalada
     if (!window.matchMedia('(display-mode: standalone)').matches && !navigator.standalone) {
       document.getElementById('pwa-install-modal').style.display = 'block';
     }
@@ -402,4 +401,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Luego mostrar cada 2 minutos
   setInterval(showInstallPrompt, 120000);
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initInstallPrompt);
+} else {
+  initInstallPrompt();
+}
