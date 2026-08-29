@@ -6,7 +6,7 @@
       "description": "💵 $10.90 USD",
       "image": "combos/carnicos/carnicos1.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_j0mha4o0w",
@@ -14,7 +14,7 @@
       "description": "💵 $17.99 USD",
       "image": "combos/carnicos/carnicos2.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_hc8c5led7",
@@ -22,7 +22,7 @@
       "description": "💵 $4.10 USD",
       "image": "combos/carnicos/carnicos3.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_fesuhdp64",
@@ -30,7 +30,7 @@
       "description": "💵 $3.95 USD",
       "image": "combos/carnicos/carnicos4.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_r9fr5vjic",
@@ -38,7 +38,7 @@
       "description": "💵 $1.69 USD",
       "image": "combos/carnicos/carnicos5.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_xafyndqdr",
@@ -46,7 +46,7 @@
       "description": "💵 $1.89 USD",
       "image": "combos/carnicos/carnicos6.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_v14yxvzhp",
@@ -54,7 +54,7 @@
       "description": "💵 $1.59 USD",
       "image": "combos/carnicos/carnicos7.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_8j660e7r9",
@@ -62,7 +62,7 @@
       "description": "💵 $5.89 USD",
       "image": "combos/carnicos/carnicos8.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_dqcaakz2x",
@@ -70,7 +70,7 @@
       "description": "💵 $3.59 USD",
       "image": "combos/carnicos/carnicos9.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_blivx3w85",
@@ -78,7 +78,7 @@
       "description": "💵 $21.00 USD",
       "image": "combos/carnicos/carnicos10.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_lh01g9aj5",
@@ -86,7 +86,7 @@
       "description": "💵 $34.99 USD",
       "image": "combos/carnicos/carnicos11.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_6qrxnghpb",
@@ -94,7 +94,7 @@
       "description": "💵 $19.50 USD",
       "image": "combos/carnicos/carnicos12.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_45kjkcdv2",
@@ -102,7 +102,7 @@
       "description": "💵 $2.70 USD",
       "image": "combos/carnicos/carnicos13.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_a8pous35g",
@@ -110,7 +110,7 @@
       "description": "💵 $8.99 USD",
       "image": "combos/carnicos/carnicos14.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_u4xk6fj7q",
@@ -134,7 +134,7 @@
       "description": "💵 $2.75 USD",
       "image": "combos/agromercado/agromercado1.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_38oxfzth4",
@@ -142,7 +142,7 @@
       "description": "💵 $2.09 USD",
       "image": "combos/agromercado/agromercado2.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_2b7c5gcbx",
@@ -150,7 +150,7 @@
       "description": "💵 $2.20 USD",
       "image": "combos/agromercado/agromercado3.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_kydzfb9ys",
@@ -158,7 +158,7 @@
       "description": "💵 $2.99 USD",
       "image": "combos/agromercado/agromercado4.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_qw9jdw1ts",
@@ -166,7 +166,7 @@
       "description": "💵 $2.29 USD",
       "image": "combos/agromercado/agromercado5.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_3c72jjn60",
@@ -174,7 +174,7 @@
       "description": "💵 $1.70 USD",
       "image": "combos/agromercado/agromercado6.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_4gn3cv6m5",
@@ -182,7 +182,7 @@
       "description": "💵 $0.95 USD",
       "image": "combos/agromercado/agromercado7.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_t6tgd78t8",
@@ -190,7 +190,7 @@
       "description": "💵 $1.05 USD",
       "image": "combos/agromercado/agromercado8.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_5socf7ofw",
@@ -198,7 +198,7 @@
       "description": "💵 $2.40 USD",
       "image": "combos/agromercado/agromercado9.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_swnolccju",
@@ -206,7 +206,7 @@
       "description": "💵 $3.45 USD",
       "image": "combos/agromercado/agromercado10.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_lqpwf6p19",
@@ -214,7 +214,7 @@
       "description": "💵 $2.25 USD",
       "image": "combos/agromercado/agromercado11.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_ydmqepr72",
@@ -222,7 +222,7 @@
       "description": "💵 $2.87 USD",
       "image": "combos/agromercado/agromercado12.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_s52frdc8h",
@@ -230,7 +230,7 @@
       "description": "💵 $2.20 USD",
       "image": "combos/agromercado/agromercado13.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_yywcbke2b",
@@ -238,7 +238,7 @@
       "description": "💵 $0.25 USD",
       "image": "combos/agromercado/agromercado14.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_upyzm3pdx",
@@ -246,7 +246,7 @@
       "description": "💵 $2.49 USD",
       "image": "combos/agromercado/agromercado15.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_i30wcjl1w",
@@ -254,7 +254,7 @@
       "description": "💵 $1.39 USD",
       "image": "combos/confituras/confituras1.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_l0czk0rts",
@@ -262,7 +262,7 @@
       "description": "💵 $1.79 USD",
       "image": "combos/confituras/confituras2.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_229vzo17i",
@@ -270,7 +270,7 @@
       "description": "💵 $1.25 USD",
       "image": "combos/confituras/confituras3.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_npad45abs",
@@ -278,7 +278,7 @@
       "description": "💵 $3.99 USD",
       "image": "combos/confituras/confituras4.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_k686s2c1o",
@@ -286,7 +286,7 @@
       "description": "💵 $1.95 USD",
       "image": "combos/confituras/confituras5.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_knww5308s",
@@ -294,7 +294,7 @@
       "description": "💵 $3.90 USD",
       "image": "combos/confituras/confituras6.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_rvxgn6mc5",
@@ -302,7 +302,7 @@
       "description": "💵 $2.27 USD",
       "image": "combos/confituras/confituras7.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_je2mkdjix",
@@ -310,7 +310,7 @@
       "description": "💵 $2.49 USD",
       "image": "combos/confituras/confituras8.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_3g6ksf6qw",
@@ -318,7 +318,7 @@
       "description": "💵 $2.49 USD",
       "image": "combos/confituras/confituras9.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_ibgbctx8b",
@@ -326,7 +326,7 @@
       "description": "💵 $1.59 USD",
       "image": "combos/confituras/confituras10.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_wqm3i345w",
@@ -334,7 +334,7 @@
       "description": "💵 $0.33 USD",
       "image": "combos/confituras/confituras11.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_pb6yoql26",
@@ -342,7 +342,7 @@
       "description": "💵 $0.31 USD",
       "image": "combos/confituras/confituras12.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_2gfyjdhc6",
@@ -350,7 +350,7 @@
       "description": "💵 $0.41 USD",
       "image": "combos/confituras/confituras13.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_y3jrlu6pa",
@@ -358,7 +358,7 @@
       "description": "💵 $1.80 USD",
       "image": "combos/bebidas/bebidas1.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_4kwx0gkxb",
@@ -366,7 +366,7 @@
       "description": "💵 $0.79 USD",
       "image": "combos/bebidas/bebidas2.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_5boldqvsy",
@@ -374,7 +374,7 @@
       "description": "💵 $0.91 USD",
       "image": "combos/bebidas/bebidas3.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_ek8z6qsqg",
@@ -382,7 +382,7 @@
       "description": "💵 $2.40 USD",
       "image": "combos/bebidas/bebidas4.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_wqay3dkd6",
@@ -390,7 +390,7 @@
       "description": "💵 $6.59 USD",
       "image": "combos/bebidas/bebidas5.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_ai14xmlbw",
@@ -398,7 +398,7 @@
       "description": "💵 $9.17 USD",
       "image": "combos/bebidas/bebidas6.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_b06r3pol4",
@@ -406,7 +406,7 @@
       "description": "💵 $2.99 USD",
       "image": "combos/bebidas/bebidas7.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_ta7iqef9o",
@@ -414,7 +414,7 @@
       "description": "💵 $4.51 USD",
       "image": "combos/aseo-limpieza/limpieza1.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_nxk27btyj",
@@ -422,7 +422,7 @@
       "description": "💵 $1.89 USD",
       "image": "combos/aseo-limpieza/limpieza2.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_cmw75rery",
@@ -430,7 +430,7 @@
       "description": "💵 $0.39 USD",
       "image": "combos/aseo-limpieza/limpieza3.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_92806sm3r",
@@ -438,7 +438,7 @@
       "description": "💵 $1.89 USD",
       "image": "combos/aseo-limpieza/limpieza4.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_cszhacx8e",
@@ -446,7 +446,7 @@
       "description": "💵 $1.10 USD",
       "image": "combos/aseo-limpieza/limpieza5.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_kp7t0ecyx",
@@ -454,7 +454,7 @@
       "description": "💵 $8.25 USD",
       "image": "combos/aseo-limpieza/limpieza6.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_r2j9b9j21",
@@ -462,7 +462,7 @@
       "description": "💵 $12.65 USD",
       "image": "combos/aseo-limpieza/limpieza7.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_fvjf2iwvg",
@@ -470,7 +470,7 @@
       "description": "💵 $8.36 USD",
       "image": "combos/aseo-limpieza/limpieza8.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_1e34yijdp",
@@ -478,7 +478,7 @@
       "description": "💵 $7.65 USD",
       "image": "combos/aseo-limpieza/limpieza9.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_opfjviypv",
@@ -486,7 +486,7 @@
       "description": "💵 $16.50 USD",
       "image": "combos/aseo-limpieza/limpieza10.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_eto6ufknz",
@@ -494,7 +494,7 @@
       "description": "💵 $5.50 USD",
       "image": "combos/aseo-limpieza/limpieza11.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_ftajhsgo1",
@@ -502,7 +502,7 @@
       "description": "💵 $4.99 USD",
       "image": "combos/aseo-limpieza/limpieza12.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_h2e3cjvnu",
@@ -510,7 +510,7 @@
       "description": "💵 $4.40 USD",
       "image": "combos/aseo-limpieza/limpieza13.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_lu3l6fgp3",
@@ -518,7 +518,7 @@
       "description": "💵 $4.18 USD",
       "image": "combos/aseo-limpieza/limpieza14.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_mna7rxhnn",
@@ -526,7 +526,7 @@
       "description": "💵 $2.53 USD",
       "image": "combos/aseo-limpieza/limpieza15.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_tm5letcpu",
@@ -534,7 +534,7 @@
       "description": "💵 $3.90 USD",
       "image": "combos/farmacia/farmacia1.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_5iwo0jbix",
@@ -542,7 +542,7 @@
       "description": "💵 $2.95 USD",
       "image": "combos/farmacia/farmacia2.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_rksbtnicg",
@@ -550,7 +550,7 @@
       "description": "💵 $50 USD",
       "image": "combos/farmacia/farmacia3.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_n4c1avvpp",
@@ -558,7 +558,7 @@
       "description": "💵 $4.10 USD",
       "image": "combos/farmacia/farmacia4.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_v3lowhyv3",
@@ -566,7 +566,7 @@
       "description": "💵 $2.90 USD",
       "image": "combos/farmacia/farmacia5.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_a9q8hb1y7",
@@ -574,7 +574,7 @@
       "description": "💵 $2.00 USD",
       "image": "combos/farmacia/farmacia6.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_6gls5f7c9",
@@ -582,7 +582,7 @@
       "description": "💵 $1.90 USD",
       "image": "combos/farmacia/farmacia7.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_cymqxlt21",
@@ -590,7 +590,7 @@
       "description": "💵 $5.90 USD",
       "image": "combos/farmacia/farmacia8.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_zdx619kr3",
@@ -598,7 +598,7 @@
       "description": "💵 $1.80 USD",
       "image": "combos/farmacia/farmacia9.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_wgrpvicuz",
@@ -606,7 +606,7 @@
       "description": "💵 $3.00 USD",
       "image": "combos/farmacia/farmacia10.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_4z1trsnmy",
@@ -614,7 +614,7 @@
       "description": "💵 $3.50 USD",
       "image": "combos/farmacia/farmacia11.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_4lfklh312",
@@ -622,7 +622,7 @@
       "description": "💵 $1.80 USD",
       "image": "combos/farmacia/farmacia12.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_noikoid12",
@@ -630,7 +630,7 @@
       "description": "💵 $2.00 USD",
       "image": "combos/farmacia/farmacia13.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_xgdpcu02s",
@@ -638,7 +638,7 @@
       "description": "💵 $5.99 USD",
       "image": "combos/farmacia/farmacia14.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_kk3zeqf5j",
@@ -646,7 +646,7 @@
       "description": "💵 $0.97 USD",
       "image": "combos/farmacia/farmacia15.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_dmfd3f3jo",
@@ -654,7 +654,7 @@
       "description": "💵 $2.00 USD",
       "image": "combos/farmacia/farmacia16.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_t5x4y2vfi",
@@ -662,7 +662,7 @@
       "description": "💵 $1.89 USD",
       "image": "combos/farmacia/farmacia17.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_g1gd1z2tr",
@@ -670,7 +670,7 @@
       "description": "💵 $4.89 USD",
       "image": "combos/farmacia/farmacia18.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_1sq7ycket",
@@ -678,7 +678,7 @@
       "description": "💵 $3.00 USD",
       "image": "combos/farmacia/farmacia19.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_i7pooa6t0",
@@ -694,7 +694,7 @@
       "description": "💵 $7.39 USD",
       "image": "combos/otros/otros1.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_1phfm6anl",
@@ -702,7 +702,7 @@
       "description": "💵 $5.79 USD",
       "image": "combos/otros/otros2.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_jj2lg5rem",
@@ -710,7 +710,7 @@
       "description": "💵 $3.99 USD",
       "image": "combos/otros/otros3.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_r0p6oepdx",
@@ -718,7 +718,7 @@
       "description": "💵 $1.88 USD",
       "image": "combos/otros/otros4.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_h5ynj4zhl",
@@ -726,7 +726,7 @@
       "description": "💵 $0.69 USD",
       "image": "combos/otros/otros5-40g.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_lef0rmlba",
@@ -734,7 +734,7 @@
       "description": "💵 $3.23 USD",
       "image": "combos/otros/otros6.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_hs24iiwyo",
@@ -742,7 +742,7 @@
       "description": "💵 $2.60 USD",
       "image": "combos/otros/otros7.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_gukwkin4h",
@@ -750,7 +750,7 @@
       "description": "💵 $3.69 USD",
       "image": "combos/otros/otros8.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_rom2qkuhl",
@@ -758,7 +758,7 @@
       "description": "💵 $3.90 USD",
       "image": "combos/otros/otros9.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_tik3nd584",
@@ -766,7 +766,7 @@
       "description": "💵 $9.90 USD",
       "image": "combos/otros/otros10.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     },
     {
       "id": "prod_pbgpfsrgq",
@@ -774,7 +774,7 @@
       "description": "💵 $5.29 USD",
       "image": "combos/otros/otros11.webp",
       "options": [],
-      "isAgotado": true
+      "isAgotado": false
     }
   ],
   "electrodomesticos": [

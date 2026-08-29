@@ -116,7 +116,7 @@ function cargarProductosEnVivo() {
     .then(response => response.json())
     .then(data => {
       productsData = data;
-      renderProducts('combos', data.combos);
+      renderProducts('carnicos', data.combos.filter(p => p.image && p.image.includes('carnicos')));
       renderProducts('electrodomesticos', data.electrodomesticos);
       renderProducts('muebles', data.muebles);
       actualizarCarrito();
@@ -173,7 +173,7 @@ function renderProducts(categoryId, products) {
     div.innerHTML = `
       <img src="${p.image}" alt="${p.name}" onclick="abrirFoto('${p.image}', '${p.name}', event)">
       <h3>${p.name}</h3>
-      <p>${p.description}</p>
+      <p class="precio">${p.description}</p>
       ${p.options && p.options.length > 0 ? 
         `<select class="selector-precio">
           ${p.options.map(opt => `<option value="${opt.value}">${opt.text}</option>`).join('')}
@@ -408,3 +408,4 @@ if (document.readyState === 'loading') {
 } else {
   initInstallPrompt();
 }
+
