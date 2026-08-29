@@ -3426,6 +3426,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     function enviarMensajeriaWhatsApp() {
+      const ids = ['m-fecha', 'm-nombre', 'm-ci', 'm-tel', 'm-dir', 'm-pedido', 'm-cant', 'm-precio', 'm-pago', 'm-precio-mensajeria', 'm-total', 'm-devolver', 'm-gestor', 'm-tel-gestor', 'm-desc-gestor'];
+      for (let i = 0; i < ids.length; i++) {
+        if (!document.getElementById(ids[i]).value.trim()) {
+          alert('⚠️ Por favor, rellena TODOS los campos del formulario de Mensajería antes de enviarlo.');
+          return;
+        }
+      }
+
       let mensaje = "📝𝐅𝐚𝐜𝐭𝐮𝐫𝐚 𝐚 𝐥𝐥𝐞𝐧𝐚𝐫 𝐩𝐨𝐫 𝐥𝐨𝐬 𝐠𝐞𝐬𝐭𝐨𝐫𝐞𝐬(𝑴𝒆𝒏𝒔𝒂𝒋𝒆𝒓í𝒂)\n\n";
       mensaje += "🪀𝐅𝐞𝐜𝐡𝐚: " + document.getElementById("m-fecha").value + "\n";
       mensaje += "🪀 𝐍𝐨𝐦𝐛𝐫𝐞 𝐝𝐞𝐥 𝐂𝐥𝐢𝐞𝐧𝐭𝐞: " + document.getElementById("m-nombre").value + "\n";
@@ -3493,6 +3501,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     function enviarRecogerWhatsApp() {
+      const ids = ['r-fecha', 'r-nombre', 'r-tel', 'r-pedido', 'r-cant', 'r-precio', 'r-pago', 'r-total', 'r-gestor', 'r-tel-gestor', 'r-direccion'];
+      for (let i = 0; i < ids.length; i++) {
+        if (!document.getElementById(ids[i]).value.trim()) {
+          alert('⚠️ Por favor, rellena TODOS los campos del formulario de Recoger en Local antes de enviarlo.');
+          return;
+        }
+      }
+
       let mensaje = "📝𝐅𝐚𝐜𝐭𝐮𝐫𝐚 𝐚 𝐥𝐥𝐞𝐧𝐚𝐫 𝐩𝐨𝐫 𝐥𝐨𝐬 𝐠𝐞𝐬𝐭𝐨𝐫𝐞𝐬 (RECOGER EN EL LOCAL)\n\n";
       mensaje += "🪀 𝐅𝐞𝐜𝐡𝐚: " + document.getElementById("r-fecha").value + "\n";
       mensaje += "🪀 Nombre del Cliente: " + document.getElementById("r-nombre").value + "\n";
