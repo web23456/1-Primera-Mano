@@ -3406,7 +3406,11 @@ document.addEventListener("DOMContentLoaded", function() {
     btn.onmouseout = function() { this.style.background = '#111'; this.style.color = '#d4af37'; };
     btn.onclick = function() {
       if (window.selectedProducts && window.selectedProducts.length > 0) {
-        abrirModalMensajeria(true);
+        if (h2.closest('section') && h2.closest('section').id === 'electrodomesticos-a') {
+          document.getElementById('modal-tarifas').style.display = 'flex';
+        } else {
+          abrirModalMensajeria(true);
+        }
       } else {
         alert('⚠️ Por favor, selecciona primero los productos usando el botón "✅ Seleccionar" en la parte superior y marcando los artículos.');
       }
@@ -3445,6 +3449,101 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 <script src="app.js"></script>
+
+  <div id="modal-tarifas" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:15000; align-items:center; justify-content:center; padding:20px; box-sizing:border-box;">
+    <div style="background:#1a1a1a; border:2px solid #d4af37; border-radius:15px; padding:20px; max-width:500px; width:100%; max-height:85vh; overflow-y:auto; color:#fff; font-size:0.95rem; line-height:1.5;">
+      <h2 style="color:#d4af37; text-align:center; margin-bottom:15px; font-size:1.5rem;">📢 TARIFAS DE MENSAJERÍA</h2>
+      <div style="background:#222; padding:10px; border-radius:8px; margin-bottom:15px;">
+        <h3 style="color:#d4af37; margin-top:0;">🛡️ CONDICIONES DEL SERVICIO 🛻</h3>
+        <ul style="padding-left:20px; margin:0;">
+          <li>🏍️ Hasta 3 artículos pequeños por dirección.</li>
+          <li>🏍️ A partir de 3 artículos: +$1,000 CUP.</li>
+          <li>🏍️ Más de 6 artículos: se duplica la tarifa.</li>
+          <li>🏍️ Artículo de gran tamaño: +$1,000 CUP.</li>
+          <li>🏍️ SMART TVs y bicicletas: +$500 CUP adicionales.</li>
+          <li>🏍️ Es obligatorio confirmar municipio y barrio específico antes de la entrega.</li>
+        </ul>
+      </div>
+
+      <p><strong style="color:#d4af37;">🏍️ SAN MIGUEL DEL PADRÓN — $1,500 CUP</strong><br>
+      Jacomino, Diezmero, San Francisco de Paula, Virgen del Camino, Juanelo, La Rosalía, La Fernanda, Barrio Obrero, Monterrey, Vista Hermosa, San Matías, La Cuevita, Alturas de Luyanó, Rocafort, California.</p>
+
+      <p><strong style="color:#d4af37;">🏍️ GUANABACOA</strong><br>
+      Carretera Vieja, Nalón, Naranjo, La Hata, Mikito, Roble, D’Beche, Chibás, Villa I y II, Mañana, Habana Nueva: $1,800 CUP.<br>
+      Reparto Escala, Policlínico A. Ortiz, Cementerio Judío, Paradero: $2,100 CUP.<br>
+      Minas, Barreras: $2,300 CUP.<br>
+      Peñalver, Bacuranao, Santa Fe: $3,100 CUP.</p>
+
+      <p><strong style="color:#d4af37;">🏍️ REGLA</strong><br>
+      Loma-Modelo, Guaicanamar: $1,900 CUP.<br>
+      Casa Blanca: $2,400 CUP.</p>
+
+      <p><strong style="color:#d4af37;">🏍️ COTORRO</strong><br>
+      Centro del Cotorro, Lotería, San Pedro: $2,100 CUP.<br>
+      Zonas posteriores al centro: Magdalena-Torriente, Alberro: $2,400 CUP.<br>
+      Cuatro Caminos: $3,100 CUP.<br>
+      Santa María del Rosario: $3,600 CUP.</p>
+
+      <p><strong style="color:#d4af37;">🏍️ DIEZ DE OCTUBRE — $1,900 CUP</strong><br>
+      Mónaco, Luyanó, Víbora, Sta. Catalina, Santos Suárez, Sevillano, Lawton, Vista Alegre, Jesús del Monte, Tamarindo, Acosta.</p>
+
+      <p><strong style="color:#d4af37;">🏍️ ARROYO NARANJO</strong><br>
+      Mantilla, Párraga, Poey, Santa Amalia, La Palma, Víbora Park, Callejas: $1,900 CUP.<br>
+      La Güinera: $2,100 CUP.<br>
+      Los Pinos, Reparto Eléctrico, Calvario, Fraternidad: $2,100 CUP.<br>
+      Las Guásimas: $3,400 CUP.<br>
+      Managua: $3,900 CUP.</p>
+
+      <p><strong style="color:#d4af37;">🏍️ CENTRO HABANA / HABANA VIEJA — $1,900 CUP</strong><br>
+      Cayo Hueso, Dragones, Barrio Chino, Los Sitios, Pueblo Nuevo, Colón, Belén, San Isidro, Prado, Catedral, Tallapiedra.</p>
+
+      <p><strong style="color:#d4af37;">🏍️ CERRO — $1,900 CUP</strong><br>
+      Latinoamericano, Pilar-Atarés, Palatino, Canal, Las Cañas, Casino Deportivo, Santa Catalina, Ayestarán.</p>
+
+      <p><strong style="color:#d4af37;">🏍️ VEDADO / PLAZA — $2,100 CUP</strong><br>
+      Vedado, Nuevo Vedado, Rampa, Príncipe, Puentes Grandes, Colón (Plaza), El Carmelo, Alturas del Vedado.</p>
+
+      <p><strong style="color:#d4af37;">🏍️ MARIANAO — $2,600 CUP</strong><br>
+      Pogolotti, Los Quemados, Los Pocitos, Santa Felicia, El Palmar, Belén, Zamora-Coco Solo, CAI Los Ángeles.</p>
+
+      <p><strong style="color:#d4af37;">🏍️ LA LISA</strong><br>
+      Alturas de La Lisa, Arimao, La Coronela, Versalles, Balcón: $2,600 CUP.<br>
+      Arroyo Arenas, San Agustín, Valle Grande, Bello 26, Cinco Palmas: $4,300 CUP.<br>
+      El Cano, La Novia del Mediodía: $4,300 CUP.<br>
+      Punta Brava, Reparto Barbosa: $5,900 CUP.</p>
+
+      <p><strong style="color:#d4af37;">🏍️ PLAYA</strong><br>
+      Miramar, Almendares, Kohly, La Ceiba, Buenavista, La Sierra, Querejeta: $2,400 CUP.<br>
+      Náutico, Cubanacán, Atabey, Siboney, Flores: $2,900 CUP.<br>
+      Santa Fe, Jaimanitas: $6,600 CUP.<br>
+      Playa Baracoa: $7,600 CUP.</p>
+
+      <p><strong style="color:#d4af37;">🏍️ HABANA DEL ESTE</strong><br>
+      Camilo Cienfuegos, Bahía, Villa Panamericana, Cojímar, Alamar, Antonio Guiteras: $2,500 CUP.<br>
+      Barreras: $2,900 CUP.<br>
+      Guanabo, Boca Ciega: $4,000 CUP.<br>
+      Campo Florido: $4,400 CUP.<br>
+      Santa Cruz del Norte: $8,100 CUP.<br>
+      San José de las Lajas: $6,300 CUP.</p>
+
+      <p><strong style="color:#d4af37;">🏍️ BOYEROS</strong><br>
+      Ponce, Trigal, La Fortuna, Aldabó, Altahabana, Embil, Miraflores, Capdevila, Reloj Club, Pte. 100 y Boyeros, Armada: $2,600 CUP.<br>
+      CUJAE, Berenguer, Fontanar, Río Verde, Mazorra: $3,600 CUP.<br>
+      Abel Santamaría, 1.º de Mayo, Rancho Boyeros, Wajay, El Chico, Baluarte, Aeropuerto, Lugardita, Pediátrico: $4,100 CUP.<br>
+      Mulgoba, Santiago de las Vegas, Nuevo Santiago: $4,400 CUP.</p>
+
+      <p><strong style="color:#d4af37;">🏍️ EXTRAMUROS / PROVINCIAS</strong><br>
+      Melena del Sur, San Antonio de los Baños: $7,600 CUP.<br>
+      Güines, Batabanó: $7,600 CUP.<br>
+      Güira de Melena: $10,600 CUP.<br>
+      Madruga: $13,600 CUP.</p>
+
+      <div style="display:flex; justify-content:space-between; margin-top:20px;">
+        <button onclick="document.getElementById('modal-tarifas').style.display='none'" style="background:#555; color:#fff; border:none; padding:10px 15px; border-radius:8px; cursor:pointer; font-weight:bold;">Cerrar</button>
+        <button onclick="document.getElementById('modal-tarifas').style.display='none'; abrirModalMensajeria(true);" style="background:#d4af37; color:#000; border:none; padding:10px 15px; border-radius:8px; cursor:pointer; font-weight:bold;">Continuar a Factura</button>
+      </div>
+    </div>
+  </div>
 
   <div id="modal-mensajeria" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:15000; align-items:center; justify-content:center; flex-direction:column; padding:20px; box-sizing:border-box;">
     <div style="background:#111; border:2px solid #d4af37; border-radius:20px; padding:20px; width:100%; max-width:500px; max-height:90vh; overflow-y:auto; position:relative;">
