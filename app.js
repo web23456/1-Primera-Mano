@@ -306,8 +306,27 @@ window.abrirFoto = function(fullSrc, titulo, evt) {
   var modal = document.getElementById('product-detail-modal');
   if (!modal) return;
 
+  var container = null;
+  var productos = document.querySelectorAll('.producto');
+  for (var i = 0; i < productos.length; i++) {
+    var h3 = productos[i].querySelector('h3');
+    if (h3 && h3.textContent.trim() === titulo) {
+      container = productos[i];
+      break;
+    }
+  }
+
+  var priceText = "Consultar precio";
+  if (container) {
+    var priceEl = container.querySelector('.precio');
+    if (priceEl) {
+      priceText = priceEl.textContent;
+    }
+  }
+
   document.getElementById('product-detail-img').src = fullSrc;
   document.getElementById('product-detail-title').textContent = titulo;
+  document.getElementById('product-detail-price').textContent = priceText;
   
   modal.style.display = 'flex';
   document.body.style.overflow = 'hidden';
