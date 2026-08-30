@@ -3408,8 +3408,11 @@ document.addEventListener("DOMContentLoaded", function() {
     btn.onmouseover = function() { this.style.background = '#d4af37'; this.style.color = '#000'; };
     btn.onmouseout = function() { this.style.background = '#111'; this.style.color = '#d4af37'; };
     btn.onclick = function() {
-      if (h2.closest('section') && h2.closest('section').id === 'electrodomesticos-a') {
+      var section = h2.closest('section');
+      if (section && section.id === 'electrodomesticos-a') {
         document.getElementById('modal-tarifas').style.display = 'flex';
+      } else if (section && section.id === 'electrodomesticos-b') {
+        document.getElementById('modal-tarifas-b').style.display = 'flex';
       } else {
         alert('SIN INFORMACIÓN');
       }
@@ -3550,6 +3553,106 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <div style="display:flex; justify-content:center; margin-top:20px;">
         <button onclick="document.getElementById('modal-tarifas').style.display='none'" style="background:#d4af37; color:#000; border:none; padding:10px 30px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:1.1rem;">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-tarifas-b" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:15000; align-items:center; justify-content:center; padding:20px; box-sizing:border-box;">
+    <div style="background:#1a1a1a; border:2px solid #d4af37; border-radius:15px; padding:20px; max-width:500px; width:100%; max-height:85vh; overflow-y:auto; color:#fff; font-size:0.95rem; line-height:1.5;">
+      <h2 style="color:#d4af37; text-align:center; margin-bottom:15px; font-size:1.5rem;">📢 TARIFAS DE MENSAJERÍA</h2>
+
+      <p><strong style="color:#d4af37;">🏍️ ZONA CENTRO</strong><br>
+      • Vedado 💰 $1,500<br>
+      • Ciudad Deportiva 💰 $1,500<br>
+      • Cerro 💰 $1,500<br>
+      • Centro Habana 💰 $1,500<br>
+      • Habana Vieja 💰 $1,500<br>
+      • Avenida 26 💰 $1,500</p>
+
+      <p><strong style="color:#d4af37;">🏍️ PLAYA</strong><br>
+      • Playa 💰 $1,800<br>
+      • Náutico 💰 $2,500<br>
+      • Siboney 💰 $2,500<br>
+      • Jaimanitas 💰 $3,000<br>
+      • Santa Fe 💰 $3,500<br>
+      • Después de Santa Fe 💰 $4,000</p>
+
+      <p><strong style="color:#d4af37;">🏍️ MARIANAO / LA LISA</strong><br>
+      • Marianao 💰 $2,200<br>
+      • La Lisa 💰 $2,600<br>
+      • El Hueco 💰 $2,500<br>
+      • San Agustín 💰 $3,000<br>
+      • La Coronela 💰 $2,500<br>
+      • Alturas de la Lisa 💰 $3,000<br>
+      • Arroyo Arenas 💰 $3,500<br>
+      • Novia del Mediodía 💰 $3,500<br>
+      • El Cano 💰 $3,000<br>
+      • Punta Brava 💰 $4,000</p>
+
+      <p><strong style="color:#d4af37;">🏍️ UCI 💰 $4,000</strong></p>
+
+      <p><strong style="color:#d4af37;">🏍️ BOYEROS</strong><br>
+      • 100 y Vento 💰 $1,500<br>
+      • CUJAE 💰 $3,000<br>
+      • Fontanar 💰 $2,500<br>
+      • Parque Lenin 💰 $2,500<br>
+      • Calabazar 💰 $3,000<br>
+      • Aeropuerto-Mazorra 💰 $3,000<br>
+      • Managua 💰 $3,000<br>
+      • Wajay 💰 $3,000<br>
+      • Mulgoba 💰 $2,500<br>
+      • Santiago de las Vegas 💰 $3,500</p>
+
+      <p><strong style="color:#d4af37;">🏍️ ARROYO NARANJO</strong><br>
+      • Víbora Park 💰 $1,000<br>
+      • La Palma 💰 $1,200<br>
+      • Miraflores 💰 $2,000<br>
+      • Vieja Linda 💰 $1,500<br>
+      • Mantilla 💰 $1,800<br>
+      • Calvario 💰 $2,000<br>
+      • Párraga 💰 $2,000<br>
+      • Capri 💰 $2,000<br>
+      • Eléctrico 💰 $2,500</p>
+
+      <p><strong style="color:#d4af37;">🏍️ DIEZ DE OCTUBRE</strong><br>
+      • Santo Suárez 💰 $1,000<br>
+      • Luyanó 💰 $1,000<br>
+      • Lawton 💰 $1,000<br>
+      • Víbora Park 💰 $1,000</p>
+
+      <p><strong style="color:#d4af37;">🏍️ SAN MIGUEL DEL PADRÓN</strong><br>
+      • Virgen del Camino 💰 $1,800<br>
+      • Virgen del Camino hasta Av. 4ta (Luyanó Moderno) 💰 $1,800<br>
+      • Caballo Blanco 💰 $1,500<br>
+      • La Cuevita 💰 $2,500<br>
+      • Diezmero 💰 $1,800<br>
+      • San Francisco de Paula 💰 $2,000</p>
+
+      <p><strong style="color:#d4af37;">🏍️ COTORRO</strong><br>
+      • Puente del Cotorro 💰 $2,200<br>
+      • Centro de Cotorro 💰 $2,500<br>
+      • Alberro 💰 $3,000<br>
+      • Lo último del Cotorro 💰 $3,500<br>
+      • 4 Caminos 💰 $4,500</p>
+
+      <p><strong style="color:#d4af37;">🏍️ GUANABACOA</strong><br>
+      • Principio 💰 $2,000<br>
+      • Centro 💰 $2,500<br>
+      • Final 💰 $4,000</p>
+
+      <p><strong style="color:#d4af37;">🏍️ HABANA DEL ESTE</strong><br>
+      • Regla 💰 $2,000<br>
+      • Reparto Camilo Cienfuegos 💰 $2,500<br>
+      • Casa Blanca 💰 $2,500<br>
+      • Reparto Chivás 💰 $2,500<br>
+      • Bahía 💰 $2,200<br>
+      • Cojímar 💰 $2,500<br>
+      • Alamar 💰 $3,000<br>
+      • Guanabo 💰 $5,000<br>
+      • Campo Florido 💰 $6,000</p>
+
+      <div style="display:flex; justify-content:center; margin-top:20px;">
+        <button onclick="document.getElementById('modal-tarifas-b').style.display='none'" style="background:#d4af37; color:#000; border:none; padding:10px 30px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:1.1rem;">Cerrar</button>
       </div>
     </div>
   </div>
