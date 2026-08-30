@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="es"><head><meta name="viewport" content="width=1200">
+﻿<!DOCTYPE html><html lang="es"><head><meta name="viewport" content="width=1200">
   <meta charset="UTF-8">
   
   <link rel="manifest" href="manifest.json">
@@ -3463,12 +3463,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <script src="app.js"></script>
 
-  <div id="modal-tarifas" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:15000; align-items:center; justify-content:center; padding:20px; box-sizing:border-box;">
-    <div style="background:#1a1a1a; border:2px solid #d4af37; border-radius:15px; padding:20px; max-width:500px; width:100%; max-height:85vh; overflow-y:auto; color:#fff; font-size:0.95rem; line-height:1.5;">
-      <h2 style="color:#d4af37; text-align:center; margin-bottom:15px; font-size:1.5rem;">📢 TARIFAS DE MENSAJERÍA</h2>
-      <div style="background:#222; padding:10px; border-radius:8px; margin-bottom:15px;">
-        <h3 style="color:#d4af37; margin-top:0;">🛡️ CONDICIONES DEL SERVICIO 🛻</h3>
-        <ul style="padding-left:20px; margin:0;">
+  <div id="modal-tarifas" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#0d0d0d; z-index:25000; overflow-y:auto; padding:0; box-sizing:border-box;">
+    <div style="max-width:1100px; margin:0 auto; padding:40px 30px 60px 30px; width:100%; box-sizing:border-box;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:40px; border-bottom:4px solid #d4af37; padding-bottom:20px;">
+        <h2 style="color:#d4af37; font-size:4rem; margin:0;">📢 TARIFAS DE MENSAJERÍA</h2>
+        <button onclick="document.getElementById('modal-tarifas').style.display='none'" style="background:transparent; border:none; color:#d4af37; font-size:6rem; cursor:pointer; line-height:1;">×</button>
+      </div>
+      <div style="background:#1a1a1a; padding:25px; border-radius:15px; margin-bottom:30px; border:2px solid #333;">
+        <h3 style="color:#d4af37; margin-top:0; font-size:3rem;">🛡️ CONDICIONES DEL SERVICIO 🛻</h3>
+        <ul style="padding-left:30px; margin:0; font-size:2.5rem; line-height:2; color:#fff;">
           <li>🏍️ Hasta 3 artículos pequeños por dirección.</li>
           <li>🏍️ A partir de 3 artículos: +$1,000 CUP.</li>
           <li>🏍️ Más de 6 artículos: se duplica la tarifa.</li>
@@ -3478,60 +3481,60 @@ document.addEventListener("DOMContentLoaded", function() {
         </ul>
       </div>
 
-      <p><strong style="color:#d4af37;">🏍️ SAN MIGUEL DEL PADRÓN — $1,500 CUP</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ SAN MIGUEL DEL PADRÓN — $1,500 CUP</strong><br>
       Jacomino, Diezmero, San Francisco de Paula, Virgen del Camino, Juanelo, La Rosalía, La Fernanda, Barrio Obrero, Monterrey, Vista Hermosa, San Matías, La Cuevita, Alturas de Luyanó, Rocafort, California.</p>
 
-      <p><strong style="color:#d4af37;">🏍️ GUANABACOA</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ GUANABACOA</strong><br>
       Carretera Vieja, Nalón, Naranjo, La Hata, Mikito, Roble, D’Beche, Chibás, Villa I y II, Mañana, Habana Nueva: $1,800 CUP.<br>
       Reparto Escala, Policlínico A. Ortiz, Cementerio Judío, Paradero: $2,100 CUP.<br>
       Minas, Barreras: $2,300 CUP.<br>
       Peñalver, Bacuranao, Santa Fe: $3,100 CUP.</p>
 
-      <p><strong style="color:#d4af37;">🏍️ REGLA</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ REGLA</strong><br>
       Loma-Modelo, Guaicanamar: $1,900 CUP.<br>
       Casa Blanca: $2,400 CUP.</p>
 
-      <p><strong style="color:#d4af37;">🏍️ COTORRO</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ COTORRO</strong><br>
       Centro del Cotorro, Lotería, San Pedro: $2,100 CUP.<br>
       Zonas posteriores al centro: Magdalena-Torriente, Alberro: $2,400 CUP.<br>
       Cuatro Caminos: $3,100 CUP.<br>
       Santa María del Rosario: $3,600 CUP.</p>
 
-      <p><strong style="color:#d4af37;">🏍️ DIEZ DE OCTUBRE — $1,900 CUP</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ DIEZ DE OCTUBRE — $1,900 CUP</strong><br>
       Mónaco, Luyanó, Víbora, Sta. Catalina, Santos Suárez, Sevillano, Lawton, Vista Alegre, Jesús del Monte, Tamarindo, Acosta.</p>
 
-      <p><strong style="color:#d4af37;">🏍️ ARROYO NARANJO</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ ARROYO NARANJO</strong><br>
       Mantilla, Párraga, Poey, Santa Amalia, La Palma, Víbora Park, Callejas: $1,900 CUP.<br>
       La Güinera: $2,100 CUP.<br>
       Los Pinos, Reparto Eléctrico, Calvario, Fraternidad: $2,100 CUP.<br>
       Las Guásimas: $3,400 CUP.<br>
       Managua: $3,900 CUP.</p>
 
-      <p><strong style="color:#d4af37;">🏍️ CENTRO HABANA / HABANA VIEJA — $1,900 CUP</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ CENTRO HABANA / HABANA VIEJA — $1,900 CUP</strong><br>
       Cayo Hueso, Dragones, Barrio Chino, Los Sitios, Pueblo Nuevo, Colón, Belén, San Isidro, Prado, Catedral, Tallapiedra.</p>
 
-      <p><strong style="color:#d4af37;">🏍️ CERRO — $1,900 CUP</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ CERRO — $1,900 CUP</strong><br>
       Latinoamericano, Pilar-Atarés, Palatino, Canal, Las Cañas, Casino Deportivo, Santa Catalina, Ayestarán.</p>
 
-      <p><strong style="color:#d4af37;">🏍️ VEDADO / PLAZA — $2,100 CUP</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ VEDADO / PLAZA — $2,100 CUP</strong><br>
       Vedado, Nuevo Vedado, Rampa, Príncipe, Puentes Grandes, Colón (Plaza), El Carmelo, Alturas del Vedado.</p>
 
-      <p><strong style="color:#d4af37;">🏍️ MARIANAO — $2,600 CUP</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ MARIANAO — $2,600 CUP</strong><br>
       Pogolotti, Los Quemados, Los Pocitos, Santa Felicia, El Palmar, Belén, Zamora-Coco Solo, CAI Los Ángeles.</p>
 
-      <p><strong style="color:#d4af37;">🏍️ LA LISA</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ LA LISA</strong><br>
       Alturas de La Lisa, Arimao, La Coronela, Versalles, Balcón: $2,600 CUP.<br>
       Arroyo Arenas, San Agustín, Valle Grande, Bello 26, Cinco Palmas: $4,300 CUP.<br>
       El Cano, La Novia del Mediodía: $4,300 CUP.<br>
       Punta Brava, Reparto Barbosa: $5,900 CUP.</p>
 
-      <p><strong style="color:#d4af37;">🏍️ PLAYA</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ PLAYA</strong><br>
       Miramar, Almendares, Kohly, La Ceiba, Buenavista, La Sierra, Querejeta: $2,400 CUP.<br>
       Náutico, Cubanacán, Atabey, Siboney, Flores: $2,900 CUP.<br>
       Santa Fe, Jaimanitas: $6,600 CUP.<br>
       Playa Baracoa: $7,600 CUP.</p>
 
-      <p><strong style="color:#d4af37;">🏍️ HABANA DEL ESTE</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ HABANA DEL ESTE</strong><br>
       Camilo Cienfuegos, Bahía, Villa Panamericana, Cojímar, Alamar, Antonio Guiteras: $2,500 CUP.<br>
       Barreras: $2,900 CUP.<br>
       Guanabo, Boca Ciega: $4,000 CUP.<br>
@@ -3539,29 +3542,32 @@ document.addEventListener("DOMContentLoaded", function() {
       Santa Cruz del Norte: $8,100 CUP.<br>
       San José de las Lajas: $6,300 CUP.</p>
 
-      <p><strong style="color:#d4af37;">🏍️ BOYEROS</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ BOYEROS</strong><br>
       Ponce, Trigal, La Fortuna, Aldabó, Altahabana, Embil, Miraflores, Capdevila, Reloj Club, Pte. 100 y Boyeros, Armada: $2,600 CUP.<br>
       CUJAE, Berenguer, Fontanar, Río Verde, Mazorra: $3,600 CUP.<br>
       Abel Santamaría, 1.º de Mayo, Rancho Boyeros, Wajay, El Chico, Baluarte, Aeropuerto, Lugardita, Pediátrico: $4,100 CUP.<br>
       Mulgoba, Santiago de las Vegas, Nuevo Santiago: $4,400 CUP.</p>
 
-      <p><strong style="color:#d4af37;">🏍️ EXTRAMUROS / PROVINCIAS</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ EXTRAMUROS / PROVINCIAS</strong><br>
       Melena del Sur, San Antonio de los Baños: $7,600 CUP.<br>
       Güines, Batabanó: $7,600 CUP.<br>
       Güira de Melena: $10,600 CUP.<br>
       Madruga: $13,600 CUP.</p>
 
       <div style="display:flex; justify-content:center; margin-top:20px;">
-        <button onclick="document.getElementById('modal-tarifas').style.display='none'" style="background:#d4af37; color:#000; border:none; padding:10px 30px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:1.1rem;">Cerrar</button>
+        <button onclick="document.getElementById('modal-tarifas').style.display='none'" style="background:linear-gradient(135deg, #d4af37, #b8921b); color:#000; border:none; padding:25px 60px; border-radius:15px; cursor:pointer; font-weight:bold; font-size:3rem;">Cerrar</button>
       </div>
     </div>
   </div>
 
-  <div id="modal-tarifas-b" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:15000; align-items:center; justify-content:center; padding:20px; box-sizing:border-box;">
-    <div style="background:#1a1a1a; border:2px solid #d4af37; border-radius:15px; padding:20px; max-width:500px; width:100%; max-height:85vh; overflow-y:auto; color:#fff; font-size:0.95rem; line-height:1.5;">
-      <h2 style="color:#d4af37; text-align:center; margin-bottom:15px; font-size:1.5rem;">📢 TARIFAS DE MENSAJERÍA</h2>
+  <div id="modal-tarifas-b" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#0d0d0d; z-index:25000; overflow-y:auto; padding:0; box-sizing:border-box;">
+    <div style="max-width:1100px; margin:0 auto; padding:40px 30px 60px 30px; width:100%; box-sizing:border-box;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:40px; border-bottom:4px solid #d4af37; padding-bottom:20px;">
+        <h2 style="color:#d4af37; font-size:4rem; margin:0;">📢 TARIFAS DE MENSAJERÍA</h2>
+        <button onclick="document.getElementById('modal-tarifas-b').style.display='none'" style="background:transparent; border:none; color:#d4af37; font-size:6rem; cursor:pointer; line-height:1;">×</button>
+      </div>
 
-      <p><strong style="color:#d4af37;">🏍️ ZONA CENTRO</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ ZONA CENTRO</strong><br>
       • Vedado 💰 $1,500<br>
       • Ciudad Deportiva 💰 $1,500<br>
       • Cerro 💰 $1,500<br>
@@ -3569,7 +3575,7 @@ document.addEventListener("DOMContentLoaded", function() {
       • Habana Vieja 💰 $1,500<br>
       • Avenida 26 💰 $1,500</p>
 
-      <p><strong style="color:#d4af37;">🏍️ PLAYA</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ PLAYA</strong><br>
       • Playa 💰 $1,800<br>
       • Náutico 💰 $2,500<br>
       • Siboney 💰 $2,500<br>
@@ -3577,7 +3583,7 @@ document.addEventListener("DOMContentLoaded", function() {
       • Santa Fe 💰 $3,500<br>
       • Después de Santa Fe 💰 $4,000</p>
 
-      <p><strong style="color:#d4af37;">🏍️ MARIANAO / LA LISA</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ MARIANAO / LA LISA</strong><br>
       • Marianao 💰 $2,200<br>
       • La Lisa 💰 $2,600<br>
       • El Hueco 💰 $2,500<br>
@@ -3589,9 +3595,9 @@ document.addEventListener("DOMContentLoaded", function() {
       • El Cano 💰 $3,000<br>
       • Punta Brava 💰 $4,000</p>
 
-      <p><strong style="color:#d4af37;">🏍️ UCI 💰 $4,000</strong></p>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ UCI 💰 $4,000</strong></p>
 
-      <p><strong style="color:#d4af37;">🏍️ BOYEROS</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ BOYEROS</strong><br>
       • 100 y Vento 💰 $1,500<br>
       • CUJAE 💰 $3,000<br>
       • Fontanar 💰 $2,500<br>
@@ -3603,7 +3609,7 @@ document.addEventListener("DOMContentLoaded", function() {
       • Mulgoba 💰 $2,500<br>
       • Santiago de las Vegas 💰 $3,500</p>
 
-      <p><strong style="color:#d4af37;">🏍️ ARROYO NARANJO</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ ARROYO NARANJO</strong><br>
       • Víbora Park 💰 $1,000<br>
       • La Palma 💰 $1,200<br>
       • Miraflores 💰 $2,000<br>
@@ -3614,13 +3620,13 @@ document.addEventListener("DOMContentLoaded", function() {
       • Capri 💰 $2,000<br>
       • Eléctrico 💰 $2,500</p>
 
-      <p><strong style="color:#d4af37;">🏍️ DIEZ DE OCTUBRE</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ DIEZ DE OCTUBRE</strong><br>
       • Santo Suárez 💰 $1,000<br>
       • Luyanó 💰 $1,000<br>
       • Lawton 💰 $1,000<br>
       • Víbora Park 💰 $1,000</p>
 
-      <p><strong style="color:#d4af37;">🏍️ SAN MIGUEL DEL PADRÓN</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ SAN MIGUEL DEL PADRÓN</strong><br>
       • Virgen del Camino 💰 $1,800<br>
       • Virgen del Camino hasta Av. 4ta (Luyanó Moderno) 💰 $1,800<br>
       • Caballo Blanco 💰 $1,500<br>
@@ -3628,19 +3634,19 @@ document.addEventListener("DOMContentLoaded", function() {
       • Diezmero 💰 $1,800<br>
       • San Francisco de Paula 💰 $2,000</p>
 
-      <p><strong style="color:#d4af37;">🏍️ COTORRO</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ COTORRO</strong><br>
       • Puente del Cotorro 💰 $2,200<br>
       • Centro de Cotorro 💰 $2,500<br>
       • Alberro 💰 $3,000<br>
       • Lo último del Cotorro 💰 $3,500<br>
       • 4 Caminos 💰 $4,500</p>
 
-      <p><strong style="color:#d4af37;">🏍️ GUANABACOA</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ GUANABACOA</strong><br>
       • Principio 💰 $2,000<br>
       • Centro 💰 $2,500<br>
       • Final 💰 $4,000</p>
 
-      <p><strong style="color:#d4af37;">🏍️ HABANA DEL ESTE</strong><br>
+      <p style="font-size:2.5rem; color:#fff; line-height:1.8;"><strong style="color:#d4af37; font-size:2.8rem;" style="color:#d4af37;">🏍️ HABANA DEL ESTE</strong><br>
       • Regla 💰 $2,000<br>
       • Reparto Camilo Cienfuegos 💰 $2,500<br>
       • Casa Blanca 💰 $2,500<br>
@@ -3652,7 +3658,7 @@ document.addEventListener("DOMContentLoaded", function() {
       • Campo Florido 💰 $6,000</p>
 
       <div style="display:flex; justify-content:center; margin-top:20px;">
-        <button onclick="document.getElementById('modal-tarifas-b').style.display='none'" style="background:#d4af37; color:#000; border:none; padding:10px 30px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:1.1rem;">Cerrar</button>
+        <button onclick="document.getElementById('modal-tarifas-b').style.display='none'" style="background:linear-gradient(135deg, #d4af37, #b8921b); color:#000; border:none; padding:25px 60px; border-radius:15px; cursor:pointer; font-weight:bold; font-size:3rem;">Cerrar</button>
       </div>
     </div>
   </div>
