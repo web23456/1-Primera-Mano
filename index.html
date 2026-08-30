@@ -1320,9 +1320,32 @@ nav a:hover, nav button:hover {
       border-radius: 12px !important;
       background: rgba(10,10,10,0.85) !important;
       border: 1px solid rgba(212,175,55,0.3) !important;
-      overflow: hidden !important;
+      overflow: visible !important;
       box-shadow: 0 4px 15px rgba(0,0,0,0.5) !important;
-      transition: transform 0.3s ease !important;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+      position: relative !important;
+    }
+
+    .producto-selected {
+      border: 3px solid #d4af37 !important;
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.7), inset 0 0 30px rgba(212, 175, 55, 0.15) !important;
+    }
+    .producto-selected::after {
+      content: "✅";
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      font-size: 32px;
+      z-index: 100;
+      background: rgba(0,0,0,0.85);
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      border: 2px solid #d4af37;
     }
 
     .producto:hover {
@@ -1556,7 +1579,7 @@ nav a:hover, nav button:hover {
   </div><nav id="main-nav">
         <div class="nav-item dropdown">
           <a href="#electrodomésticos">⚡ Electrodomésticos <span class="dropdown-icon">▼</span></a>
-          <div class="dropdown-content"><a href="#electrodomésticos-productos">⚡ Electrodomésticos</a></div>
+          <div class="dropdown-content"><a href="#electrodomesticos-a">⚡ Electrodomésticos A</a><a href="#electrodomesticos-b">⚡ Electrodomésticos B</a><a href="#electrodomesticos-c">⚡ Electrodomésticos C</a></div>
         </div>
       
         <div class="nav-item dropdown">
@@ -1654,7 +1677,7 @@ nav a:hover, nav button:hover {
   
     
  
-    <section class="seccion-productos" id="electrodomésticos-productos"><h2>⚡ Electrodomésticos</h2><div class="galeria">
+    <section class="seccion-productos" id="electrodomesticos-a"><h2>⚡ Electrodomésticos A</h2><div class="galeria">
       
       <div class="producto">
         <img src="productos_nuevos/thumb_1779112309593_ru8f.webp" alt="Cocina infrarroja 3500W" loading="lazy" class="img-thumb" onclick="abrirFoto('productos_nuevos/full_1779112309593_ru8f.webp', 'Cocina infrarroja 3500W')" style="cursor:zoom-in" title="Toca para ampliar">
@@ -1851,8 +1874,18 @@ nav a:hover, nav button:hover {
 
    </div></section>
     
-    
-    </section>
+   <section class="seccion-productos" id="electrodomesticos-b">
+     <h2 class="titulo-oro">⚡ Electrodomésticos B</h2>
+     <div class="galeria">
+     </div>
+   </section>
+
+   <section class="seccion-productos" id="electrodomesticos-c">
+     <h2 class="titulo-oro">⚡ Electrodomésticos C</h2>
+     <div class="galeria">
+     </div>
+   </section>
+   </section>
     <section class="seccion-padre" id="muebles" style="margin-top:40px; border-top:2px solid gold; padding-top:20px;">
       <h2 class="titulo-padre" style="text-align:center; color:gold; font-size:2.5rem; text-transform:uppercase; margin-bottom:10px; text-shadow:0 0 15px rgba(212,175,55,0.7);">🪑 Muebles</h2>
     <section id="camas" class="seccion-productos">
@@ -3701,42 +3734,44 @@ document.addEventListener("DOMContentLoaded", function() {
         bar.style.display = 'none';
         // Limpiar selecciones
         window.selectedProducts = [];
+        window.selectedCategory = null;
         document.querySelectorAll('.producto').forEach(p => {
-           p.style.border = '';
-           p.style.boxShadow = '';
-           var icon = p.querySelector('.check-icon');
-           if (icon) icon.remove();
+           p.classList.remove('producto-selected');
         });
       }
     }
 
+    function getProductCategory(container) {
+      var section = container.closest('.seccion-productos');
+      if (section && section.id) return section.id;
+      section = container.closest('.seccion-padre');
+      if (section && section.id) return section.id;
+      return 'unknown';
+    }
+
     window.toggleProductSelection = function(titulo, container) {
-      // Toggle logic
+      var category = getProductCategory(container);
+
+      // Check category restriction
+      if (window.selectedProducts.length > 0 && window.selectedCategory && window.selectedCategory !== category) {
+        alert('⚠️ Solo puedes seleccionar productos de la misma categoría.\nYa tienes productos de: ' + window.selectedCategory);
+        return;
+      }
+
       var index = window.selectedProducts.findIndex(p => p.nombre === titulo);
       if (index > -1) {
+        // Deselect
         window.selectedProducts.splice(index, 1);
-        container.style.border = '';
-        container.style.boxShadow = '';
-        var icon = container.querySelector('.check-icon');
-        if (icon) icon.remove();
+        container.classList.remove('producto-selected');
+        if (window.selectedProducts.length === 0) {
+          window.selectedCategory = null;
+        }
       } else {
-        // Find price
+        // Select
         var priceText = container.querySelector('.precio') ? container.querySelector('.precio').textContent : '0';
         window.selectedProducts.push({ nombre: titulo, precio: priceText });
-        container.style.border = '2px solid #d4af37';
-        container.style.boxShadow = '0 0 15px rgba(212, 175, 55, 0.5)';
-        var icon = document.createElement('div');
-        icon.className = 'check-icon';
-        icon.innerHTML = '✅';
-        icon.style.position = 'absolute';
-        icon.style.top = '10px';
-        icon.style.right = '10px';
-        icon.style.fontSize = '24px';
-        icon.style.background = '#000';
-        icon.style.borderRadius = '50%';
-        icon.style.padding = '2px';
-        icon.style.zIndex = '10';
-        container.appendChild(icon);
+        window.selectedCategory = category;
+        container.classList.add('producto-selected');
       }
       document.getElementById('selection-count').textContent = window.selectedProducts.length + " seleccionados";
     }

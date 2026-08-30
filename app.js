@@ -109,16 +109,18 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-let productsData = { combos: [], electrodomesticos: [], muebles: [] };
+let productsData = { combos: [], electrodomesticos: [], electrodomesticos_b: [], electrodomesticos_c: [], muebles: [] };
 
 function cargarProductosEnVivo() {
   fetch('products.json')
     .then(response => response.json())
     .then(data => {
       productsData = data;
-      renderProducts('carnicos', data.combos.filter(p => p.image && p.image.includes('carnicos')));
-      renderProducts('electrodomesticos', data.electrodomesticos);
-      renderProducts('muebles', data.muebles);
+      renderProducts('carnicos', (data.combos || []).filter(p => p.image && p.image.includes('carnicos')));
+      renderProducts('electrodomesticos-a', data.electrodomesticos || []);
+      if(data.electrodomesticos_b) renderProducts('electrodomesticos-b', data.electrodomesticos_b);
+      if(data.electrodomesticos_c) renderProducts('electrodomesticos-c', data.electrodomesticos_c);
+      renderProducts('muebles', data.muebles || []);
       actualizarCarrito();
       precacheImagesAggressively(data); // Iniciar prefetch de imágenes inteligente
     })
@@ -135,7 +137,7 @@ function precacheImagesAggressively(data) {
 
   // Extraer todas las URLs de imágenes de los productos
   let urls = [];
-  const categorias = ['combos', 'electrodomesticos', 'muebles'];
+  const categorias = ['combos', 'electrodomesticos', 'electrodomesticos_b', 'electrodomesticos_c', 'muebles'];
   categorias.forEach(cat => {
     if (data[cat]) {
       data[cat].forEach(p => {
