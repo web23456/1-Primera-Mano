@@ -3540,42 +3540,44 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
   </div>
 
-  <div id="modal-mensajeria" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:15000; align-items:center; justify-content:center; flex-direction:column; padding:0; box-sizing:border-box;">
-    <div style="background:#111; border:2px solid #d4af37; border-radius:0; padding:20px; width:100%; max-width:500px; height:100%; max-height:100vh; overflow-y:auto; position:relative;">
-      <button onclick="document.getElementById('modal-mensajeria').style.display='none'" style="position:absolute; top:10px; right:15px; background:transparent; border:none; color:#d4af37; font-size:2rem; cursor:pointer;">×</button>
-      <h3 style="color:#d4af37; text-align:center; margin-bottom:20px; margin-top:5px;">📝 Factura (Mensajería)</h3>
-      <form id="form-mensajeria" style="display:flex; flex-direction:column; gap:10px;">
-        <label style="color:#fff; font-size:1rem;">🪀 Fecha: <input type="date" id="m-fecha" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
-        <label style="color:#fff; font-size:1rem;">🪀 Nombre del Cliente: <input type="text" id="m-nombre" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
-        <label style="color:#fff; font-size:1rem;">🪀 CI: <input type="text" id="m-ci" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
-        <label style="color:#fff; font-size:1rem;">🪀 Teléfono del Cliente: <input type="text" id="m-tel" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
-        <label style="color:#fff; font-size:1rem;">🪀 Dirección del cliente: <input type="text" id="m-dir" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
-        <div id="m-pedidos-container" style="display:flex; flex-direction:column; gap:10px;"></div>
-        <label style="color:#fff; font-size:1rem;">🪀 Precio del artículo: <input type="text" id="m-precio" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" readonly></label>
-        <label style="color:#fff; font-size:1rem;">🪀 Método de pago: 
-          <select id="m-pago" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;">
+  <div id="modal-mensajeria" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#0d0d0d; z-index:15000; overflow-y:auto; padding:0; box-sizing:border-box;">
+    <div style="max-width:520px; margin:0 auto; padding:25px 20px 40px 20px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:25px; border-bottom:2px solid #d4af37; padding-bottom:15px;">
+        <h3 style="color:#d4af37; font-size:1.6rem; margin:0;">📝 Factura (Mensajería)</h3>
+        <button onclick="document.getElementById('modal-mensajeria').style.display='none'" style="background:transparent; border:none; color:#d4af37; font-size:2.2rem; cursor:pointer; line-height:1;">×</button>
+      </div>
+      <form id="form-mensajeria" style="display:flex; flex-direction:column; gap:18px;">
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Fecha: <input type="date" id="m-fecha" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Nombre del Cliente: <input type="text" id="m-nombre" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 CI: <input type="text" id="m-ci" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Teléfono del Cliente: <input type="text" id="m-tel" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Dirección del cliente: <input type="text" id="m-dir" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
+        <div id="m-pedidos-container" style="display:flex; flex-direction:column; gap:12px;"></div>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Precio del artículo: <input type="text" id="m-precio" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#d4af37; box-sizing:border-box; margin-top:6px; font-size:1.15rem; font-weight:bold;" readonly></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Método de pago: 
+          <select id="m-pago" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;">
             <option value="USD">USD</option>
             <option value="Moneda nacional 10 pesos por encima del toque">Moneda nacional 10 pesos por encima del toque</option>
             <option value="Mixta USD MN">Mixta USD MN</option>
           </select>
         </label>
-        <label style="color:#fff; font-size:1rem;">🪀 Precio de la mensajería: 
-          <div style="display:flex; gap:5px; margin-top:5px;">
-            <input type="text" id="m-precio-mensajeria" style="flex:1; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box;" placeholder="Cantidad">
-            <select id="m-moneda-mensajeria" style="width:80px; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box;">
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Precio de la mensajería: 
+          <div style="display:flex; gap:8px; margin-top:6px;">
+            <input type="text" id="m-precio-mensajeria" style="flex:1; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; font-size:1.05rem;" placeholder="Cantidad">
+            <select id="m-moneda-mensajeria" style="width:85px; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; font-size:1.05rem;">
               <option value="USD">USD</option>
               <option value="MN">MN</option>
               <option value="MIX">MIX</option>
             </select>
           </div>
         </label>
-        <label style="color:#fff; font-size:1rem;">🪀 Total a Recoger: <input type="text" id="m-total" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
-        <label style="color:#fff; font-size:1rem;">🪀 Dinero a devolver: <input type="text" id="m-devolver" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
-        <label style="color:#fff; font-size:1rem;">🪀 Nombre del gestor: <input type="text" id="m-gestor" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
-        <label style="color:#fff; font-size:1rem;">🪀 #De teléfono del Gestor: <input type="text" id="m-tel-gestor" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
-        <label style="color:#fff; font-size:1rem;">🪀 Descontar al gestor: <input type="text" id="m-desc-gestor" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Total a Recoger: <input type="text" id="m-total" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Dinero a devolver: <input type="text" id="m-devolver" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Nombre del gestor: <input type="text" id="m-gestor" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 #De teléfono del Gestor: <input type="text" id="m-tel-gestor" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Descontar al gestor: <input type="text" id="m-desc-gestor" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
         
-        <button type="button" onclick="enviarMensajeriaWhatsApp()" style="background: linear-gradient(135deg, #25D366, #128C7E); color:white; padding:15px; border:none; border-radius:10px; font-size:1.2rem; cursor:pointer; margin-top:20px; font-weight:bold;">📲 Enviar por WhatsApp</button>
+        <button type="button" onclick="enviarMensajeriaWhatsApp()" style="background: linear-gradient(135deg, #25D366, #128C7E); color:white; padding:16px; border:none; border-radius:12px; font-size:1.3rem; cursor:pointer; margin-top:15px; font-weight:bold; letter-spacing:0.5px;">📲 Enviar por WhatsApp</button>
       </form>
     </div>
   </div>
@@ -3693,29 +3695,31 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   </script>
 
-  <div id="modal-recoger" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:15000; align-items:center; justify-content:center; flex-direction:column; padding:0; box-sizing:border-box;">
-    <div style="background:#111; border:2px solid #d4af37; border-radius:0; padding:20px; width:100%; max-width:500px; height:100%; max-height:100vh; overflow-y:auto; position:relative;">
-      <button onclick="document.getElementById('modal-recoger').style.display='none'" style="position:absolute; top:10px; right:15px; background:transparent; border:none; color:#d4af37; font-size:2rem; cursor:pointer;">×</button>
-      <h3 style="color:#d4af37; text-align:center; margin-bottom:20px; margin-top:5px;">📝 Factura (Recoger en el Local)</h3>
-      <form id="form-recoger" style="display:flex; flex-direction:column; gap:10px;">
-        <label style="color:#fff; font-size:1rem;">🪀 Fecha: <input type="date" id="r-fecha" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
-        <label style="color:#fff; font-size:1rem;">🪀 Nombre del Cliente: <input type="text" id="r-nombre" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
-        <label style="color:#fff; font-size:1rem;">🪀 #De teléfono del Cliente: <input type="text" id="r-tel" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
-        <div id="r-pedidos-container" style="display:flex; flex-direction:column; gap:10px;"></div>
-        <label style="color:#fff; font-size:1rem;">🪀 Precio del artículo: <input type="text" id="r-precio" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" readonly></label>
-        <label style="color:#fff; font-size:1rem;">🪀 Método de pago: 
-          <select id="r-pago" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;">
+  <div id="modal-recoger" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#0d0d0d; z-index:15000; overflow-y:auto; padding:0; box-sizing:border-box;">
+    <div style="max-width:520px; margin:0 auto; padding:25px 20px 40px 20px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:25px; border-bottom:2px solid #d4af37; padding-bottom:15px;">
+        <h3 style="color:#d4af37; font-size:1.6rem; margin:0;">📝 Factura (Recoger en el Local)</h3>
+        <button onclick="document.getElementById('modal-recoger').style.display='none'" style="background:transparent; border:none; color:#d4af37; font-size:2.2rem; cursor:pointer; line-height:1;">×</button>
+      </div>
+      <form id="form-recoger" style="display:flex; flex-direction:column; gap:18px;">
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Fecha: <input type="date" id="r-fecha" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Nombre del Cliente: <input type="text" id="r-nombre" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 #De teléfono del Cliente: <input type="text" id="r-tel" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
+        <div id="r-pedidos-container" style="display:flex; flex-direction:column; gap:12px;"></div>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Precio del artículo: <input type="text" id="r-precio" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#d4af37; box-sizing:border-box; margin-top:6px; font-size:1.15rem; font-weight:bold;" readonly></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Método de pago: 
+          <select id="r-pago" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;">
             <option value="USD">USD</option>
             <option value="Moneda nacional 10 pesos por encima del toque">Moneda nacional 10 pesos por encima del toque</option>
             <option value="Mixta USD MN">Mixta USD MN</option>
           </select>
         </label>
-        <label style="color:#fff; font-size:1rem;">🪀 Total a Recoger: <input type="text" id="r-total" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
-        <label style="color:#fff; font-size:1rem;">🪀 Nombre del gestor: <input type="text" id="r-gestor" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
-        <label style="color:#fff; font-size:1rem;">🪀 #De teléfono del Gestor: <input type="text" id="r-tel-gestor" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
-        <label style="color:#fff; font-size:1rem;">🪀 Dirección del local: <input type="text" id="r-direccion" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Total a Recoger: <input type="text" id="r-total" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Nombre del gestor: <input type="text" id="r-gestor" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 #De teléfono del Gestor: <input type="text" id="r-tel-gestor" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
+        <label style="color:#fff; font-size:1.15rem; font-weight:600;">🪀 Dirección del local: <input type="text" id="r-direccion" style="width:100%; padding:12px; border-radius:8px; border:1px solid #444; background:#1a1a1a; color:#fff; box-sizing:border-box; margin-top:6px; font-size:1.05rem;"></label>
         
-        <button type="button" onclick="enviarRecogerWhatsApp()" style="background: linear-gradient(135deg, #d4af37, #b8921b); color:#000; padding:15px; border:none; border-radius:10px; font-size:1.2rem; cursor:pointer; margin-top:20px; font-weight:bold;">📲 Enviar por WhatsApp</button>
+        <button type="button" onclick="enviarRecogerWhatsApp()" style="background: linear-gradient(135deg, #d4af37, #b8921b); color:#000; padding:16px; border:none; border-radius:12px; font-size:1.3rem; cursor:pointer; margin-top:15px; font-weight:bold; letter-spacing:0.5px;">📲 Enviar por WhatsApp</button>
       </form>
     </div>
   </div>
