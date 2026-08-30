@@ -1534,6 +1534,10 @@ nav a:hover, nav button:hover {
       <i class="fa-solid fa-gem icon-animado"></i>
       <h1 class="titulo-animado">Primera Mano</h1>
     </div>
+    
+    <div style="margin: 0 5px;">
+      <button onclick="toggleSelectionMode()" id="btn-selection-mode" style="background:transparent; border:1px solid #d4af37; color:#d4af37; padding:5px 10px; border-radius:5px; font-size:1rem; cursor:pointer; font-weight:bold;">✅ Seleccionar</button>
+    </div>
 
     <!-- Botón de Opciones -->
     <div style="position:relative; margin: 0 10px;">
@@ -3288,8 +3292,6 @@ nav a:hover, nav button:hover {
 <script id="product-detail-js">
 function abrirFoto(fullSrc, titulo, evt) {
   if (evt) evt.stopPropagation();
-  var modal = document.getElementById('product-detail-modal');
-  if (!modal) return;
   
   var container = null;
   var productos = document.querySelectorAll('.producto');
@@ -3300,6 +3302,14 @@ function abrirFoto(fullSrc, titulo, evt) {
       break;
     }
   }
+
+  if (window.isSelectionMode && container) {
+    if(window.toggleProductSelection) window.toggleProductSelection(titulo, container);
+    return;
+  }
+
+  var modal = document.getElementById('product-detail-modal');
+  if (!modal) return;
 
   var priceText = "Consultar precio";
   var numericPrice = 0;
@@ -3418,21 +3428,33 @@ document.addEventListener("DOMContentLoaded", function() {
   </div>
   
   <script>
-    function abrirModalMensajeria() {
-      const titulo = document.getElementById("product-detail-title").innerText;
-      const precio = document.getElementById("product-detail-price").innerText;
-      const caracteristicas = document.getElementById("m-caracteristicas").value;
+    function abrirModalMensajeria(isMulti = false) {
+      let pedidoDesc = "";
+      let precioTotal = 0;
       
-      let pedidoDesc = titulo;
-      if(caracteristicas) {
-         pedidoDesc += " (" + caracteristicas + ")";
+      if (isMulti && window.selectedProducts && window.selectedProducts.length > 0) {
+        pedidoDesc = window.selectedProducts.map(p => p.nombre).join(", ");
+        window.selectedProducts.forEach(p => {
+          let num = p.precio.replace(/[^\d.]/g, '');
+          if(num) precioTotal += parseFloat(num);
+        });
+        document.getElementById("m-precio").value = "💰 $" + precioTotal;
+        document.getElementById("m-cant").value = window.selectedProducts.length;
+      } else {
+        const titulo = document.getElementById("product-detail-title").innerText;
+        const precio = document.getElementById("product-detail-price").innerText;
+        const caracteristicas = document.getElementById("m-caracteristicas").value;
+        pedidoDesc = titulo;
+        if(caracteristicas) {
+           pedidoDesc += " (" + caracteristicas + ")";
+        }
+        document.getElementById("m-precio").value = precio;
       }
       
       // Set today's date
       document.getElementById("m-fecha").valueAsDate = new Date();
       
       document.getElementById("m-pedido").value = pedidoDesc;
-      document.getElementById("m-precio").value = precio;
 
       if(localStorage.getItem('gestor_nombre')) document.getElementById("m-gestor").value = localStorage.getItem('gestor_nombre');
       if(localStorage.getItem('gestor_tel')) document.getElementById("m-tel-gestor").value = localStorage.getItem('gestor_tel');
@@ -3501,19 +3523,31 @@ document.addEventListener("DOMContentLoaded", function() {
   </div>
   
   <script>
-    function abrirModalRecoger() {
-      const titulo = document.getElementById("product-detail-title").innerText;
-      const precio = document.getElementById("product-detail-price").innerText;
-      const caracteristicas = document.getElementById("m-caracteristicas").value;
+    function abrirModalRecoger(isMulti = false) {
+      let pedidoDesc = "";
+      let precioTotal = 0;
       
-      let pedidoDesc = titulo;
-      if(caracteristicas) {
-         pedidoDesc += " (" + caracteristicas + ")";
+      if (isMulti && window.selectedProducts && window.selectedProducts.length > 0) {
+        pedidoDesc = window.selectedProducts.map(p => p.nombre).join(", ");
+        window.selectedProducts.forEach(p => {
+          let num = p.precio.replace(/[^\d.]/g, '');
+          if(num) precioTotal += parseFloat(num);
+        });
+        document.getElementById("r-precio").value = "💰 $" + precioTotal;
+        document.getElementById("r-cant").value = window.selectedProducts.length;
+      } else {
+        const titulo = document.getElementById("product-detail-title").innerText;
+        const precio = document.getElementById("product-detail-price").innerText;
+        const caracteristicas = document.getElementById("m-caracteristicas").value;
+        pedidoDesc = titulo;
+        if(caracteristicas) {
+           pedidoDesc += " (" + caracteristicas + ")";
+        }
+        document.getElementById("r-precio").value = precio;
       }
       
       document.getElementById("r-fecha").valueAsDate = new Date();
       document.getElementById("r-pedido").value = pedidoDesc;
-      document.getElementById("r-precio").value = precio;
 
       if(localStorage.getItem('gestor_nombre')) document.getElementById("r-gestor").value = localStorage.getItem('gestor_nombre');
       if(localStorage.getItem('gestor_tel')) document.getElementById("r-tel-gestor").value = localStorage.getItem('gestor_tel');
@@ -3577,6 +3611,75 @@ document.addEventListener("DOMContentLoaded", function() {
       localStorage.setItem('gestor_tel', document.getElementById('g-tel').value);
       alert('Información guardada correctamente. Se autocompletará en tus próximas facturas.');
       document.getElementById('modal-gestor').style.display = 'none';
+    }
+  </script>
+
+  <!-- Barra inferior de selección múltiple -->
+  <div id="selection-bar" style="display:none; position:fixed; bottom:0; left:0; width:100%; background:#111; border-top:2px solid #d4af37; padding:15px; z-index:20000; box-sizing:border-box; justify-content:space-between; align-items:center; box-shadow:0 -5px 20px rgba(0,0,0,0.8);">
+    <div id="selection-count" style="color:#fff; font-weight:bold; font-size:1.1rem;">0 seleccionados</div>
+    <div style="display:flex; gap:10px;">
+      <button onclick="abrirModalMensajeria(true)" style="background: linear-gradient(135deg, #128C7E, #075E54); color:#fff; border:none; padding:10px 15px; border-radius:8px; font-weight:bold; cursor:pointer;">Mensajería 🚚</button>
+      <button onclick="abrirModalRecoger(true)" style="background: linear-gradient(135deg, #d4af37, #b8921b); color:#000; border:none; padding:10px 15px; border-radius:8px; font-weight:bold; cursor:pointer;">Vale Local 🏪</button>
+    </div>
+  </div>
+
+  <script>
+    window.isSelectionMode = false;
+    window.selectedProducts = []; // Arreglo de objetos {nombre, precio}
+
+    function toggleSelectionMode() {
+      window.isSelectionMode = !window.isSelectionMode;
+      var btn = document.getElementById('btn-selection-mode');
+      var bar = document.getElementById('selection-bar');
+      if (window.isSelectionMode) {
+        btn.style.background = '#d4af37';
+        btn.style.color = '#000';
+        bar.style.display = 'flex';
+        // Deshabilitar scrolls o avisar al usuario
+      } else {
+        btn.style.background = 'transparent';
+        btn.style.color = '#d4af37';
+        bar.style.display = 'none';
+        // Limpiar selecciones
+        window.selectedProducts = [];
+        document.querySelectorAll('.producto').forEach(p => {
+           p.style.border = '';
+           p.style.boxShadow = '';
+           var icon = p.querySelector('.check-icon');
+           if (icon) icon.remove();
+        });
+      }
+    }
+
+    window.toggleProductSelection = function(titulo, container) {
+      // Toggle logic
+      var index = window.selectedProducts.findIndex(p => p.nombre === titulo);
+      if (index > -1) {
+        window.selectedProducts.splice(index, 1);
+        container.style.border = '';
+        container.style.boxShadow = '';
+        var icon = container.querySelector('.check-icon');
+        if (icon) icon.remove();
+      } else {
+        // Find price
+        var priceText = container.querySelector('.precio') ? container.querySelector('.precio').textContent : '0';
+        window.selectedProducts.push({ nombre: titulo, precio: priceText });
+        container.style.border = '2px solid #d4af37';
+        container.style.boxShadow = '0 0 15px rgba(212, 175, 55, 0.5)';
+        var icon = document.createElement('div');
+        icon.className = 'check-icon';
+        icon.innerHTML = '✅';
+        icon.style.position = 'absolute';
+        icon.style.top = '10px';
+        icon.style.right = '10px';
+        icon.style.fontSize = '24px';
+        icon.style.background = '#000';
+        icon.style.borderRadius = '50%';
+        icon.style.padding = '2px';
+        icon.style.zIndex = '10';
+        container.appendChild(icon);
+      }
+      document.getElementById('selection-count').textContent = window.selectedProducts.length + " seleccionados";
     }
   </script>
 </body></html>

@@ -303,9 +303,7 @@ window.toggleCarritoModal = window.toggleCarritoPanel;
 // Modal details
 window.abrirFoto = function(fullSrc, titulo, evt) {
   if (evt) evt.stopPropagation();
-  var modal = document.getElementById('product-detail-modal');
-  if (!modal) return;
-
+  
   var container = null;
   var productos = document.querySelectorAll('.producto');
   for (var i = 0; i < productos.length; i++) {
@@ -315,6 +313,14 @@ window.abrirFoto = function(fullSrc, titulo, evt) {
       break;
     }
   }
+
+  if (window.isSelectionMode && container) {
+    window.toggleProductSelection(titulo, container);
+    return;
+  }
+
+  var modal = document.getElementById('product-detail-modal');
+  if (!modal) return;
 
   var priceText = "Consultar precio";
   if (container) {
