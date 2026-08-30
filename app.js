@@ -183,7 +183,7 @@ function renderProducts(categoryId, products) {
         : '<p class="precio" style="display:none">0</p>'}
       ${p.isAgotado ? 
         `<button class="boton-agotado" disabled>Agotado</button>` : 
-        `<button class="boton-carrito" onclick="agregarAlCarrito(this, '${p.name}')">Añadir al carrito 🛒</button>`}
+        `<button class="boton-carrito" onclick="abrirFoto('${p.image}', '${p.name}', event)">Comprar</button>`}
     `;
     gallery.appendChild(div);
   });
