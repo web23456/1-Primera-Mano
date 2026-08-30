@@ -3405,14 +3405,10 @@ document.addEventListener("DOMContentLoaded", function() {
     btn.onmouseover = function() { this.style.background = '#d4af37'; this.style.color = '#000'; };
     btn.onmouseout = function() { this.style.background = '#111'; this.style.color = '#d4af37'; };
     btn.onclick = function() {
-      if (window.selectedProducts && window.selectedProducts.length > 0) {
-        if (h2.closest('section') && h2.closest('section').id === 'electrodomesticos-a') {
-          document.getElementById('modal-tarifas').style.display = 'flex';
-        } else {
-          abrirModalMensajeria(true);
-        }
+      if (h2.closest('section') && h2.closest('section').id === 'electrodomesticos-a') {
+        document.getElementById('modal-tarifas').style.display = 'flex';
       } else {
-        alert('⚠️ Por favor, selecciona primero los productos usando el botón "✅ Seleccionar" en la parte superior y marcando los artículos.');
+        alert('SIN INFORMACIÓN');
       }
     };
     
@@ -3538,9 +3534,8 @@ document.addEventListener("DOMContentLoaded", function() {
       Güira de Melena: $10,600 CUP.<br>
       Madruga: $13,600 CUP.</p>
 
-      <div style="display:flex; justify-content:space-between; margin-top:20px;">
-        <button onclick="document.getElementById('modal-tarifas').style.display='none'" style="background:#555; color:#fff; border:none; padding:10px 15px; border-radius:8px; cursor:pointer; font-weight:bold;">Cerrar</button>
-        <button onclick="document.getElementById('modal-tarifas').style.display='none'; abrirModalMensajeria(true);" style="background:#d4af37; color:#000; border:none; padding:10px 15px; border-radius:8px; cursor:pointer; font-weight:bold;">Continuar a Factura</button>
+      <div style="display:flex; justify-content:center; margin-top:20px;">
+        <button onclick="document.getElementById('modal-tarifas').style.display='none'" style="background:#d4af37; color:#000; border:none; padding:10px 30px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:1.1rem;">Cerrar</button>
       </div>
     </div>
   </div>
