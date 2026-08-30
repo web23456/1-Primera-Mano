@@ -3540,8 +3540,8 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
   </div>
 
-  <div id="modal-mensajeria" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:15000; align-items:center; justify-content:center; flex-direction:column; padding:20px; box-sizing:border-box;">
-    <div style="background:#111; border:2px solid #d4af37; border-radius:20px; padding:20px; width:100%; max-width:500px; max-height:90vh; overflow-y:auto; position:relative;">
+  <div id="modal-mensajeria" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:15000; align-items:center; justify-content:center; flex-direction:column; padding:0; box-sizing:border-box;">
+    <div style="background:#111; border:2px solid #d4af37; border-radius:0; padding:20px; width:100%; max-width:500px; height:100%; max-height:100vh; overflow-y:auto; position:relative;">
       <button onclick="document.getElementById('modal-mensajeria').style.display='none'" style="position:absolute; top:10px; right:15px; background:transparent; border:none; color:#d4af37; font-size:2rem; cursor:pointer;">×</button>
       <h3 style="color:#d4af37; text-align:center; margin-bottom:20px; margin-top:5px;">📝 Factura (Mensajería)</h3>
       <form id="form-mensajeria" style="display:flex; flex-direction:column; gap:10px;">
@@ -3591,9 +3591,16 @@ document.addEventListener("DOMContentLoaded", function() {
           let num = p.precio.replace(/[^\d.]/g, '');
           let basePrice = num ? parseFloat(num) : 0;
           precioTotal += basePrice;
+          let imgHtml = p.img ? `<img src="${p.img}" style="width:50px; height:50px; object-fit:cover; border-radius:5px; border:1px solid #d4af37; flex-shrink:0;">` : '';
+          
           container.innerHTML += `
-            <div class="pedido-item" style="border:1px solid #444; padding:10px; border-radius:8px; background:#1a1a1a;">
-              <label style="color:#fff; font-size:1rem; display:block; margin-bottom:5px;">🪀 Pedido: <input type="text" class="dyn-pedido" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" value="${p.nombre}"></label>
+            <div class="pedido-item" style="border:1px solid #444; padding:10px; border-radius:8px; background:#1a1a1a; margin-bottom:10px;">
+              <div style="display:flex; gap:10px; align-items:center; margin-bottom:5px;">
+                ${imgHtml}
+                <div style="flex-grow:1;">
+                  <label style="color:#fff; font-size:1rem; display:block;">🪀 Pedido: <input type="text" class="dyn-pedido" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" value="${p.nombre}"></label>
+                </div>
+              </div>
               <label style="color:#fff; font-size:1rem; display:block;">🪀 Cantidad: <input type="number" class="dyn-cant" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" value="1" min="1"></label>
               <input type="hidden" class="dyn-precio-base" value="${basePrice}">
             </div>
@@ -3604,6 +3611,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const titulo = document.getElementById("product-detail-title").innerText;
         const precio = document.getElementById("product-detail-price").innerText;
         const caracteristicas = document.getElementById("m-caracteristicas").value;
+        const imgElement = document.getElementById("product-detail-img");
+        const imgSrc = imgElement ? imgElement.getAttribute("src") : "";
+        let imgHtml = imgSrc ? `<img src="${imgSrc}" style="width:50px; height:50px; object-fit:cover; border-radius:5px; border:1px solid #d4af37; flex-shrink:0;">` : '';
+        
         let pedidoDesc = titulo;
         if(caracteristicas) {
            pedidoDesc += " (" + caracteristicas + ")";
@@ -3612,8 +3623,13 @@ document.addEventListener("DOMContentLoaded", function() {
         basePrice = basePrice ? parseFloat(basePrice) : 0;
         
         container.innerHTML = `
-            <div class="pedido-item" style="border:1px solid #444; padding:10px; border-radius:8px; background:#1a1a1a;">
-              <label style="color:#fff; font-size:1rem; display:block; margin-bottom:5px;">🪀 Pedido: <input type="text" class="dyn-pedido" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" value="${pedidoDesc}"></label>
+            <div class="pedido-item" style="border:1px solid #444; padding:10px; border-radius:8px; background:#1a1a1a; margin-bottom:10px;">
+              <div style="display:flex; gap:10px; align-items:center; margin-bottom:5px;">
+                ${imgHtml}
+                <div style="flex-grow:1;">
+                  <label style="color:#fff; font-size:1rem; display:block;">🪀 Pedido: <input type="text" class="dyn-pedido" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" value="${pedidoDesc}"></label>
+                </div>
+              </div>
               <label style="color:#fff; font-size:1rem; display:block;">🪀 Cantidad: <input type="number" class="dyn-cant" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" value="1" min="1"></label>
               <input type="hidden" class="dyn-precio-base" value="${basePrice}">
             </div>
@@ -3677,8 +3693,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   </script>
 
-  <div id="modal-recoger" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:15000; align-items:center; justify-content:center; flex-direction:column; padding:20px; box-sizing:border-box;">
-    <div style="background:#111; border:2px solid #d4af37; border-radius:20px; padding:20px; width:100%; max-width:500px; max-height:90vh; overflow-y:auto; position:relative;">
+  <div id="modal-recoger" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:15000; align-items:center; justify-content:center; flex-direction:column; padding:0; box-sizing:border-box;">
+    <div style="background:#111; border:2px solid #d4af37; border-radius:0; padding:20px; width:100%; max-width:500px; height:100%; max-height:100vh; overflow-y:auto; position:relative;">
       <button onclick="document.getElementById('modal-recoger').style.display='none'" style="position:absolute; top:10px; right:15px; background:transparent; border:none; color:#d4af37; font-size:2rem; cursor:pointer;">×</button>
       <h3 style="color:#d4af37; text-align:center; margin-bottom:20px; margin-top:5px;">📝 Factura (Recoger en el Local)</h3>
       <form id="form-recoger" style="display:flex; flex-direction:column; gap:10px;">
@@ -3715,9 +3731,16 @@ document.addEventListener("DOMContentLoaded", function() {
           let num = p.precio.replace(/[^\d.]/g, '');
           let basePrice = num ? parseFloat(num) : 0;
           precioTotal += basePrice;
+          let imgHtml = p.img ? `<img src="${p.img}" style="width:50px; height:50px; object-fit:cover; border-radius:5px; border:1px solid #d4af37; flex-shrink:0;">` : '';
+          
           container.innerHTML += `
-            <div class="pedido-item" style="border:1px solid #444; padding:10px; border-radius:8px; background:#1a1a1a;">
-              <label style="color:#fff; font-size:1rem; display:block; margin-bottom:5px;">🪀 Pedido: <input type="text" class="dyn-pedido" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" value="${p.nombre}"></label>
+            <div class="pedido-item" style="border:1px solid #444; padding:10px; border-radius:8px; background:#1a1a1a; margin-bottom:10px;">
+              <div style="display:flex; gap:10px; align-items:center; margin-bottom:5px;">
+                ${imgHtml}
+                <div style="flex-grow:1;">
+                  <label style="color:#fff; font-size:1rem; display:block;">🪀 Pedido: <input type="text" class="dyn-pedido" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" value="${p.nombre}"></label>
+                </div>
+              </div>
               <label style="color:#fff; font-size:1rem; display:block;">🪀 Cantidad: <input type="number" class="dyn-cant" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" value="1" min="1"></label>
               <input type="hidden" class="dyn-precio-base" value="${basePrice}">
             </div>
@@ -3728,6 +3751,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const titulo = document.getElementById("product-detail-title").innerText;
         const precio = document.getElementById("product-detail-price").innerText;
         const caracteristicas = document.getElementById("m-caracteristicas").value;
+        const imgElement = document.getElementById("product-detail-img");
+        const imgSrc = imgElement ? imgElement.getAttribute("src") : "";
+        let imgHtml = imgSrc ? `<img src="${imgSrc}" style="width:50px; height:50px; object-fit:cover; border-radius:5px; border:1px solid #d4af37; flex-shrink:0;">` : '';
+        
         let pedidoDesc = titulo;
         if(caracteristicas) {
            pedidoDesc += " (" + caracteristicas + ")";
@@ -3736,8 +3763,13 @@ document.addEventListener("DOMContentLoaded", function() {
         basePrice = basePrice ? parseFloat(basePrice) : 0;
         
         container.innerHTML = `
-            <div class="pedido-item" style="border:1px solid #444; padding:10px; border-radius:8px; background:#1a1a1a;">
-              <label style="color:#fff; font-size:1rem; display:block; margin-bottom:5px;">🪀 Pedido: <input type="text" class="dyn-pedido" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" value="${pedidoDesc}"></label>
+            <div class="pedido-item" style="border:1px solid #444; padding:10px; border-radius:8px; background:#1a1a1a; margin-bottom:10px;">
+              <div style="display:flex; gap:10px; align-items:center; margin-bottom:5px;">
+                ${imgHtml}
+                <div style="flex-grow:1;">
+                  <label style="color:#fff; font-size:1rem; display:block;">🪀 Pedido: <input type="text" class="dyn-pedido" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" value="${pedidoDesc}"></label>
+                </div>
+              </div>
               <label style="color:#fff; font-size:1rem; display:block;">🪀 Cantidad: <input type="number" class="dyn-cant" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" value="1" min="1"></label>
               <input type="hidden" class="dyn-precio-base" value="${basePrice}">
             </div>
@@ -3890,7 +3922,9 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
         // Select
         var priceText = container.querySelector('.precio') ? container.querySelector('.precio').textContent : '0';
-        window.selectedProducts.push({ nombre: titulo, precio: priceText });
+        var imgElement = container.querySelector('img');
+        var imgUrl = imgElement ? imgElement.getAttribute('src') : '';
+        window.selectedProducts.push({ nombre: titulo, precio: priceText, img: imgUrl });
         window.selectedCategory = category;
         container.classList.add('producto-selected');
       }
