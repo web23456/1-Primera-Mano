@@ -3389,8 +3389,23 @@ document.addEventListener("DOMContentLoaded", function() {
         <label style="color:#fff; font-size:1rem;">🪀 Pedido: <input type="text" id="m-pedido" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" readonly></label>
         <label style="color:#fff; font-size:1rem;">🪀 Cantidad: <input type="number" id="m-cant" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" value="1"></label>
         <label style="color:#fff; font-size:1rem;">🪀 Precio del artículo: <input type="text" id="m-precio" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" readonly></label>
-        <label style="color:#fff; font-size:1rem;">🪀 Método de pago: <input type="text" id="m-pago" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
-        <label style="color:#fff; font-size:1rem;">🪀 Precio de la mensajería: <input type="text" id="m-precio-mensajeria" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
+        <label style="color:#fff; font-size:1rem;">🪀 Método de pago: 
+          <select id="m-pago" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;">
+            <option value="USD">USD</option>
+            <option value="Moneda nacional 10 pesos por encima del toque">Moneda nacional 10 pesos por encima del toque</option>
+            <option value="Mixta USD MN">Mixta USD MN</option>
+          </select>
+        </label>
+        <label style="color:#fff; font-size:1rem;">🪀 Precio de la mensajería: 
+          <div style="display:flex; gap:5px; margin-top:5px;">
+            <input type="text" id="m-precio-mensajeria" style="flex:1; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box;" placeholder="Cantidad">
+            <select id="m-moneda-mensajeria" style="width:80px; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box;">
+              <option value="USD">USD</option>
+              <option value="MN">MN</option>
+              <option value="MIX">MIX</option>
+            </select>
+          </div>
+        </label>
         <label style="color:#fff; font-size:1rem;">🪀 Total a Recoger: <input type="text" id="m-total" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
         <label style="color:#fff; font-size:1rem;">🪀 Dinero a devolver: <input type="text" id="m-devolver" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
         <label style="color:#fff; font-size:1rem;">🪀 Nombre del gestor: <input type="text" id="m-gestor" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
@@ -3444,7 +3459,7 @@ document.addEventListener("DOMContentLoaded", function() {
       mensaje += "🪀 𝐂𝐚𝐧𝐭𝐢𝐝𝐚𝐝: " + document.getElementById("m-cant").value + "\n";
       mensaje += "🪀 𝐏𝐫𝐞𝐜𝐢𝐨 𝐝𝐞𝐥 𝐚𝐫𝐭í𝐜𝐮𝐥𝐨: " + document.getElementById("m-precio").value + "\n";
       mensaje += "🪀 𝐌é𝐭𝐨𝐝𝐨 𝐝𝐞 𝐩𝐚𝐠𝐨: " + document.getElementById("m-pago").value + "\n";
-      mensaje += "🪀 𝐏𝐫𝐞𝐜𝐢𝐨 𝐝𝐞 𝐥𝐚 𝐦𝐞𝐧𝐬𝐚𝐣𝐞𝐫í𝐚: " + document.getElementById("m-precio-mensajeria").value + "\n";
+      mensaje += "🪀 𝐏𝐫𝐞𝐜𝐢𝐨 𝐝𝐞 𝐥𝐚 𝐦𝐞𝐧𝐬𝐚𝐣𝐞𝐫í𝐚: " + document.getElementById("m-precio-mensajeria").value + " " + document.getElementById("m-moneda-mensajeria").value + "\n";
       mensaje += "🪀 𝐓𝐨𝐭𝐚𝐥 𝐚 𝐑𝐞𝐜𝐨𝐣𝐞𝐫: " + document.getElementById("m-total").value + "\n";
       mensaje += "🪀 𝐃𝐢𝐧𝐞𝐫𝐨 𝐚 𝐝𝐞𝐯𝐨𝐥𝐯𝐞𝐫: " + document.getElementById("m-devolver").value + "\n";
       mensaje += "🪀 𝐍𝐨𝐦𝐛𝐫𝐞 𝐝𝐞𝐥 𝐠𝐞𝐬𝐭𝐨𝐫: " + document.getElementById("m-gestor").value + "\n";
@@ -3468,7 +3483,13 @@ document.addEventListener("DOMContentLoaded", function() {
         <label style="color:#fff; font-size:1rem;">🪀 Pedido: <input type="text" id="r-pedido" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" readonly></label>
         <label style="color:#fff; font-size:1rem;">🪀 Cantidad: <input type="number" id="r-cant" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" value="1"></label>
         <label style="color:#fff; font-size:1rem;">🪀 Precio del artículo: <input type="text" id="r-precio" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;" readonly></label>
-        <label style="color:#fff; font-size:1rem;">🪀 Método de pago: <input type="text" id="r-pago" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
+        <label style="color:#fff; font-size:1rem;">🪀 Método de pago: 
+          <select id="r-pago" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;">
+            <option value="USD">USD</option>
+            <option value="Moneda nacional 10 pesos por encima del toque">Moneda nacional 10 pesos por encima del toque</option>
+            <option value="Mixta USD MN">Mixta USD MN</option>
+          </select>
+        </label>
         <label style="color:#fff; font-size:1rem;">🪀 Total a Recoger: <input type="text" id="r-total" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
         <label style="color:#fff; font-size:1rem;">🪀 Nombre del gestor: <input type="text" id="r-gestor" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
         <label style="color:#fff; font-size:1rem;">🪀 #De teléfono del Gestor: <input type="text" id="r-tel-gestor" style="width:100%; padding:8px; border-radius:5px; border:1px solid #555; background:#222; color:#fff; box-sizing:border-box; margin-top:5px;"></label>
