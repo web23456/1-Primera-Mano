@@ -1558,10 +1558,7 @@ nav a:hover, nav button:hover {
       <h1 class="titulo-animado">Primera Mano</h1>
     </div>
     
-    <div style="margin: 0 5px;">
-      <button onclick="toggleSelectionMode()" id="btn-selection-mode" style="background:transparent; border:1px solid #d4af37; color:#d4af37; padding:5px 10px; border-radius:5px; font-size:1rem; cursor:pointer; font-weight:bold;">✅ Seleccionar</button>
-    </div>
-
+    
     <!-- Botón de Opciones -->
     <div style="position:relative; margin: 0 10px;">
       <button onclick="document.getElementById('menu-opciones').style.display = document.getElementById('menu-opciones').style.display === 'none' ? 'block' : 'none';" style="background:transparent; border:none; color:#d4af37; font-size:1.5rem; cursor:pointer;">
@@ -3397,11 +3394,17 @@ function cerrarDetalle() {
 // Make the whole product card clickable
 document.addEventListener("DOMContentLoaded", function() {
 
-  // Add Mensajeria button to each category
+  // Add Mensajeria and Seleccionar buttons to each category
   document.querySelectorAll('.seccion-productos h2').forEach(function(h2) {
+    var btnGroup = document.createElement('div');
+    btnGroup.style.display = 'flex';
+    btnGroup.style.justifyContent = 'center';
+    btnGroup.style.gap = '15px';
+    btnGroup.style.marginTop = '5px';
+
     var btn = document.createElement('button');
     btn.innerHTML = '🚚 Mensajería';
-    btn.style.cssText = 'background: #111; border: 1px solid #d4af37; color: #d4af37; padding: 6px 18px; border-radius: 20px; cursor: pointer; margin-top: 5px; font-size: 1.1rem; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.5); transition: all 0.3s ease;';
+    btn.style.cssText = 'background: #111; border: 1px solid #d4af37; color: #d4af37; padding: 6px 18px; border-radius: 20px; cursor: pointer; font-size: 1.1rem; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.5); transition: all 0.3s ease;';
     btn.onmouseover = function() { this.style.background = '#d4af37'; this.style.color = '#000'; };
     btn.onmouseout = function() { this.style.background = '#111'; this.style.color = '#d4af37'; };
     btn.onclick = function() {
@@ -3412,6 +3415,17 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     };
     
+    var btnSel = document.createElement('button');
+    btnSel.innerHTML = '✅ Seleccionar';
+    btnSel.className = 'btn-selection-mode';
+    btnSel.style.cssText = 'background: transparent; border: 1px solid #d4af37; color: #d4af37; padding: 6px 18px; border-radius: 20px; cursor: pointer; font-size: 1.1rem; font-weight: bold; transition: all 0.3s ease;';
+    btnSel.onclick = function() {
+      toggleSelectionMode();
+    };
+
+    btnGroup.appendChild(btn);
+    btnGroup.appendChild(btnSel);
+    
     var div = document.createElement('div');
     div.style.textAlign = 'center';
     div.style.marginBottom = '25px';
@@ -3420,7 +3434,7 @@ document.addEventListener("DOMContentLoaded", function() {
     h2.parentNode.insertBefore(div, h2);
     div.appendChild(h2);
     h2.style.marginBottom = '8px';
-    div.appendChild(btn);
+    div.appendChild(btnGroup);
   });
 
   document.querySelectorAll('.producto').forEach(function(p) {
@@ -3878,16 +3892,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function toggleSelectionMode() {
       window.isSelectionMode = !window.isSelectionMode;
-      var btn = document.getElementById('btn-selection-mode');
+      var btns = document.querySelectorAll('.btn-selection-mode');
       var bar = document.getElementById('selection-bar');
       if (window.isSelectionMode) {
-        btn.style.background = '#d4af37';
-        btn.style.color = '#000';
+        btns.forEach(btn => {
+          btn.style.background = '#d4af37';
+          btn.style.color = '#000';
+        });
         bar.style.display = 'flex';
         // Deshabilitar scrolls o avisar al usuario
       } else {
-        btn.style.background = 'transparent';
-        btn.style.color = '#d4af37';
+        btns.forEach(btn => {
+          btn.style.background = 'transparent';
+          btn.style.color = '#d4af37';
+        });
         bar.style.display = 'none';
         // Limpiar selecciones
         window.selectedProducts = [];
